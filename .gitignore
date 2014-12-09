@@ -1,0 +1,7 @@
+# Usual TeX ignores
+*.swp
+*.aux
+*.bbl
+*.blg
+*.log
+
