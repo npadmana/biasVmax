@@ -164,8 +164,8 @@ The Maximum Circular Velocity Dependence of Halo Clustering
 \begin_layout Standard
 In this section, we investigate the maximum circular velocity dependence
  of halo clustering on both large and small scales.
- In order to do that, we compute correlation functions and measure halo
- biases for halo samples having different maximum circular velocities.
+ In order to do that, we compute correlation functions and measre halo biases
+ for halo samples having different maximum circular velocities.
  We first describe how we select halos for each sample and then show how
  those samples have different clustering properties.
 \end_layout
@@ -468,7 +468,7 @@ lower
 
 \begin_layout Standard
 *need some explanations for the decrease of the relative bias on the lowest
- mass end? is it real or artificial?
+ mass end? is it real or srtificial?
 \end_layout
 
 \begin_layout Standard
@@ -487,7 +487,7 @@ lower
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -641,8 +641,8 @@ reference "fig:small-scale"
  small scales.
  On small scales, a halo bias is scale-dependent.
  The question here is whether halos with different maximum circular velocity
- have different scale-dependence on their biases.
- In order to find that, we take the ratio of halo-matter cross correlation
+ have dierent scale-dependence on their biases.
+ In order to nd that, we take the ratio of halo-matter cross correlation
  functions between 
 \begin_inset Quotes eld
 \end_inset
@@ -730,7 +730,7 @@ upper" and
 lower" subsamples on small scales normalized by their linear biases.
  The plots are from the Bolshoi simulation (left) and the MultiDark simulation
  (right) at z = 0:0.
- Each line corresponds to different halo mass bins labeled in the plots.
+ Each line corresponds to dierent halo mass bins labeled in the plots.
  Those plots show that 
 \backslash
 upper" and 
