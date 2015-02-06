@@ -203,18 +203,27 @@ where
 \end_inset
 
  is the halo mass, 
-\begin_inset Formula $G$
-\end_inset
-
- is the gravitational constant, 
 \begin_inset Formula $\Delta_{{\rm h}}$
 \end_inset
 
- is XXX, and 
+ is the overdensity limit which defines the virial radius, and 
 \begin_inset Formula $c$
 \end_inset
 
  is the concentration parameter.
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+ comes from an NFW profile (
+\color red
+citation
+\color inherit
+).
  To obtain Eq.
  
 \begin_inset CommandInset ref
@@ -255,12 +264,11 @@ reference "fig:vmax-mvir"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename ../plots/logVmax_logMvir_Dh360.png
-	lyxscale 40
 	width 50col%
 
 \end_inset
@@ -406,6 +414,14 @@ where
 \begin_inset Formula $20h^{-1}{\rm Mpc}$
 \end_inset
 
+ where 
+\begin_inset Formula $r$
+\end_inset
+
+ is
+\color red
+ the distance between two objects counted on correlation functions
+\color inherit
  (??may change to jackknife samplings).
  Here, instead of using full DM particles, we subsample 
 \begin_inset Formula $1000000$
@@ -467,59 +483,23 @@ lower
 \end_layout
 
 \begin_layout Standard
-*need some explanations for the decrease of the relative bias on the lowest
- mass end? is it real or artificial?
-\end_layout
-
-\begin_layout Standard
-*use M*
-\end_layout
-
-\begin_layout Standard
-*use jackknife sampling to put error bars
-\end_layout
-
-\begin_layout Standard
-*where this trend comes from?...assembly bias: concentration?->z_form
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../plots/linearBias_wang2_Bolshoi.pdf
-	lyxscale 40
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang_Bolshoi.pdf
+	lyxscale 50
 	width 50col%
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename ../plots/linearBias_wang2_MultiDark.pdf
-	lyxscale 40
-	width 50col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../plots/linearBiasRatio_wang2_Bolshoi.pdf
-	lyxscale 40
-	width 50col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename ../plots/linearBiasRatio_wang2_MultiDark.pdf
-	lyxscale 40
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang_MultiDark.pdf
+	lyxscale 50
 	width 50col%
 
 \end_inset
@@ -647,11 +627,19 @@ reference "fig:small-scale"
 \begin_inset Quotes eld
 \end_inset
 
-upper" and 
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
 \begin_inset Quotes eld
 \end_inset
 
-lower" subsamples and normalize it by their linear biases.
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples and normalize it by their linear biases.
  Fig.
  
 \begin_inset CommandInset ref
@@ -666,17 +654,41 @@ reference "fig:small-scale"
 \begin_inset Quotes eld
 \end_inset
 
-upper" and 
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
 \begin_inset Quotes eld
 \end_inset
 
-lower" subsamples increases, especially halos with large maximum circular
- velocities heavily clustered around 
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples increases, especially halos with large maximum circular velocities
+ heavily clustered around 
 \begin_inset Formula $1h^{-1}{\rm Mpc}$
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Standard
+*need some explanations for the decrease of the relative bias on the lowest
+ mass end? is it real or artificial?
+\end_layout
+
+\begin_layout Standard
+*use M*
+\end_layout
+
+\begin_layout Standard
+*use jackknife sampling to put error bars
+\end_layout
+
+\begin_layout Standard
+*where this trend comes from?...assembly bias: concentration?->z_form
 \end_layout
 
 \begin_layout Standard
@@ -692,20 +704,20 @@ lower" subsamples increases, especially halos with large maximum circular
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../plots/Bolshoi_smallScale_wang2.pdf
-	lyxscale 70
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_smallScale_wang_log.pdf
+	lyxscale 50
 	width 50col%
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename ../plots/MultiDark_smallScale_wang2.pdf
-	lyxscale 70
+	filename /Users/old_ts485/Desktop/biasVmax/plots/MultiDark_smallScale_wang_log.pdf
+	lyxscale 50
 	width 50col%
 
 \end_inset
@@ -724,21 +736,83 @@ name "fig:small-scale"
 \end_inset
 
 Ratio of halo-matter cross correlation functions for 
-\backslash
-upper" and 
-\backslash
-lower" subsamples on small scales normalized by their linear biases.
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples on small scales normalized by their linear biases (normalized!).
  The plots are from the Bolshoi simulation (left) and the MultiDark simulation
  (right) at z = 0:0.
  Each line corresponds to different halo mass bins labeled in the plots.
  Those plots show that 
-\backslash
-upper" and 
-\backslash
-lower" subsamples have dierent scale-dependence on small scales and the
- relative scale-dependence between those subsamples increases smoothly with
- decreasing halo mass.
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples have dierent scale-dependence on small scales and the relative
+ scale-dependence between those subsamples increases smoothly with decreasing
+ halo mass.
  (?? normalize by their linear biases)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_smallScale_nonEj_wang_log.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+ejected halos
 \end_layout
 
 \end_inset
