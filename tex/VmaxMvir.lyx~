@@ -82,7 +82,25 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-XXX
+The halo model has been remarkably successful in describing observations
+ of galaxy clustering at many scales and many redshifts (give some examples
+ here).
+ fundamental assumption clustering only depends on the halo mass; not true
+ because of assembly bias on large scales but also ideas of eg.
+ backsplashed halos.
+ recent trend has been to populate galaxies according to their maximum circular
+ velocity.
+ Describe why this might be motivated — depends only on the central part
+ of the potential, set early in the growth of the halo (point to Frank’s
+ recent paper here as an example).
+ Also may be more robust to disruption in mergers.
+\end_layout
+
+\begin_layout Standard
+goal here is to discuss the dependence of galaxy clustering on the central
+ velocity dispersion both on small and large scales.
+ We show that some of the features in a detailed halo model come from the
+ effects of back-splash halos.
 \end_layout
 
 \begin_layout Section
@@ -170,6 +188,10 @@ In this section, we investigate the maximum circular velocity dependence
  those samples have different clustering properties.
 \end_layout
 
+\begin_layout Subsection
+The Maximum Circular Velocity
+\end_layout
+
 \begin_layout Standard
 As shown in Fig.
  
@@ -189,7 +211,7 @@ reference "fig:vmax-mvir"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-V_{{\rm max}}=0.465M_{{\rm vir}}^{1/3}\sqrt{G(\frac{4}{3}\pi\Delta_{{\rm h}}\rho_{{\rm crit}}\Omega_{m})^{1/3}\frac{c}{{\rm ln(1+c)-c/(1+c)}}},\label{eq:vmax-mvir}
+\overline{V}_{{\rm max}}=0.465M_{{\rm vir}}^{1/3}\sqrt{G(\frac{4}{3}\pi\Delta_{{\rm h}}\rho_{{\rm crit}}\Omega_{m})^{1/3}\frac{c}{{\rm ln(1+c)-c/(1+c)}}},\label{eq:vmax-mvir}
 \end{equation}
 
 \end_inset
@@ -260,15 +282,19 @@ reference "fig:vmax-mvir"
  this relation.
 \end_layout
 
+\begin_layout Subsection
+Samples
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../plots/logVmax_logMvir_Dh360.png
+	filename /Users/old_ts485/Desktop/biasVmax/plots/logVmax_logMvir_Dh360.pdf
 	width 50col%
 
 \end_inset
@@ -290,9 +316,34 @@ Distribution of halo mass and the maximum circular velocity at
 \begin_inset Formula $z=0.0$
 \end_inset
 
- from the MultiDark simulation.
- The red solid line represents the maximum circular velocity computed for
- a given halo mass using Eq.
+ for halos whose masses are between 
+\begin_inset Formula $10^{12.5}{\rm M_{\odot}}$
+\end_inset
+
+ and 
+\begin_inset Formula $10^{13.0}{\rm M_{\odot}}$
+\end_inset
+
+.
+ The blue dots represent halos whose maximum circular velocity is greater
+ than 
+\begin_inset Formula $\overline{V}_{mas}$
+\end_inset
+
+, while the green dots are the ones with smaller 
+\begin_inset Formula $V_{max,obs}$
+\end_inset
+
+ than 
+\begin_inset Formula $\overline{V}_{max}$
+\end_inset
+
+.
+ The boundary between blue and green dots corrspond to 
+\begin_inset Formula $\overline{V}_{max}$
+\end_inset
+
+ computed from Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -301,16 +352,6 @@ reference "eq:vmax-mvir"
 \end_inset
 
 .
- The red and green dashed lines are 
-\begin_inset Formula $1\sigma$
-\end_inset
-
- and 
-\begin_inset Formula $2\sigma$
-\end_inset
-
- away in the log-normal distribution of concentration at a fixed halo mass.
- ??Add color bar to the plot
 \end_layout
 
 \end_inset
@@ -324,8 +365,8 @@ reference "eq:vmax-mvir"
 \end_layout
 
 \begin_layout Standard
-In other words, the above equation is a one to one mapping between the virial
- mass of the halo and its maximum circular velocity.
+The above equation is a one to one mapping between the virial mass of the
+ halo and its maximum circular velocity.
  Given this mapping, we can translate clustering measurements as a function
  of halo mass into predicted clustering measurements as a function of maximum
  circular velocity.
@@ -365,7 +406,7 @@ lower
  This selection ensures that both the upper and lower subsamples have the
  same mean halo mass.
  Therefore, in the absence of an additional 
-\begin_inset Formula $V_{{\rm max}}$
+\begin_inset Formula $M_{vir}$
 \end_inset
 
  dependence (??isn't this 
@@ -381,6 +422,10 @@ lower
 
 , since the two resulting subsamples would have different mean halo masses.
  
+\end_layout
+
+\begin_layout Subsection
+Mvir-based samples
 \end_layout
 
 \begin_layout Standard
@@ -414,14 +459,6 @@ where
 \begin_inset Formula $20h^{-1}{\rm Mpc}$
 \end_inset
 
- where 
-\begin_inset Formula $r$
-\end_inset
-
- is
-\color red
- the distance between two objects counted on correlation functions
-\color inherit
  (??may change to jackknife samplings).
  Here, instead of using full DM particles, we subsample 
 \begin_inset Formula $1000000$
@@ -486,7 +523,7 @@ lower
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -523,41 +560,17 @@ Upper panel: Linear bias at
 
  as a function of halo mass from the Bolshoi simulation (left) and the MultiDark
  simulation (right).
- The blue solid line represents a linear bias for halos whose maximum circular
+ The blue circles represents a linear bias for halos whose maximum circular
  velocities are greater than 
-\begin_inset Formula $V_{{\rm max}}(M_{{\rm vir}})$
+\begin_inset Formula $\overline{V}_{max}$
 \end_inset
 
- from Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:vmax-mvir"
-
+, while the green circles correspond to halos whose maximum circular velocities
+ are smaller than 
+\begin_inset Formula $\overline{V}_{max}$
 \end_inset
 
- (labeled as 
-\begin_inset Quotes eld
-\end_inset
-
-upper
-\begin_inset Quotes erd
-\end_inset
-
-), while the green solid line corresponds to halos whose maximum circular
- velocities are smaller than 
-\begin_inset Formula $V_{{\rm max}}(M_{{\rm vir}})$
-\end_inset
-
- (labeled as 
-\begin_inset Quotes eld
-\end_inset
-
-lower
-\begin_inset Quotes erd
-\end_inset
-
-).
+.
  Lower panel: Ratio of linear biases between 
 \begin_inset Quotes eld
 \end_inset
@@ -566,7 +579,11 @@ upper
 \begin_inset Quotes erd
 \end_inset
 
- and 
+ (i.e., 
+\begin_inset Formula $V_{max,obs}>\overline{V}_{max}$
+\end_inset
+
+) and 
 \begin_inset Quotes eld
 \end_inset
 
@@ -574,12 +591,13 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- maximum circular velocity halos at 
-\begin_inset Formula $z=0.0$
+ (i.e., 
+\begin_inset Formula $V_{max,obs}<\overline{V}_{max}$
 \end_inset
 
- from the Bolshoi simulation (left) and the MultiDark simulation (right).
- As halo masses decrease, the difference on halo bias between 
+) samples from the Bolshoi simulation (left) and the MultiDark simulation
+ (right).
+ As halo masses decrease, the difference on linear bias between 
 \begin_inset Quotes eld
 \end_inset
 
@@ -595,7 +613,12 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- subsamples becomes larger.
+ subsamples becomes larger up to 40%.
+ Here, 
+\begin_inset Formula $M*=10^{11.5}{\rm M_{\odot}}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -654,51 +677,29 @@ reference "fig:small-scale"
 \begin_inset Quotes eld
 \end_inset
 
-upper" and 
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
 \begin_inset Quotes eld
 \end_inset
 
-lower" subsamples increases,
-\color red
- especially halos with large maximum circular velocities heavily clustered
- around 
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples increases, especially halos with large maximum circular velocities
+ heavily clustered around 
 \begin_inset Formula $1h^{-1}{\rm Mpc}$
 \end_inset
 
-
-\color inherit
 .
- 
-\end_layout
-
-\begin_layout Standard
-*need some explanations for the decrease of the relative bias on the lowest
- mass end? is it real or artificial?
-\end_layout
-
-\begin_layout Standard
-*use M*
-\end_layout
-
-\begin_layout Standard
-*use jackknife sampling to put error bars
-\end_layout
-
-\begin_layout Standard
-*where this trend comes from?...assembly bias: concentration?->z_form
-\end_layout
-
-\begin_layout Standard
-*Why is upper subsample clustered around 1Mpc/h? Are there any physical
- reasons?
-\end_layout
-
-\begin_layout Standard
-*Do we get the same scale-dependence by eliminating ejected halos?
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -732,23 +733,46 @@ name "fig:small-scale"
 
 \end_inset
 
-Ratio of halo-matter cross correlation functions for 
-\backslash
-upper" and 
-\backslash
-lower" subsamples on small scales normalized by their linear biases (normalized!
-).
+Ratio of halo-matter cross correlation functions between 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples normalized by their linear biases.
  The plots are from the Bolshoi simulation (left) and the MultiDark simulation
- (right) at z = 0:0.
+ (right) at z = 0.0.
  Each line corresponds to different halo mass bins labeled in the plots.
  Those plots show that 
-\backslash
-upper" and 
-\backslash
-lower" subsamples have dierent scale-dependence on small scales and the
- relative scale-dependence between those subsamples increases smoothly with
- decreasing halo mass.
- (?? normalize by their linear biases)
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples have different scale-dependence on small scales and the relative
+ scale-dependence between those subsamples increases smoothly with decreasing
+ halo mass.
+ 
 \end_layout
 
 \end_inset
@@ -767,11 +791,20 @@ lower" subsamples have dierent scale-dependence on small scales and the
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang_Bolshoi_eje.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_smallScale_nonEj_wang_log.pdf
 	lyxscale 50
@@ -786,7 +819,67 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-XXX
+The same figures as Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:linear-bias"
+
+\end_inset
+
+ (left) and Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+ (right) without ejected halos.
+ We use halos from the Bolshoi simulation at 
+\begin_inset Formula $z=0.0$
+\end_inset
+
+, because we could not find many ejected halos in the MultiDark simulation
+ due to its mass resolution.
+ The left panel shows the linear bias as a function of halo mass for the
+ halos whose 
+\begin_inset Formula $V_{max}$
+\end_inset
+
+ greater/less than 
+\begin_inset Formula $\bar{V}_{max}$
+\end_inset
+
+ and their ratio between those subsamples.
+ The difference in linear biases without ejected halos is suppressed on
+ small halos close to 
+\begin_inset Formula $M^{*}$
+\end_inset
+
+, while there is little difference between the ratio with and without ejected
+ halos on large mass end.
+ The right panel shows the ratio of halo-matter cross correlation functions
+ between 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples normallized by their linear biases.
+ It is obvious that the scale-dependent clustering difference is now mostly
+ removed by excluding ejected halos from samples.
+ 
 \end_layout
 
 \end_inset
@@ -803,8 +896,227 @@ XXX
 
 \end_layout
 
+\begin_layout Standard
+*need some explanations for the decrease of the relative bias on the lowest
+ mass end? is it real or artificial?
+\end_layout
+
+\begin_layout Standard
+*use jackknife sampling to put error bars
+\end_layout
+
+\begin_layout Section
+Applications
+\end_layout
+
+\begin_layout Subsection
+Mvir-based v.s.
+ Vmax-based
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/logMhalo_Vcir_nbar_Bolshoi.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:nbar"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi.pdf
+	lyxscale 75
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi_nonEj.pdf
+	lyxscale 75
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:abundance_linear"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale_nonEj.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:abundance_small"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\Delta\Sigma(r)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+MergerTree's Vmax v.s.
+ Vmax,obs
+\end_layout
+
 \begin_layout Section
 Discussion
+\end_layout
+
+\begin_layout Standard
+(Option)
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Downloads/dist2_nearestCluster_m11.7to11.8.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Histogram of distances to the nearest Clusters (defined as 
+\begin_inset Formula $M_{vir}>10^{14}{\rm M_{\odot}}$
+\end_inset
+
+) for non-ejected halos and ejected halos: Right now, I only have the one
+ for all the halos...may change to the plot of fractions: Is it reasonable
+ to play with the cluster masses? Also, make the similar plots for nearest
+ massive halos by separating ejected and non-ejected halos (upper/lower)...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
