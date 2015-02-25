@@ -162,17 +162,22 @@ We use cosmological N-body simulations called the Bolshoi simulation and
  are described in XXX.
  For halo identification, we use the ROCKSTAR halo finder (XXX) where the
  halo masses and maximum circular velocities are computed from bound particles.
+ We use both simulations to get large dynamic mass range.
+ The effective mass ranges is 
+\begin_inset Formula $M_{{\rm vir}}>XXX$
+\end_inset
+
+ for the MultiDark simulation and 
+\begin_inset Formula $M_{{\rm vir}}>XXX$
+\end_inset
+
+ for the Bolshoi simuation.
  
 \end_layout
 
 \begin_layout Standard
-??Should I explain more about what bound particles mean (though my understanding
- is vague...) and am not so sure what other ways to define masses and circular
- velocity and also how the definitions can make things different...
-\end_layout
-
-\begin_layout Standard
-??What other information do I need to put here?
+Q: What is the lower limit of mass for each simulation and how do we justfy
+ those numbers?
 \end_layout
 
 \begin_layout Section
@@ -182,10 +187,11 @@ The Maximum Circular Velocity Dependence of Halo Clustering
 \begin_layout Standard
 In this section, we investigate the maximum circular velocity dependence
  of halo clustering on both large and small scales.
- In order to do that, we compute correlation functions and measure halo
- biases for halo samples having different maximum circular velocities.
- We first describe how we select halos for each sample and then show how
- those samples have different clustering properties.
+ We first start with an analytic expression of the maximum circular velocity
+ computed from the halo mass and its concentration.
+ Then, we explain how we select halos to remove the halo mass dependence
+ from the samples using the analytic expression of the maximum circular
+ velocity.
 \end_layout
 
 \begin_layout Subsection
@@ -193,93 +199,79 @@ The Maximum Circular Velocity
 \end_layout
 
 \begin_layout Standard
-As shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:vmax-mvir"
-
+Here, we assume that dark matter halos are defined as a spherical halo with
+ a virial radius.
+ Those halos have average density equal to 
+\begin_inset Formula $\Delta_{{\rm h}}\rho_{{\rm crit}}$
 \end_inset
 
-, the maximum circular velocity and halo mass has tight correlation, and
- yet the scatter between the maximum circular velocity and halo mass becomes
- larger with decreasing halo masses.
- In fact, we can compute an expected maximum circular velocity from halo
- mass
+ where 
+\begin_inset Formula $\Delta_{{\rm h}}=360$
+\end_inset
+
+ for the MultiDark and Bolshoi simulations.
+ We also assume that those spherica halos have an NFW density profile (XXX).
+ Then, the maximum circular velocity 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ as a function of the halo mass 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+ and its concentration 
+\begin_inset Formula $c$
+\end_inset
+
+ is given by:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\overline{V}_{{\rm max}}=0.465M_{{\rm vir}}^{1/3}\sqrt{G(\frac{4}{3}\pi\Delta_{{\rm h}}\rho_{{\rm crit}}\Omega_{m})^{1/3}\frac{c}{{\rm ln(1+c)-c/(1+c)}}},\label{eq:vmax-mvir}
+\overline{V}_{{\rm max}}=0.465M_{{\rm vir}}^{1/3}\sqrt{G(\frac{4}{3}\pi\Delta_{{\rm h}}\rho_{{\rm crit}}\Omega_{m})^{1/3}\frac{c}{{\rm ln(1+c)-c/(1+c)}}}.\label{eq:vmax-mvir}
 \end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $V_{{\rm max}}$
+The median concentration-mass relation at 
+\begin_inset Formula $z=0$
 \end_inset
 
- is the maximum circular velocity and 
-\begin_inset Formula $M_{{\rm vir}}$
-\end_inset
-
- is the halo mass, 
-\begin_inset Formula $\Delta_{{\rm h}}$
-\end_inset
-
- is the overdensity limit which defines the virial radius, and 
-\begin_inset Formula $c$
-\end_inset
-
- is the concentration parameter.
- Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:vmax-mvir"
-
-\end_inset
-
- comes from an NFW profile (
-\color red
-citation
-\color inherit
-).
- To obtain Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:vmax-mvir"
-
-\end_inset
-
-, we use the concentration of 
+ obtained from the Bolshoi simulation in Ref.
+ XXX(Klypin et al.
+ 2011) is: 
 \begin_inset Formula 
 \begin{equation}
-{\rm log}_{10}c=-0.097{\rm log_{10}M_{vir}}+2.148.
+{\rm log}_{10}c=-0.097{\rm log_{10}M_{vir}}+2.148.\label{eq:concen}
 \end{equation}
 
 \end_inset
 
-(??Ask Frank how he obtain this concentration value and why this is a reasonable
- value) 
+
 \color black
-In Fig.
+By using the above median concentration to Eq.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:vmax-mvir"
+reference "eq:vmax-mvir"
 
 \end_inset
 
-, this 
-\begin_inset Formula $V_{{\rm max}}-M_{{\rm vir}}$
+, we obtain a one to one mapping between the virial halo mass and its maximum
+ circular velocity, denoted as 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
 \end_inset
 
- relation with the above concentration (shown as a red solid line) intersects
- the peak of the distribution, which means that many of the halos follow
- this relation.
+ hereafter.
+
+\color inherit
+ Given this mapping, we can translate clustering measurements as a function
+ of halo mass into predicted clustering measurements as a function of maximum
+ circular velocity.
+ Our goal below is to determine whether this conversion describes the measured
+ clustering or if there is a residual dependence on the maximum circular
+ velocity.
 \end_layout
 
 \begin_layout Subsection
@@ -312,7 +304,7 @@ name "fig:vmax-mvir"
 
 \end_inset
 
-Distribution of halo mass and the maximum circular velocity at 
+Distribution of halo mass and maximum circular velocity at 
 \begin_inset Formula $z=0.0$
 \end_inset
 
@@ -365,17 +357,9 @@ reference "eq:vmax-mvir"
 \end_layout
 
 \begin_layout Standard
-The above equation is a one to one mapping between the virial mass of the
- halo and its maximum circular velocity.
- Given this mapping, we can translate clustering measurements as a function
- of halo mass into predicted clustering measurements as a function of maximum
- circular velocity.
- Our goal below is to determine whether this conversion describes the measured
- clustering or if there is a residual dependence on the maximum circular
- velocity.
- In order to explore this, we first split the sample into a sequence of
- virial mass bins, chosen such that there are the same numbers of halos
- in each bin.
+In order to explore a dependence on the maximum circular velocity, we first
+ split the sample into a sequence of virial mass bins, chosen such that
+ there are the same numbers of halos in each bin.
  This process is reminiscent of an abundance-matching procedure (cite XXX).
  We then further split each bin into two subsamples with their observed
  
@@ -399,21 +383,44 @@ lower
 \end_inset
 
 ) 
-\begin_inset Formula $V_{{\rm max}}(M_{{\rm vir}})$
+\begin_inset Formula $\overline{V}_{{\rm max}}$
 \end_inset
 
 .
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:vmax-mvir"
+
+\end_inset
+
+ shows the distribution of halo mass and maximum circular velocity classified
+ into 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ (blue dots) and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ (green dots) samples as an example.
+ As you can see, the number of halos in each sample is almost half for any
+ halo mass bins.
  This selection ensures that both the upper and lower subsamples have the
  same mean halo mass.
  Therefore, in the absence of an additional 
 \begin_inset Formula $M_{vir}$
 \end_inset
 
- dependence (??isn't this 
-\begin_inset Formula $M_{{\rm vir}}$
-\end_inset
-
- dependence?) on clustering, these samples should have the same clustering
+ dependence on clustering, these samples should have the same clustering
  properties.
  Note that this would not be true if we had simply split the sample along
  
@@ -425,7 +432,7 @@ lower
 \end_layout
 
 \begin_layout Subsection
-Mvir-based samples
+Halo Bias
 \end_layout
 
 \begin_layout Standard
@@ -459,7 +466,7 @@ where
 \begin_inset Formula $20h^{-1}{\rm Mpc}$
 \end_inset
 
- (??may change to jackknife samplings).
+.
  Here, instead of using full DM particles, we subsample 
 \begin_inset Formula $1000000$
 \end_inset
@@ -488,7 +495,11 @@ upper
 \begin_inset Quotes erd
 \end_inset
 
- and 
+ (i.e., 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+\end_inset
+
+) and 
 \begin_inset Quotes eld
 \end_inset
 
@@ -496,34 +507,53 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- maximum circular velocity halos.
- The halos which have different maximum circular velocity clearly cluster
- differently.
- Furthermore, the relative bias of 
-\begin_inset Quotes eld
+ (i.e., 
+\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
 \end_inset
 
-upper
-\begin_inset Quotes erd
+) maximum circular velocity halos.
+ The halos which have different maximum circular velocity have different
+ linear bias values.
+ On large mass end, halos with 
+\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
 \end_inset
 
- versus 
-\begin_inset Quotes eld
+ have a larger linear bias, which is consitent to the result discussed in
+ Ref.
+ XXX(Dalal et al.
+ 2008).
+ On the other hand, as halo masses decrease, halos with 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
 \end_inset
 
-lower
-\begin_inset Quotes erd
+ start having larger linear biases than those with 
+\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
 \end_inset
 
- subsamples increases with decreasing halo mass to almost 40% on low mass
- end.
+, and the difference between those two samples increases up to 40%.
+ We think that the drop of the ratio on the low mass end is due to mass
+ resolution of the simulation not resolving all the halos
+\color red
+ for the low mass
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+things that I want to write (possibly with the histogram): Halos which have
+ larger maximum circular velocity than the one predicted from its halo mass
+ have high concentration.
+ Those halos which have high concentration are the halos which should have
+ grown to larger halo mass but somehow the mass growth was suppressed or
+ its mass was stripped from other larger halos...want to explain things more
+ clearly...any good papers which explain about this physical picture?
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -562,12 +592,12 @@ Upper panel: Linear bias at
  simulation (right).
  The blue circles represents a linear bias for halos whose maximum circular
  velocities are greater than 
-\begin_inset Formula $\overline{V}_{max}$
+\begin_inset Formula $\overline{V}_{{\rm max}}$
 \end_inset
 
 , while the green circles correspond to halos whose maximum circular velocities
  are smaller than 
-\begin_inset Formula $\overline{V}_{max}$
+\begin_inset Formula $\overline{V}_{{\rm max}}$
 \end_inset
 
 .
@@ -580,7 +610,7 @@ upper
 \end_inset
 
  (i.e., 
-\begin_inset Formula $V_{max,obs}>\overline{V}_{max}$
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
 \end_inset
 
 ) and 
@@ -592,7 +622,7 @@ lower
 \end_inset
 
  (i.e., 
-\begin_inset Formula $V_{max,obs}<\overline{V}_{max}$
+\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
 \end_inset
 
 ) samples from the Bolshoi simulation (left) and the MultiDark simulation
@@ -615,10 +645,16 @@ lower
 
  subsamples becomes larger up to 40%.
  Here, 
-\begin_inset Formula $M*=10^{11.5}{\rm M_{\odot}}$
+\begin_inset Formula $M*=10^{12.4}{\rm M_{\odot}}$
 \end_inset
 
-.
+ (
+\color red
+Is the unit M_{
+\backslash
+odot} or with h?
+\color inherit
+).
 \end_layout
 
 \end_inset
@@ -662,8 +698,7 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- subsamples and normalize it by their linear biases.
- Fig.
+ subsamples and normalize it by their linear biases, shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -671,9 +706,16 @@ reference "fig:small-scale"
 
 \end_inset
 
- clearly shows that the scale-dependence depends on the maximum circular
- velocity and its Vmax-dependence is mass-dependent.
- As halo mass decreases, the relative scale-dependence between 
+.
+ By normalizing by their linear biases, the ratios go to one on large scales.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+ clearly shows different scale-dependence between 
 \begin_inset Quotes eld
 \end_inset
 
@@ -689,12 +731,21 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- subsamples increases, especially halos with large maximum circular velocities
- heavily clustered around 
-\begin_inset Formula $1h^{-1}{\rm Mpc}$
-\end_inset
-
+ subsamples.
+ As halo masses decrease, 
+\color red
+the difference in halo biases become larger
+\color inherit
 .
+ 
+\end_layout
+
+\begin_layout Standard
+Q: How can I describe this characteristic bump aroun 1Mpc/h?
+\end_layout
+
+\begin_layout Standard
+Q: Also, how can I connect from this plot to the plot without ejected halos?
 \end_layout
 
 \begin_layout Standard
@@ -794,13 +845,13 @@ lower
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang_Bolshoi_eje.pdf
 	lyxscale 50
-	width 50col%
+	height 50col%
 
 \end_inset
 
@@ -835,51 +886,17 @@ reference "fig:small-scale"
 
 \end_inset
 
- (right) without ejected halos.
- We use halos from the Bolshoi simulation at 
-\begin_inset Formula $z=0.0$
-\end_inset
-
-, because we could not find many ejected halos in the MultiDark simulation
- due to its mass resolution.
- The left panel shows the linear bias as a function of halo mass for the
- halos whose 
-\begin_inset Formula $V_{max}$
-\end_inset
-
- greater/less than 
-\begin_inset Formula $\bar{V}_{max}$
-\end_inset
-
- and their ratio between those subsamples.
- The difference in linear biases without ejected halos is suppressed on
- small halos close to 
-\begin_inset Formula $M^{*}$
-\end_inset
-
-, while there is little difference between the ratio with and without ejected
- halos on large mass end.
- The right panel shows the ratio of halo-matter cross correlation functions
- between 
-\begin_inset Quotes eld
-\end_inset
-
-upper
-\begin_inset Quotes erd
-\end_inset
-
- and 
-\begin_inset Quotes eld
-\end_inset
-
-lower
-\begin_inset Quotes erd
-\end_inset
-
- subsamples normallized by their linear biases.
- It is obvious that the scale-dependent clustering difference is now mostly
- removed by excluding ejected halos from samples.
- 
+ (right) without ejected halos from the Bolshoi simulation.
+ As can be seen by comparing these results to those in Figures 2 & 3, the
+ Vmax-dependence of halo bias on small scales is dramatically reduced by
+ excluding ejected subhalos, 
+\color red
+while the Vmax-dependence of linear bias is suppressed but not completely
+ removed
+\color inherit
+.
+ This implies an intimate connection between assembly bias and subhalo back-spla
+shing.
 \end_layout
 
 \end_inset
@@ -897,8 +914,12 @@ lower
 \end_layout
 
 \begin_layout Standard
-*need some explanations for the decrease of the relative bias on the lowest
- mass end? is it real or artificial?
+We use halos from the Bolshoi simulation at 
+\begin_inset Formula $z=0.0$
+\end_inset
+
+, because we could not find many ejected halos in the MultiDark simulation
+ due to its mass resolution.
 \end_layout
 
 \begin_layout Standard
@@ -942,7 +963,30 @@ name "fig:nbar"
 
 \end_inset
 
+Distribution of halo mass and the maximum circular velocity as a countour
+ plot, overplotted 
+\begin_inset Formula $\overline{V}_{max}$
+\end_inset
 
+ (as a green dashed line) and the correspondence between 
+\begin_inset Formula $M_{vir}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{max}$
+\end_inset
+
+ in abundance matching (as a red dashed line labeled as 
+\begin_inset Formula $\overline{n}$
+\end_inset
+
+).
+ The plot shows that 
+\begin_inset Formula $\overline{V}_{max}$
+\end_inset
+
+ and the correspondence in abundance matching overlaps on most of halo mass
+ scales.
 \end_layout
 
 \end_inset
@@ -970,7 +1014,7 @@ status open
 \begin_inset Graphics
 	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi.pdf
 	lyxscale 75
-	width 50col%
+	height 50col%
 
 \end_inset
 
@@ -978,7 +1022,7 @@ status open
 \begin_inset Graphics
 	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi_nonEj.pdf
 	lyxscale 75
-	width 50col%
+	height 50col%
 
 \end_inset
 
@@ -992,7 +1036,58 @@ name "fig:abundance_linear"
 
 \end_inset
 
+Upper panel: We compare linear biases for halos selected by abundance matching
+ for halo mass (blue dots) and the maximum circular velocity (green dots)
+ as a function of halo mass where 
+\begin_inset Formula $M^{*}=10^{11.5}{\rm M_{\odot}}$
+\end_inset
 
+.
+ As shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:nbar"
+
+\end_inset
+
+, we can find a corresponding 
+\begin_inset Formula $V_{max}$
+\end_inset
+
+ for those samples through Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+.
+ The left panel is the result including ejected halos, while the right panel
+ is the one without ejected halos.
+ The linear biases overall decrease by excluding ejected halos for both
+ 
+\begin_inset Formula $M_{vir}$
+\end_inset
+
+-based and 
+\begin_inset Formula $V_{max}$
+\end_inset
+
+-based abundance matching samples.
+ Lower panel: Ratio of linear biases between 
+\begin_inset Formula $M_{vir}$
+\end_inset
+
+-based and 
+\begin_inset Formula $V_{max}$
+\end_inset
+
+-based abundance matching samples with ejected halos (left) and without
+ ejected halos (right).
+ The difference between those samples become smaller by at most factor of
+ 2.
 \end_layout
 
 \end_inset
@@ -1045,7 +1140,38 @@ name "fig:abundance_small"
 
 \end_inset
 
+Ratio of halo-matter cross correlation functions between
+\begin_inset Formula $M_{vir}$
+\end_inset
 
+-based and 
+\begin_inset Formula $V_{max}$
+\end_inset
+
+-based abundance matching samples with ejected halos (left) and without
+ ejected halos (right).
+ The ratios are normalized by their linear biases.
+ Each line corresponds to different halo mass bins labeled in the plots
+ (which can be translated into corresponding 
+\begin_inset Formula $\overline{V}_{max}$
+\end_inset
+
+ through Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+).
+ When samples contain ejected halos, there is a strong scale-dependent differenc
+e between those two different abundance matching samples around 
+\begin_inset Formula $1h^{-1}{\rm Mpc}$
+\end_inset
+
+.
+ By excluding ejected halos, the difference is more or less removed.
 \end_layout
 
 \end_inset
@@ -1081,6 +1207,7 @@ Discussion
 \begin_layout Standard
 (Option)
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
