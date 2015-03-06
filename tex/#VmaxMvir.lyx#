@@ -1,0 +1,2014 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass jcappub
+\begin_preamble
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+%Make my life significantly easier
+\global\long\def\bd{{\bm{\delta}}}
+\end_preamble
+\options usenatbib
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding latin9
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+The Maximum Circular Velocity Dependence of Halo Clustering
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+The halo model has been remarkably successful in describing observations
+ of galaxy clustering at many scales and many redshifts (give some examples
+ here).
+ fundamental assumption clustering only depends on the halo mass; not true
+ because of assembly bias on large scales but also ideas of e.g..
+ backsplashed halos.
+ recent trend has been to populate galaxies according to their maximum circular
+ velocity.
+ Describe why this might be motivated — depends only on the central part
+ of the potential, set early in the growth of the halo (point to Frank’s
+ recent paper here as an example).
+ Also may be more robust to disruption in mergers.
+\end_layout
+
+\begin_layout Standard
+goal here is to discuss the dependence of galaxy clustering on the central
+ velocity dispersion both on small and large scales.
+ We show that some of the features in a detailed halo model come from the
+ effects of back-splash halos.
+\end_layout
+
+\begin_layout Section
+The Simulation
+\end_layout
+
+\begin_layout Standard
+We use cosmological N-body simulations called the Bolshoi simulation and
+ the MultiDark simulation, described in XXX and XXX respectively, to investigate
+ the maximum circular velocity dependence of halo clustering.
+ The Bolshoi simulation uses 
+\begin_inset Formula $2048^{3}$
+\end_inset
+
+ particles with a volume of 
+\begin_inset Formula $(250$
+\end_inset
+
+
+\begin_inset Formula $h^{-1}{\rm Mpc})^{3}$
+\end_inset
+
+, while the MultiDark simulation uses the same number of particles as the
+ Bolshoi simulation but with a volume of (
+\begin_inset Formula $1h^{-1}{\rm Gpc})^{3}$
+\end_inset
+
+.
+ Both simulations assumes a flat 
+\begin_inset Formula $\Lambda{\rm CDM}$
+\end_inset
+
+ model with density parameters 
+\begin_inset Formula $\Omega_{m}=0.27$
+\end_inset
+
+, 
+\begin_inset Formula $\Omega_{\Lambda}=0.73$
+\end_inset
+
+, 
+\begin_inset Formula $\Omega_{b}=0.0469$
+\end_inset
+
+, and 
+\begin_inset Formula $\sigma_{8}=0.82$
+\end_inset
+
+, 
+\begin_inset Formula $n=0.95$
+\end_inset
+
+, 
+\begin_inset Formula $h=0.70$
+\end_inset
+
+.
+ The details of the simulations are described in XXX.
+ For halo identification, we use the ROCKSTAR halo finder (XXX) where the
+ halo masses and maximum circular velocities are computed from bound particles.
+ We use both simulations to get large dynamic mass range.
+ For the sake of internal structure of halos to be resolved well enough,
+ we make very conservative cut in mass and maximum circular velocity.
+ We use halos whose mass is greater than 
+\begin_inset Formula $10^{12}h^{-1}{\rm M_{\odot}}$
+\end_inset
+
+ and whose maximum circular velocity is greater than 
+\begin_inset Formula $200{\rm km/s}$
+\end_inset
+
+ for the MultiDark simulation and halos whose maximum circular velocity
+ is greater than 
+\begin_inset Formula $95{\rm km/s}$
+\end_inset
+
+ without any lower mass limit for the Bolshoi simulation.
+ Those values correspond to the peak in the number of halos by binning them
+ as a function of mass and maximum circular velocity.
+ In other words, we select halos which contains more than a thousand particles
+ for the Bolshoi simulation and halos with more than a hundred particles
+ for the MultiDark simulation.
+\end_layout
+
+\begin_layout Standard
+--Explain about ejected halos.
+\end_layout
+
+\begin_layout Section
+The Maximum Circular Velocity Dependence of Halo Clustering
+\end_layout
+
+\begin_layout Standard
+In this section, we investigate the maximum circular velocity dependence
+ of halo clustering on both large and small scales.
+ We first start with an analytic expression of the maximum circular velocity
+ computed from the halo mass and its concentration.
+ Then, we explain how we select halos to remove the halo mass dependence
+ from the samples using the analytic expression of the maximum circular
+ velocity.
+\end_layout
+
+\begin_layout Subsection
+The Maximum Circular Velocity
+\end_layout
+
+\begin_layout Standard
+Here, we assume that dark matter halos are defined as a spherical halo with
+ a virial radius.
+ Those halos have average density equal to 
+\begin_inset Formula $\Delta_{{\rm h}}\rho_{{\rm crit}}$
+\end_inset
+
+ where 
+\begin_inset Formula $\Delta_{{\rm h}}=360$
+\end_inset
+
+ for the MultiDark and Bolshoi simulations.
+ We also assume that those spherical halos have an NFW density profile (XXX).
+ Then, the maximum circular velocity 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ as a function of the halo mass 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+ and its concentration 
+\begin_inset Formula $c$
+\end_inset
+
+ is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\overline{V}_{{\rm max}}=0.465M_{{\rm vir}}^{1/3}\sqrt{G(\frac{4}{3}\pi\Delta_{{\rm h}}\rho_{{\rm crit}}\Omega_{m})^{1/3}\frac{c}{{\rm ln(1+c)-c/(1+c)}}}.\label{eq:vmax-mvir}
+\end{equation}
+
+\end_inset
+
+The median concentration-mass relation at 
+\begin_inset Formula $z=0$
+\end_inset
+
+ obtained from the Bolshoi simulation in Ref.
+ XXX(Klypin et al.
+ 2011) is: 
+\begin_inset Formula 
+\begin{equation}
+{\rm log}_{10}c=-0.097{\rm log_{10}M_{vir}}+2.148.\label{eq:concen}
+\end{equation}
+
+\end_inset
+
+
+\color black
+By using the above median concentration to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+, we obtain a one to one mapping between the virial halo mass and its maximum
+ circular velocity, denoted as 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ hereafter.
+
+\color inherit
+ Given this mapping, we can translate clustering measurements as a function
+ of halo mass into predicted clustering measurements as a function of maximum
+ circular velocity.
+ Our goal below is to determine whether this conversion describes the measured
+ clustering or if there is a residual dependence on the maximum circular
+ velocity.
+\end_layout
+
+\begin_layout Subsection
+Samples
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/logVmax_logMvir_Dh360.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:vmax-mvir"
+
+\end_inset
+
+Distribution of halo mass and maximum circular velocity at 
+\begin_inset Formula $z=0.0$
+\end_inset
+
+ for halos whose masses are between 
+\begin_inset Formula $10^{12.5}h^{-1}{\rm M_{\odot}}$
+\end_inset
+
+ and 
+\begin_inset Formula $10^{13.0}h^{-1}{\rm M_{\odot}}$
+\end_inset
+
+.
+ The blue dots represent halos whose observed maximum circular velocity,
+ 
+\begin_inset Formula $V_{{\rm max,obs}}$
+\end_inset
+
+, is greater than 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+, while the green dots are the ones with smaller 
+\begin_inset Formula $V_{{\rm max,obs}}$
+\end_inset
+
+ than 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+.
+ The boundary between blue and green dots correspond to 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ computed from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to explore a dependence on the maximum circular velocity, we first
+ split the sample into a sequence of virial mass bins, chosen such that
+ there are the same numbers of halos in each bin.
+ This process is reminiscent of an abundance-matching procedure (cite XXX).
+ We then further split each bin into two subsamples with their observed
+ 
+\begin_inset Formula $V_{{\rm max,obs}}$
+\end_inset
+
+ greater than (denoted by 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+) or less than (denoted as 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:vmax-mvir"
+
+\end_inset
+
+ shows the distribution of halo mass and maximum circular velocity classified
+ into 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ (blue dots) and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ (green dots) samples as an example.
+ As you can see, the number of halos in each sample is almost half for any
+ halo mass bins.
+ This selection ensures that both the upper and lower subsamples have the
+ same mean halo mass.
+ Therefore, in the absence of an additional 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+ dependence on clustering, these samples should have the same clustering
+ properties.
+ Note that this would not be true if we had simply split the sample along
+ 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+, since the two resulting subsamples would have different mean halo masses.
+ 
+\end_layout
+
+\begin_layout Subsection
+Halo Bias
+\end_layout
+
+\begin_layout Standard
+We use cross correlation functions to reduce the shot noise effect on the
+ error.
+ In order to measure halo biases, we compute halo-matter cross correlation
+ functions for each subsample and measure a linear bias 
+\begin_inset Formula 
+\begin{equation}
+b_{{\rm lin}}=\sum_{i}(\xi_{hm}(r_{i})/\xi_{mm}(r_{i}))/N_{{\rm bin}},
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\xi_{hm}$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi_{mm}$
+\end_inset
+
+ are halo-matter and matter-matter correlation functions and we take the
+ average of the ratio on 
+\begin_inset Formula $r$
+\end_inset
+
+ from 
+\begin_inset Formula $10h^{-1}{\rm Mpc}$
+\end_inset
+
+ to 
+\begin_inset Formula $20h^{-1}{\rm Mpc}$
+\end_inset
+
+, which contains 20 bins as a total.
+ Here, instead of using full DM particles, we subsample 
+\begin_inset Formula $1000000$
+\end_inset
+
+ particles to compute matter auto correlation functions.
+ 
+\end_layout
+
+\begin_layout Standard
+In Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:linear-bias"
+
+\end_inset
+
+, we show how linear biases depend on the maximum circular velocity as a
+ function of halo mass.
+ We compute linear biases for each mass bin classifying into 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ maximum circular velocity halos.
+ The halos which have different maximum circular velocity have different
+ linear bias values.
+ On large mass end, halos with 
+\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
+\end_inset
+
+ have a larger linear bias, which is consistent to the result discussed
+ in Ref.
+ XXX(Dalal et al.
+ 2008).
+ On the other hand, as halo masses decrease, halos with 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+\end_inset
+
+ start having larger linear biases than those with 
+\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
+\end_inset
+
+, and the difference between those two samples increases up to 40%.
+ We think that the drop of the ratio on the low mass end is due to mass
+ resolution of the simulation not resolving all the halos
+\color black
+ for the low mass
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+things that I want to write (possibly with the histogram): Halos which have
+ larger maximum circular velocity than the one predicted from its halo mass
+ have high concentration.
+ Those halos which have high concentration are the halos which should have
+ grown to larger halo mass but somehow the mass growth was suppressed or
+ its mass was stripped from other larger halos...want to explain things more
+ clearly...any good papers which explain about this physical picture?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang_Bolshoi.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang_MultiDark.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:linear-bias"
+
+\end_inset
+
+Upper panel: Linear bias at 
+\begin_inset Formula $z=0.0$
+\end_inset
+
+ as a function of halo mass from the Bolshoi simulation (left) and the MultiDark
+ simulation (right).
+ The blue circles corresponds to a linear bias for halos whose maximum circular
+ velocities are greater than 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ (called 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ samples in the text), while the green circles correspond to halos whose
+ maximum circular velocities are smaller than 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ (called 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ samples).
+ Lower panel: Ratio of linear biases between 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ (i.e., 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+\end_inset
+
+) and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ (i.e., 
+\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
+\end_inset
+
+) samples from the Bolshoi simulation (left) and the MultiDark simulation
+ (right).
+ As halo masses decrease, the difference on linear bias between 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ samples becomes larger up to 40%.
+ .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+, we investigate the maximum circular velocity dependence of halo bias on
+ small scales.
+ On small scales, a halo bias is scale-dependent.
+ The question here is whether halos with different maximum circular velocity
+ have different scale-dependence on their biases.
+ In order to find that, we take the ratio of halo-matter cross correlation
+ functions between 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples and normalize it by their linear biases, shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+.
+ By normalizing by their linear biases, the ratios go to one on large scales.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+ clearly shows different scale-dependence between 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples
+\color black
+, and the difference becomes larger a
+\color inherit
+s halo masses decrease.
+ We particularly see that there is a characteristic bump around 1 to 2 
+\begin_inset Formula $h^{-1}{\rm Mpc}$
+\end_inset
+
+.
+ This implies that many halos in the 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ samples, especially low mass halos, cluster very closely to each other.
+ 
+\end_layout
+
+\begin_layout Standard
+Q: How can I describe this characteristic bump around 1Mpc/h?
+\end_layout
+
+\begin_layout Standard
+Q: Do I need to describe what's going on physically? Are there any good
+ reference for that?
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+[need more explanation either here or in simulation section]Using the merger
+ trees, there are three types of halos: host halos, subhalos, and ejected
+ halos.
+ Their definitions are found in Ref.
+ XXX(Frank's paper).
+
+\color inherit
+ Up to now, we use both host halos and ejected halos to compute halo biases.
+ Ejected halos are sometimes called 
+\begin_inset Quotes eld
+\end_inset
+
+backsplash
+\begin_inset Quotes erd
+\end_inset
+
+ halos, which passed through the virial region of other halos before 
+\begin_inset Formula $z=0$
+\end_inset
+
+.
+ Those ejected halos tend to exist around a more massive halos (any reference?),
+ and some of them may be gravitationally bound to the massive halos.
+ To test this, we compute halo-matter cross correlation functions without
+ the ejected halos.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:eject"
+
+\end_inset
+
+ shows the same figures as Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+ without ejected halos from the Bolshoi simulation.
+ Due to mass resolution, we could not find many ejected halos in the MultiDark
+ simulation.
+ 
+\color black
+The ratios of linear biases between 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ samples are somewhat suppressed by excluding ejected halos.
+ There are, however, still more than 20% differences in those samples.
+ On the the hand, the different scale dependence of halo bias appeared on
+ small scales significantly goes down 
+\color inherit
+to to less than 10%, which implies that difference in small scale halo biases
+ are mostly due to the ejected halos.
+\end_layout
+
+\begin_layout Standard
+We conclude that halos which have different 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ cluster differently even when those halos have the same virial mass.
+ Halos which have high 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ are the ones which could have grown to a larger halo mass, but did not
+ due to suppression of mass growth caused by tidal fields in high density
+ regions (any references for this picture, and also how can I phrase this
+ better?), and therefore they have larger halo biases than the ones which
+ low 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Both_smallScale_wang_log.pdf
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:small-scale"
+
+\end_inset
+
+Ratio of halo-matter cross correlation functions between 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples normalized by their linear biases.
+ The plots are from the Bolshoi simulation and the MultiDark simulation
+ at z = 0.0.
+ Each line corresponds to different halo mass bins labeled in the plots.
+ Those plots show that 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples have different scale-dependence on small scales and the relative
+ scale-dependence between those subsamples increases smoothly with decreasing
+ halo mass.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_smallScale_wang_log_eje.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:eject"
+
+\end_inset
+
+The same figures as Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+ without ejected halos from the Bolshoi simulation.
+ As can be seen by comparing these results to those in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+, the Vmax-dependence of halo bias on small scales is dramatically reduced
+ by excluding ejected subhalos.
+ This implies an intimate connection between assembly bias and subhalo back-spla
+shing.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We use halos from the Bolshoi simulation at 
+\begin_inset Formula $z=0.0$
+\end_inset
+
+, because we could not find many ejected halos in the MultiDark simulation
+ due to its mass resolution.
+\end_layout
+
+\begin_layout Standard
+--use jackknife sampling to put error bars
+\end_layout
+
+\begin_layout Section
+Applications
+\end_layout
+
+\begin_layout Standard
+In this section, we demonstrate possible observational relevances of the
+ results in the previous section to complement the halo theory results.
+ We start with the abundance matching (citation?) technique based on halo
+ mass and the maximum circular velocity, and then compute 
+\begin_inset Formula $\Delta\Sigma({\rm R})$
+\end_inset
+
+ using those two different abundance matching.
+\end_layout
+
+\begin_layout Subsection
+Mvir-based v.s.
+ Vmax-based
+\end_layout
+
+\begin_layout Standard
+In abundance matching, we assume that a big galaxy lives in a big halo in
+ a hierarchical manner to link galaxies to halos.
+ The question is what 
+\begin_inset Quotes eld
+\end_inset
+
+big
+\begin_inset Quotes erd
+\end_inset
+
+ halos really mean.
+ To rank order halos, we want to identify what kind of physical properties
+ of halos characterize 
+\begin_inset Quotes eld
+\end_inset
+
+size
+\begin_inset Quotes erd
+\end_inset
+
+ of halos.
+ As a first step, we explore how the abundance matching based on halo mass
+ and maximum circular velocity make difference on halo clustering.
+\end_layout
+
+\begin_layout Standard
+First, we check the correspondence between 
+\begin_inset Formula $\overline{n}(M_{{\rm vir}})$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{n}(V_{{\rm max}})$
+\end_inset
+
+ as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:nbar"
+
+\end_inset
+
+.
+ The red line shows the boundary where 
+\begin_inset Formula $\overline{n}(M_{{\rm vir}}<)=\overline{n}(V_{{\rm max}}<)$
+\end_inset
+
+ (how can I phrase this differently?).
+ This boundary overlaps with 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+, which implies that XXX.
+ 
+\end_layout
+
+\begin_layout Standard
+Similar to the previous section, we compute halo-matter cross correlation
+ functions for the abundance matched samples by splitting halos into a sequence
+ of halo mass bins and the maximum circular velocity bins chosen such that
+ each bin has the same number of halos.
+ We observe that the linear biases for the samples 
+\begin_inset Formula $\overline{n}(V_{{\rm max}})$
+\end_inset
+
+ are larger than the ones for the samples 
+\begin_inset Formula $\overline{n}(M_{{\rm vir}})$
+\end_inset
+
+ by 5% with ejected halos, while the difference in linear biases is suppressed
+ to 2% by excluding ejected halos.
+ This result agrees with the result in Sec.
+ 3.2.
+ The magnitude of the difference is, however, smaller than the cases of
+ splitting the samples based on 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We also compare the cross correlation functions on small scales.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:abundance_small"
+
+\end_inset
+
+ is the same as Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+ with the ejected halos (left panel) and without the ejected halos (right
+ panel).
+ We see the same trend as the previous section in the different scale dependence
+ between 
+\begin_inset Formula $\overline{n}(M_{{\rm vir}})$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{n}(V_{{\rm max}})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+--how to describe the result for small scale biases?
+\end_layout
+
+\begin_layout Standard
+--interpretation/implication
+\end_layout
+
+\begin_layout Standard
+--what's the possible problem if any
+\end_layout
+
+\begin_layout Standard
+--what's interesting
+\end_layout
+
+\begin_layout Standard
+--check the number of ejected halos in Vmax and Mvir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/logMhalo_Vcir_nbar_Bolshoi.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:nbar"
+
+\end_inset
+
+Distribution of halo mass and the maximum circular velocity as a contour
+ plot, overplotted 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ (as a green dashed line) and the correspondence between 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ in abundance matching (as a red dashed line labeled as 
+\begin_inset Formula $\overline{n}$
+\end_inset
+
+).
+ The plot shows that 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ and the correspondence in abundance matching overlaps on most of halo mass
+ scales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi.pdf
+	lyxscale 50
+	height 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi_nonEj.pdf
+	lyxscale 50
+	height 50col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:abundance_linear"
+
+\end_inset
+
+Upper panel: We compare linear biases for halos selected by abundance matching
+ for halo mass (blue dots) and the maximum circular velocity (green dots)
+ as a function of halo mass.
+ As shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:nbar"
+
+\end_inset
+
+, we can find a corresponding 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ for those samples through Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+.
+ The left panel is the result including ejected halos, while the right panel
+ is the one without ejected halos.
+ The linear biases overall decrease by excluding ejected halos for both
+ 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-based and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-based abundance matching samples.
+ Lower panel: Ratio of linear biases between 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-based and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-based abundance matching samples with ejected halos (left) and without
+ ejected halos (right).
+ The difference between those samples become smaller by at most factor of
+ 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale_nonEj.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:abundance_small"
+
+\end_inset
+
+Ratio of halo-matter cross correlation functions between
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-based and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-based abundance matching samples with ejected halos (left) and without
+ ejected halos (right).
+ The ratios are normalized by their linear biases.
+ Each line corresponds to different halo mass bins labeled in the plots
+ (which can be translated into corresponding 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ through Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+).
+ When samples contain ejected halos, there is a strong scale-dependent differenc
+e between those two different abundance matching samples around 
+\begin_inset Formula $1h^{-1}{\rm Mpc}$
+\end_inset
+
+.
+ By excluding ejected halos, the difference is more or less removed.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/num_eject.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The number of ejected halos as a function of halo mass (need to change either
+ y-label or the plotted object).
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\Delta\Sigma(r)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Both are from Andrew's comments)
+\end_layout
+
+\begin_layout Standard
+--Select a bin of Milky Way mass host halos, and select their number-density-mat
+ched Vmax-selected equivalent.
+ Use Peter Behroozi's stellar-to-halo mass relation to estimate the stellar
+ mass of the central galaxy that would be found in these halos, then plot
+ the halo-matter cross-correlation as a function of scale, over-plotting
+ the two results.
+\end_layout
+
+\begin_layout Standard
+--want to show: We show that the galaxy-galaxy lensing signal of low-mass
+ centrals is impacted at the xxx-yyy% level, in a highly scale-dependent
+ fashion, by the theoretical choice to empirically connect stellar mass
+ to either host halo Vmax or Mvir.
+\end_layout
+
+\begin_layout Subsection
+HOD(?)
+\end_layout
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Standard
+(Option)
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Downloads/dist2_nearestCluster_m11.7to11.8.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Histogram of distances to the nearest Clusters (defined as 
+\begin_inset Formula $M_{vir}>10^{14}{\rm M_{\odot}}$
+\end_inset
+
+) for non-ejected halos and ejected halos: Right now, I only have the one
+ for all the halos...may change to the plot of fractions: Is it reasonable
+ to play with the cluster masses? Also, make the similar plots for nearest
+ massive halos by separating ejected and non-ejected halos (upper/lower)...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mvir
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vmax
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vmax/Mvir
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1669
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1730
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.037
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1838
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2041
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.110
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2056
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2352
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.144
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2418
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2623
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.085
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2553
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2732
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.070
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2684
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3098
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.154
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2684
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3161
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.178
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2839
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3435
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.210
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2970
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3458
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.164
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3030
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3673
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.212
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+number of ejected halos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
