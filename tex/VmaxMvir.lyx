@@ -159,34 +159,68 @@ We use cosmological N-body simulations called the Bolshoi simulation and
 
 .
  The details of the simulations are described in XXX.
- For halo identification, we use the ROCKSTAR halo finder (XXX) where the
- halo masses and maximum circular velocities are computed from bound particles.
  We use both simulations to get large dynamic mass range.
+\end_layout
+
+\begin_layout Standard
+For halo identification, we use the ROCKSTAR halo finder (XXX) where the
+ halo masses and maximum circular velocities are computed from bound particles.
  For the sake of internal structure of halos to be resolved well enough,
  we make very conservative cut in mass and maximum circular velocity.
  We use halos whose mass is greater than 
 \begin_inset Formula $10^{12}h^{-1}{\rm M_{\odot}}$
 \end_inset
 
- and whose maximum circular velocity is greater than 
+ (corresponding to 
+\begin_inset Formula $>100$
+\end_inset
+
+ particles per halo) and whose maximum circular velocity is greater than
+ 
 \begin_inset Formula $200{\rm km/s}$
 \end_inset
 
- for the MultiDark simulation and halos whose maximum circular velocity
- is greater than 
+ for the MultiDark simulation and halos whose mass is greater than 
+\begin_inset Formula $10^{11}h^{-1}{\rm M_{\odot}}$
+\end_inset
+
+ (corresponding to 
+\begin_inset Formula $>740$
+\end_inset
+
+ particles per halo) and whose maximum circular velocity is greater than
+ 
 \begin_inset Formula $95{\rm km/s}$
 \end_inset
 
- without any lower mass limit for the Bolshoi simulation.
+ for the Bolshoi simulation.
  Those values correspond to the peak in the number of halos by binning them
  as a function of mass and maximum circular velocity.
- In other words, we select halos which contains more than a thousand particles
- for the Bolshoi simulation and halos with more than a hundred particles
- for the MultiDark simulation.
-\end_layout
+ The ROCKSTAR halo finder also provides the merger trees for halos classified
+ into three different categories of halos: host halo, subhalos, and ejected
+ halos.
+ Host halos are the halos which never been within the virial radius of more
+ massive halos.
+ Subhalos are the halos which are within the virial radius of more massive
+ halos at 
+\begin_inset Formula $z=0$
+\end_inset
 
-\begin_layout Standard
---Explain about ejected halos.
+.
+ Ejected halos, sometimes called 
+\begin_inset Quotes eld
+\end_inset
+
+backsplash
+\begin_inset Quotes erd
+\end_inset
+
+ halos, are the distinct halos at 
+\begin_inset Formula $z=0$
+\end_inset
+
+ whose main progenitor passed through the virial radius of a more massive
+ halos at least once in the past.
 \end_layout
 
 \begin_layout Section
@@ -547,6 +581,10 @@ lower
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
 things that I want to write (possibly with the histogram): Halos which have
  larger maximum circular velocity than the one predicted from its halo mass
  have high concentration.
@@ -554,6 +592,11 @@ things that I want to write (possibly with the histogram): Halos which have
  grown to larger halo mass but somehow the mass growth was suppressed or
  its mass was stripped from other larger halos...want to explain things more
  clearly...any good papers which explain about this physical picture?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -768,41 +811,22 @@ upper
 \end_layout
 
 \begin_layout Standard
-Q: How can I describe this characteristic bump around 1Mpc/h?
-\end_layout
-
-\begin_layout Standard
-Q: Do I need to describe what's going on physically? Are there any good
- reference for that?
-\end_layout
-
-\begin_layout Standard
-
-\color blue
-[need more explanation either here or in simulation section]Using the merger
- trees, there are three types of halos: host halos, subhalos, and ejected
- halos.
- Their definitions are found in Ref.
- XXX(Frank's paper).
-
-\color inherit
- Up to now, we use both host halos and ejected halos to compute halo biases.
- Ejected halos are sometimes called 
-\begin_inset Quotes eld
-\end_inset
-
-backsplash
-\begin_inset Quotes erd
-\end_inset
-
- halos, which passed through the virial region of other halos before 
+Up to now, we use both host halos and ejected halos to compute halo biases.
+ Both types of halos are identified as distinct halos at 
 \begin_inset Formula $z=0$
 \end_inset
 
 .
+ Ejected halos are, however, halos which were a part of a more massive halos
+ at one or more occasions in the past.
  Those ejected halos tend to exist around a more massive halos (any reference?),
- and some of them may be gravitationally bound to the massive halos.
- To test this, we compute halo-matter cross correlation functions without
+ and some of them may be gravitationally bound to other more massive halos.
+ We question how much of the effect in the scale-dependent biases is caused
+ by those ejected halos.
+\end_layout
+
+\begin_layout Standard
+To test this, we compute halo-matter cross correlation functions without
  the ejected halos.
  Fig.
  
@@ -841,12 +865,12 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- samples are somewhat suppressed by excluding ejected halos.
- There are, however, still more than 20% differences in those samples.
+ samples are suppressed by 10%.
+ There are, however, still more than 25% differences in those samples.
  On the the hand, the different scale dependence of halo bias appeared on
  small scales significantly goes down 
 \color inherit
-to to less than 10%, which implies that difference in small scale halo biases
+to less than 10%, which implies that difference in small scale halo biases
  are mostly due to the ejected halos.
 \end_layout
 
@@ -856,7 +880,16 @@ We conclude that halos which have different
 \end_inset
 
  cluster differently even when those halos have the same virial mass.
- Halos which have high 
+ Especially, the scale-dependence of halo biases on small scales shows a
+ siginificant difference, which mainly caused by the ejected halos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Halos which have high 
 \begin_inset Formula $V_{{\rm max}}$
 \end_inset
 
@@ -871,12 +904,17 @@ We conclude that halos which have different
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -959,7 +997,7 @@ lower
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1017,15 +1055,6 @@ shing.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-We use halos from the Bolshoi simulation at 
-\begin_inset Formula $z=0.0$
-\end_inset
-
-, because we could not find many ejected halos in the MultiDark simulation
- due to its mass resolution.
 \end_layout
 
 \begin_layout Standard
@@ -1170,8 +1199,7 @@ reference "fig:small-scale"
 \begin_inset Formula $\overline{n}(V_{{\rm max}})$
 \end_inset
 
-.
- 
+, which is caused mainly by the ejected halos.
 \end_layout
 
 \begin_layout Standard
@@ -1264,10 +1292,9 @@ Distribution of halo mass and the maximum circular velocity as a contour
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
