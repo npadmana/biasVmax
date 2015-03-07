@@ -1282,102 +1282,6 @@ Distribution of halo mass and the maximum circular velocity as a contour
 
 \begin_layout Standard
 \begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi.pdf
-	lyxscale 50
-	height 50col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi_nonEj.pdf
-	lyxscale 50
-	height 50col%
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:abundance_linear"
-
-\end_inset
-
-Upper panel: We compare linear biases for halos selected by abundance matching
- for halo mass (blue dots) and the maximum circular velocity (green dots)
- as a function of halo mass.
- As shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:nbar"
-
-\end_inset
-
-, we can find a corresponding 
-\begin_inset Formula $V_{{\rm max}}$
-\end_inset
-
- for those samples through Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:vmax-mvir"
-
-\end_inset
-
-.
- The left panel is the result including ejected halos, while the right panel
- is the one without ejected halos.
- The linear biases overall decrease by excluding ejected halos for both
- 
-\begin_inset Formula $M_{{\rm vir}}$
-\end_inset
-
--based and 
-\begin_inset Formula $V_{{\rm max}}$
-\end_inset
-
--based abundance matching samples.
- Lower panel: Ratio of linear biases between 
-\begin_inset Formula $M_{{\rm vir}}$
-\end_inset
-
--based and 
-\begin_inset Formula $V_{{\rm max}}$
-\end_inset
-
--based abundance matching samples with ejected halos (left) and without
- ejected halos (right).
- The difference between those samples become smaller by at most factor of
- 2.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
 placement H
 wide false
 sideways false
@@ -1532,6 +1436,101 @@ Discussion
 
 \begin_layout Standard
 (Option)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi.pdf
+	lyxscale 50
+	height 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_andrew_Bolshoi_nonEj.pdf
+	lyxscale 50
+	height 50col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:abundance_linear"
+
+\end_inset
+
+Upper panel: We compare linear biases for halos selected by abundance matching
+ for halo mass (blue dots) and the maximum circular velocity (green dots)
+ as a function of halo mass.
+ As shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:nbar"
+
+\end_inset
+
+, we can find a corresponding 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ for those samples through Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vmax-mvir"
+
+\end_inset
+
+.
+ The left panel is the result including ejected halos, while the right panel
+ is the one without ejected halos.
+ The linear biases overall decrease by excluding ejected halos for both
+ 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-based and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-based abundance matching samples.
+ Lower panel: Ratio of linear biases between 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-based and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-based abundance matching samples with ejected halos (left) and without
+ ejected halos (right).
+ The difference between those samples become smaller by at most factor of
+ 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
