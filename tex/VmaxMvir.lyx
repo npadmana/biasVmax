@@ -335,9 +335,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
@@ -351,15 +348,11 @@ Distribution of halo mass and maximum circular velocity at
 \begin_inset Formula $z=0.0$
 \end_inset
 
- for halos whose masses are between 
-\begin_inset Formula $10^{12.5}h^{-1}{\rm M_{\odot}}$
-\end_inset
+ for halos
+\color black
+ from the Bolshoi simulation.
 
- and 
-\begin_inset Formula $10^{13.0}h^{-1}{\rm M_{\odot}}$
-\end_inset
-
-.
+\color inherit
  The blue dots represent halos whose observed maximum circular velocity,
  
 \begin_inset Formula $V_{{\rm max,obs}}$
@@ -607,16 +600,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang_Bolshoi.pdf
-	lyxscale 50
-	width 50col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang_MultiDark.pdf
-	lyxscale 50
+	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang.pdf
 	width 50col%
 
 \end_inset
@@ -638,8 +622,8 @@ Upper panel: Linear bias at
 \begin_inset Formula $z=0.0$
 \end_inset
 
- as a function of halo mass from the Bolshoi simulation (left) and the MultiDark
- simulation (right).
+ as a function of halo mass from the Bolshoi simulation and the MultiDark
+ simulation.
  The blue circles corresponds to a linear bias for halos whose maximum circular
  velocities are greater than 
 \begin_inset Formula $\overline{V}_{{\rm max}}$
@@ -691,8 +675,7 @@ lower
 \begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
 \end_inset
 
-) samples from the Bolshoi simulation (left) and the MultiDark simulation
- (right).
+) samples from the Bolshoi simulation and the MultiDark simulation.
  As halo masses decrease, the difference on linear bias between 
 \begin_inset Quotes eld
 \end_inset
@@ -817,10 +800,11 @@ Up to now, we use both host halos and ejected halos to compute halo biases.
 \end_inset
 
 .
- Ejected halos are, however, halos which were a part of a more massive halos
- at one or more occasions in the past.
+ Ejected halos are, however, halos which were identified as a part of a
+ more massive halos at one or more occasions in the past.
  Those ejected halos tend to exist around a more massive halos (any reference?),
- and some of them may be gravitationally bound to other more massive halos.
+ and only some of them may be gravitationally bound to other more massive
+ halos.
  We question how much of the effect in the scale-dependent biases is caused
  by those ejected halos.
 \end_layout
@@ -849,7 +833,7 @@ reference "fig:small-scale"
  simulation.
  
 \color black
-The ratios of linear biases between 
+After removing ejected halos, the ratios of linear biases between 
 \begin_inset Quotes eld
 \end_inset
 
@@ -865,13 +849,20 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- samples are suppressed by 10%.
- There are, however, still more than 25% differences in those samples.
- On the the hand, the different scale dependence of halo bias appeared on
- small scales significantly goes down 
-\color inherit
-to less than 10%, which implies that difference in small scale halo biases
- are mostly due to the ejected halos.
+ samples are suppressed by ~10%.
+ 
+\color red
+There are, however, still more than 25% differences in those samples.
+ 
+\color black
+Once removing the ejected halos, the deviation of the halo bias on small
+ scales is greatly reduced.
+ 
+\color red
+On the other hand, the different scale dependence of halo bias appeared
+ on small scales significantly goes down to less than 10%, which implies
+ that difference in small scale halo biases are mostly due to the ejected
+ halos.
 \end_layout
 
 \begin_layout Standard
@@ -914,7 +905,7 @@ Halos which have high
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -997,12 +988,11 @@ lower
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_smallScale_wang_log_eje.pdf
-	lyxscale 50
 	width 50col%
 
 \end_inset
@@ -1294,7 +1284,7 @@ Distribution of halo mass and the maximum circular velocity as a contour
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
