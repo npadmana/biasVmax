@@ -235,6 +235,8 @@ In this section, we investigate the maximum circular velocity dependence
  Then, we explain how we select halos to remove the halo mass dependence
  from the samples using the analytic expression of the maximum circular
  velocity.
+ Finally, we show how halos biases differ for those samples both on large
+ scales and small scales.
 \end_layout
 
 \begin_layout Subsection
@@ -242,8 +244,8 @@ The Maximum Circular Velocity
 \end_layout
 
 \begin_layout Standard
-Here, we assume that dark matter halos are defined as a spherical halo with
- a virial radius.
+In order to compute the maximum circular velocity for halos, we assume that
+ dark matter halos are defined as a spherical halo with a virial radius.
  Those halos have average density equal to 
 \begin_inset Formula $\Delta_{{\rm h}}\rho_{{\rm crit}}$
 \end_inset
@@ -329,7 +331,8 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/logVmax_logMvir_Dh360.pdf
+	filename /Users/old_ts485/Desktop/biasVmax/plots/plaecholder.tiff
+	lyxscale 50
 	width 50col%
 
 \end_inset
@@ -397,9 +400,8 @@ reference "eq:vmax-mvir"
 \end_layout
 
 \begin_layout Standard
-In order to explore a dependence on the maximum circular velocity, we first
- split the sample into a sequence of virial mass bins, chosen such that
- there are the same numbers of halos in each bin.
+We first split the sample into a sequence of virial mass bins, chosen such
+ that there are the same numbers of halos in each bin.
  This process is reminiscent of an abundance-matching procedure (cite XXX).
  We then further split each bin into two subsamples with their observed
  
@@ -477,10 +479,11 @@ Halo Bias
 \end_layout
 
 \begin_layout Standard
-We use cross correlation functions to reduce the shot noise effect on the
- error.
- In order to measure halo biases, we compute halo-matter cross correlation
- functions for each subsample and measure a linear bias 
+In order to measure halo biases, we first compute halo-matter cross correlation
+ functions for each subsample.
+ Here, we use cross correlation functions to reduce the shot noise effect
+ on the error.
+ Then, we define a linear bias: 
 \begin_inset Formula 
 \begin{equation}
 b_{{\rm lin}}=\sum_{i}(\xi_{hm}(r_{i})/\xi_{mm}(r_{i}))/N_{{\rm bin}},
@@ -511,7 +514,7 @@ where
 
 , which contains 20 bins as a total.
  Here, instead of using full DM particles, we subsample 
-\begin_inset Formula $1000000$
+\begin_inset Formula $10^{6}$
 \end_inset
 
  particles to compute matter auto correlation functions.
@@ -519,7 +522,7 @@ where
 \end_layout
 
 \begin_layout Standard
-In Fig.
+Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -527,9 +530,8 @@ reference "fig:linear-bias"
 
 \end_inset
 
-, we show how linear biases depend on the maximum circular velocity as a
- function of halo mass.
- We compute linear biases for each mass bin classifying into 
+ shows linear biases as a function of halo mass by splitting each sample
+ into 
 \begin_inset Quotes eld
 \end_inset
 
@@ -545,58 +547,97 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- maximum circular velocity halos.
- The halos which have different maximum circular velocity have different
- linear bias values.
- On large mass end, halos with 
-\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
+ subsamples.
+ On large halo masses, the 
+\begin_inset Quotes eld
 \end_inset
 
- have a larger linear bias, which is consistent to the result discussed
- in Ref.
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples have larger linear biases than the 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples.
+ This result is consistent with the result discusses in Ref.
  XXX(Dalal et al.
  2008).
- On the other hand, as halo masses decrease, halos with 
-\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+ On low halo masses, the 
+\begin_inset Quotes eld
 \end_inset
 
- start having larger linear biases than those with 
-\begin_inset Formula $V_{{\rm max}}<\overline{V}_{{\rm max}}$
+upper
+\begin_inset Quotes erd
 \end_inset
 
-, and the difference between those two samples increases up to 40%.
- We think that the drop of the ratio on the low mass end is due to mass
- resolution of the simulation not resolving all the halos
-\color black
- for the low mass
-\color inherit
+ subsamples have larger linear biases than the 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples.
+ Those halos which have larger maximum circular velocities than 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+ are the ones which supposed to grow into larger mass halos, but somehow
+ the mass growth is suppressed.
+ This is why those halos in the 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples cluster mosre strongly than the ones in the 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples.
+ As halo mass decreases, the difference between the 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples on linear bias increases up to 
+\begin_inset Formula $\sim40\%$
+\end_inset
+
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status collapsed
-
-\begin_layout Plain Layout
-things that I want to write (possibly with the histogram): Halos which have
- larger maximum circular velocity than the one predicted from its halo mass
- have high concentration.
- Those halos which have high concentration are the halos which should have
- grown to larger halo mass but somehow the mass growth was suppressed or
- its mass was stripped from other larger halos...want to explain things more
- clearly...any good papers which explain about this physical picture?
-\end_layout
-
-\end_inset
-
-
+ On low mass end, there is a drop of the ratio.
+ We think that the drop is due to mass resolution of the simulation.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -707,21 +748,9 @@ lower
 \end_layout
 
 \begin_layout Standard
-In Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:small-scale"
-
-\end_inset
-
-, we investigate the maximum circular velocity dependence of halo bias on
- small scales.
- On small scales, a halo bias is scale-dependent.
- The question here is whether halos with different maximum circular velocity
- have different scale-dependence on their biases.
- In order to find that, we take the ratio of halo-matter cross correlation
- functions between 
+Although halo biases are constant on large scales, halo biases on small
+ scales are scale-dependent (XXX:reference).
+ We explore whether those 
 \begin_inset Quotes eld
 \end_inset
 
@@ -737,16 +766,25 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- subsamples and normalize it by their linear biases, shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:small-scale"
-
+ subsamples have different scale-dependence.
+ To do that, we take the ratio of the cross correlation functions between
+ the 
+\begin_inset Quotes eld
 \end_inset
 
-.
- By normalizing by their linear biases, the ratios go to one on large scales.
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples and normalize it with their linear biases.
  Fig.
  
 \begin_inset CommandInset ref
@@ -755,7 +793,9 @@ reference "fig:small-scale"
 
 \end_inset
 
- clearly shows different scale-dependence between 
+ show the ratios for several mass bins from the Bolshoi and MultiDark simulation
+s.
+ The 
 \begin_inset Quotes eld
 \end_inset
 
@@ -771,26 +811,14 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- subsamples
-\color black
-, and the difference becomes larger a
-\color inherit
-s halo masses decrease.
- We particularly see that there is a characteristic bump around 1 to 2 
+ subsamples have very different scale-dependence, especially around 1 to
+ 2
 \begin_inset Formula $h^{-1}{\rm Mpc}$
 \end_inset
 
 .
- This implies that many halos in the 
-\begin_inset Quotes eld
-\end_inset
-
-upper
-\begin_inset Quotes erd
-\end_inset
-
- samples, especially low mass halos, cluster very closely to each other.
- 
+ Furthermore, the difference on small scales becomes larger for lower halo
+ mass samples.
 \end_layout
 
 \begin_layout Standard
@@ -812,28 +840,16 @@ Up to now, we use both host halos and ejected halos to compute halo biases.
 \begin_layout Standard
 To test this, we compute halo-matter cross correlation functions without
  the ejected halos.
- Fig.
+ Similar to Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:eject"
+reference "fig:linear-bias"
 
 \end_inset
 
- shows the same figures as Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:small-scale"
-
-\end_inset
-
- without ejected halos from the Bolshoi simulation.
- Due to mass resolution, we could not find many ejected halos in the MultiDark
- simulation.
- 
-\color black
-After removing ejected halos, the ratios of linear biases between 
+, we first compare linear biases as a function of halo mass.
+ We observe that the ratios of linear biases between the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -849,20 +865,48 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- samples are suppressed by ~10%.
+ subsamples are suppressed by 
+\begin_inset Formula $\sim10\%$
+\end_inset
+
+.
+ Next, we compare cross correlation functions on small scales, as shown
+ in Fig.
  
-\color red
-There are, however, still more than 25% differences in those samples.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:eject"
+
+\end_inset
+
+ similar to Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:small-scale"
+
+\end_inset
+
+.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:eject"
+
+\end_inset
+
+ only shows the results for low mass halos from the Bolshoi simulation.
+ This is because we do not find many ejected halos in the MultiDark simulation
+ due to its mass resolution.
  
 \color black
 Once removing the ejected halos, the deviation of the halo bias on small
  scales is greatly reduced.
  
-\color red
-On the other hand, the different scale dependence of halo bias appeared
- on small scales significantly goes down to less than 10%, which implies
- that difference in small scale halo biases are mostly due to the ejected
- halos.
+\color inherit
+This implies an intimate connection between assembly bias and subhalo back-splas
+hing.
 \end_layout
 
 \begin_layout Standard
@@ -876,36 +920,11 @@ We conclude that halos which have different
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Halos which have high 
-\begin_inset Formula $V_{{\rm max}}$
-\end_inset
-
- are the ones which could have grown to a larger halo mass, but did not
- due to suppression of mass growth caused by tidal fields in high density
- regions (any references for this picture, and also how can I phrase this
- better?), and therefore they have larger halo biases than the ones which
- low 
-\begin_inset Formula $V_{{\rm max}}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -988,7 +1007,7 @@ lower
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1027,8 +1046,12 @@ reference "fig:small-scale"
 
 \end_inset
 
-, the Vmax-dependence of halo bias on small scales is dramatically reduced
- by excluding ejected subhalos.
+, the 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-dependence of halo bias on small scales is dramatically reduced by excluding
+ ejected subhalos.
  This implies an intimate connection between assembly bias and subhalo back-spla
 shing.
 \end_layout
@@ -1073,7 +1096,7 @@ Mvir-based v.s.
 
 \begin_layout Standard
 In abundance matching, we assume that a big galaxy lives in a big halo in
- a hierarchical manner to link galaxies to halos.
+ a hierarchical manner to link galaxy polulations to halo populations.
  The question is what 
 \begin_inset Quotes eld
 \end_inset
@@ -1098,60 +1121,28 @@ size
 \end_layout
 
 \begin_layout Standard
-First, we check the correspondence between 
-\begin_inset Formula $\overline{n}(M_{{\rm vir}})$
-\end_inset
-
- and 
-\begin_inset Formula $\overline{n}(V_{{\rm max}})$
-\end_inset
-
- as shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:nbar"
-
-\end_inset
-
-.
- The red line shows the boundary where 
-\begin_inset Formula $\overline{n}(M_{{\rm vir}}<)=\overline{n}(V_{{\rm max}}<)$
-\end_inset
-
- (how can I phrase this differently?).
- This boundary overlaps with 
-\begin_inset Formula $\overline{V}_{{\rm max}}$
-\end_inset
-
- from Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:vmax-mvir"
-
-\end_inset
-
-, which implies that XXX.
- 
-\end_layout
-
-\begin_layout Standard
 Similar to the previous section, we compute halo-matter cross correlation
  functions for the abundance matched samples by splitting halos into a sequence
- of halo mass bins and the maximum circular velocity bins chosen such that
- each bin has the same number of halos.
- We observe that the linear biases for the samples 
-\begin_inset Formula $\overline{n}(V_{{\rm max}})$
-\end_inset
-
- are larger than the ones for the samples 
+ of halo mass bins, 
 \begin_inset Formula $\overline{n}(M_{{\rm vir}})$
 \end_inset
 
- by 5% with ejected halos, while the difference in linear biases is suppressed
- to 2% by excluding ejected halos.
- This result agrees with the result in Sec.
+, and the maximum circular velocity bins, 
+\begin_inset Formula $\overline{n}(V_{{\rm max}})$
+\end_inset
+
+, chosen such that each bin has the same number of halos.
+ We observe that the linear biases for the 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-samples are larger than the ones for the 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-samples by 5% with ejected halos, while the difference in linear biases
+ is suppressed to 2% by excluding ejected halos.
+ This result is consistent with the result in Sec.
  3.2.
  The magnitude of the difference is, however, smaller than the cases of
  splitting the samples based on 
@@ -1180,36 +1171,540 @@ reference "fig:small-scale"
 
  with the ejected halos (left panel) and without the ejected halos (right
  panel).
- We see the same trend as the previous section in the different scale dependence
- between 
-\begin_inset Formula $\overline{n}(M_{{\rm vir}})$
+ When those samples contain ejected halos, the 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-samples show very different scale-dependence on halo bias than the 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-samples do.
+ This scale-dependent feature becomes stronger as halo mass decreases.
+ Without ejected halos, the difference on small-scale biases between the
+ 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+- and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+- samples is reduced to 
+\begin_inset Formula $\sim5\%$
+\end_inset
+
+, which is the same order of magnitude as the case of Sec.
+ 3.3 shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:eject"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale_nonEj.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:abundance_small"
+
+\end_inset
+
+Ratio of halo-matter cross correlation functions between
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-based and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-based abundance matching samples with ejected halos (left) and without
+ ejected halos (right).
+ The ratios are normalized by their linear biases.
+ Each line corresponds to different halo mass bins labeled in the plots.
+ With ejected halos, the halo biases computed from the 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-samples have very different scale-dependence than the ones from the 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-samples.
+ By removing those ejected halos, the difference is more or less removed.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:abundance_small"
+
+\end_inset
+
+ shows that ejected halos make halo biases on small scales having different
+ scale-dependence, we 
+\color red
+wonder
+\color inherit
+ how many ejected halos each 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+- and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-samples contain.
+ To check this, we simply count the number of ejected halos in each abundance
+ matched sample.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:n_eject"
+
+\end_inset
+
+ shows the fraction of the ejected halos in the aundance matched samples
+ based on 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+ (blue line) and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ (green line).
+ The 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-samples contain more number of ejected halos.
+ From this result, we 
+\color red
+guess
+\color inherit
+ the reason the halo biases on small scales show different scale-dependence
+ between the 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+- and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-samples is due to having different number of ejected halos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Desktop/biasVmax/plots/num_eject.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Downloads/num_upperEject.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:n_eject"
+
+\end_inset
+
+The fraction of ejected halos as a function of halo mass.
+ We use an abundance matching based on 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+ (blue line) and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ (green line).
+ The plot shows that the abundance matched samples based on 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ contaion more number of ejected halos that the ones based on 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+.
+ Similarly, the right panel is the fraction of ejected halos whose maximum
+ circular velocity is greater than 
+\begin_inset Formula $\overline{V}_{{\rm max}}$
+\end_inset
+
+.
+ The difference between the 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+- and 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-samples for the number of ejected halos with 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+\end_inset
+
+ is larger than the case of including all the ejected halos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To confirm our guess, we re-compute cross correlation functions by changing
+ weights for halos.
+ In general, we simply set all the weights for halos one, but now we give
+ different weights for ejected halos and host halos such that the number
+ of ejected halos and host halos in the 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-samples becomes the same as those in the 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-samples:
+\begin_inset Formula 
+\[
+\xi_{all}(r|V_{{\rm max}})\sim F\xi_{{\rm ej}}(r|M_{{\rm vir}})+(1-F)\xi_{{\rm host}}(r|M_{{\rm vir}}),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $F$
+\end_inset
+
+ is the ratio of the number of ejected halos in the 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-sample to the one in the 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-sample, 
+\begin_inset Formula $\xi_{all}$
+\end_inset
+
+, 
+\begin_inset Formula $\xi_{{\rm ej}}$
+\end_inset
+
+, and 
+\begin_inset Formula $\xi_{{\rm host}}$
+\end_inset
+
+ are the halo-matter cross correlation functions for all the halos, ejected
+ halos, and host halos respectively.
+ We first compares the correlation functions computed from the 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-samples with and without weights.
+ We give the ratio of the number of host halos in the Vmax-sample and the
+ Mvir-sample as the weights to host halos, while the ratio of ejected halos
+ in the Vmax- and Mvir-samples as the weights to ejected halos.
+ Fig.
+ 7 shows the ratio of the cross correlation functions with and without weights.
+ This figure shows the similar but smaller scale-dependent feature on small-scal
+e halo biases.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Downloads/Bolshoi_andrew_smallScale_weight.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ratio of halo-matter cross correlation functions computed from the
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-sample with and without weights.
+ The ratios are normalized by their linear biases.
+ Each line corresponds to different halo mass bins labeled in the plots.
+ We give the weights to host halos as the ratio of the number of host halos
+ in the 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+-sample
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, we wonder weather all the ejected halos contribute to this scale-dependent
+ feature, because we see the same scale-dependent feature for the case of
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
 \end_inset
 
  and 
-\begin_inset Formula $\overline{n}(V_{{\rm max}})$
+\begin_inset Quotes eld
 \end_inset
 
-, which is caused mainly by the ejected halos.
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ subsamples in Sec.
+ 3.3.
+ For those subsamples, the number of ejected halos is almost the same, and
+ yet the halo bias of the 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples show very different scale-dependence than the ones from the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples.
+ So, now we decide to give different weights only for those ejected halos
+ with 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+\end_inset
+
+, as shown in Fig.
+ 8.
+ Fig.
+ 8 suggests that the contribution to the scale-dependent feature comes mainly
+ from the ejected halos with 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
---how to describe the result for small scale biases?
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/old_ts485/Downloads/Bolshoi_andrew_smallScale_upperEject.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/old_ts485/Downloads/Bolshoi_andrew_smallScale_weight3.pdf
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ratio of halo-matter cross correlation functions computed from the
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+-sample with and without weights.
+ The ratios are normalized by their linear biases.
+ Each line corresponds to different halo mass bins labeled in the plots.
+ The left panel gives different weights only for the ejected halos with
+ 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+\end_inset
+
+ by using the ratio of the number of 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ ejected halos in the Vmax- and Mvir-samples as weights.
+ The right panel gives the same weights for all the ejected halos.
+ This indicates that this characteristic bump becomes larger by giving larger
+ weights.
+ On the other hand, the contribution to this feature is mainly due to the
+ ejected halos with 
+\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\Delta\Sigma(r)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
---interpretation/implication
+(Both are from Andrew's comments)
 \end_layout
 
 \begin_layout Standard
---what's the possible problem if any
+--Select a bin of Milky Way mass host halos, and select their number-density-mat
+ched Vmax-selected equivalent.
+ Use Peter Behroozi's stellar-to-halo mass relation to estimate the stellar
+ mass of the central galaxy that would be found in these halos, then plot
+ the halo-matter cross-correlation as a function of scale, over-plotting
+ the two results.
 \end_layout
 
 \begin_layout Standard
---what's interesting
+--want to show: We show that the galaxy-galaxy lensing signal of low-mass
+ centrals is impacted at the xxx-yyy% level, in a highly scale-dependent
+ fashion, by the theoretical choice to empirically connect stellar mass
+ to either host halo Vmax or Mvir.
+\end_layout
+
+\begin_layout Subsection
+HOD(?)
+\end_layout
+
+\begin_layout Section
+Discussion
 \end_layout
 
 \begin_layout Standard
---check the number of ejected halos in Vmax and Mvir:
+(Option)
 \end_layout
 
 \begin_layout Standard
@@ -1268,10 +1763,6 @@ Distribution of halo mass and the maximum circular velocity as a contour
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1367,171 +1858,12 @@ reference "eq:vmax-mvir"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale.pdf
-	lyxscale 50
-	width 50col%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale_nonEj.pdf
-	lyxscale 50
-	width 50col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:abundance_small"
-
-\end_inset
-
-Ratio of halo-matter cross correlation functions between
-\begin_inset Formula $M_{{\rm vir}}$
-\end_inset
-
--based and 
-\begin_inset Formula $V_{{\rm max}}$
-\end_inset
-
--based abundance matching samples with ejected halos (left) and without
- ejected halos (right).
- The ratios are normalized by their linear biases.
- Each line corresponds to different halo mass bins labeled in the plots
- (which can be translated into corresponding 
-\begin_inset Formula $\overline{V}_{{\rm max}}$
-\end_inset
-
- through Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:vmax-mvir"
-
-\end_inset
-
-).
- When samples contain ejected halos, there is a strong scale-dependent differenc
-e between those two different abundance matching samples around 
-\begin_inset Formula $1h^{-1}{\rm Mpc}$
-\end_inset
-
-.
- By excluding ejected halos, the difference is more or less removed.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/num_eject.pdf
-	width 50col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-The number of ejected halos as a function of halo mass (need to change either
- y-label or the plotted object).
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-\begin_inset Formula $\Delta\Sigma(r)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(Both are from Andrew's comments)
-\end_layout
-
-\begin_layout Standard
---Select a bin of Milky Way mass host halos, and select their number-density-mat
-ched Vmax-selected equivalent.
- Use Peter Behroozi's stellar-to-halo mass relation to estimate the stellar
- mass of the central galaxy that would be found in these halos, then plot
- the halo-matter cross-correlation as a function of scale, over-plotting
- the two results.
-\end_layout
-
-\begin_layout Standard
---want to show: We show that the galaxy-galaxy lensing signal of low-mass
- centrals is impacted at the xxx-yyy% level, in a highly scale-dependent
- fashion, by the theoretical choice to empirically connect stellar mass
- to either host halo Vmax or Mvir.
-\end_layout
-
-\begin_layout Subsection
-HOD(?)
-\end_layout
-
-\begin_layout Section
-Discussion
-\end_layout
-
-\begin_layout Standard
-(Option)
 \begin_inset Float figure
 placement H
 wide false

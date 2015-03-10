@@ -599,7 +599,7 @@ upper
 \begin_inset Quotes erd
 \end_inset
 
- subsamples cluster more strongly than the ones in the 
+ subsamples cluster mosre strongly than the ones in the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -916,7 +916,7 @@ We conclude that halos which have different
 
  cluster differently even when those halos have the same virial mass.
  Especially, the scale-dependence of halo biases on small scales shows a
- significant difference, which mainly caused by the ejected halos.
+ siginificant difference, which mainly caused by the ejected halos.
 \end_layout
 
 \begin_layout Standard
@@ -1096,7 +1096,7 @@ Mvir-based v.s.
 
 \begin_layout Standard
 In abundance matching, we assume that a big galaxy lives in a big halo in
- a hierarchical manner to link galaxy populations to halo populations.
+ a hierarchical manner to link galaxy polulations to halo populations.
  The question is what 
 \begin_inset Quotes eld
 \end_inset
@@ -1309,7 +1309,7 @@ reference "fig:n_eject"
 
 \end_inset
 
- shows the fraction of the ejected halos in the abundance matched samples
+ shows the fraction of the ejected halos in the aundance matched samples
  based on 
 \begin_inset Formula $M_{{\rm vir}}$
 \end_inset
@@ -1390,7 +1390,7 @@ The fraction of ejected halos as a function of halo mass.
 \begin_inset Formula $V_{{\rm max}}$
 \end_inset
 
- contain more number of ejected halos that the ones based on 
+ contaion more number of ejected halos that the ones based on 
 \begin_inset Formula $M_{{\rm vir}}$
 \end_inset
 
@@ -1587,20 +1587,14 @@ lower
 
 , as shown in Fig.
  8.
- Fig.
- 8 suggests that the contribution to the scale-dependent feature comes mainly
- from the ejected halos with 
-\begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1634,7 +1628,7 @@ Ratio of halo-matter cross correlation functions computed from the
 \begin_inset Formula $V_{{\rm max}}>\overline{V}_{{\rm max}}$
 \end_inset
 
- by using the ratio of the number of 
+ with the ratio of the number of 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1642,8 +1636,9 @@ upper
 \begin_inset Quotes erd
 \end_inset
 
- ejected halos in the Vmax- and Mvir-samples as weights.
- The right panel gives the same weights for all the ejected halos.
+ ejected halos in the Vmax- and Mvir-samples.
+ The right panel gives different weight for all the ejected halos but the
+ weights are the same as the left panel.
  This indicates that this characteristic bump becomes larger by giving larger
  weights.
  On the other hand, the contribution to this feature is mainly due to the
