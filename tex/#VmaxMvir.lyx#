@@ -83,7 +83,7 @@ Introduction
 
 \begin_layout Standard
 
-\color red
+\color black
 The halo model
 \color inherit
  has been remarkably successful in describing observations of galaxy clustering.
@@ -488,7 +488,7 @@ lower
  (green dots) samples as an example.
  Note that the number of halos in upper and lower subsamples
 \color red
- is 
+ are 
 \color inherit
 almost equal.
  This selection ensures that both the upper and lower subsamples have the
@@ -1157,9 +1157,9 @@ big
 \begin_inset Quotes erd
 \end_inset
 
- halos really mean.
+ halos really means.
  To rank order halos, we want to identify what kind of physical properties
- of halos characterize 
+ characterize halo 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1167,9 +1167,9 @@ size
 \begin_inset Quotes erd
 \end_inset
 
- of halos.
+.
  As a first step, we explore how the abundance matching based on halo mass
- and maximum circular velocity make difference on halo clustering.
+ and maximum circular velocity influence halo clustering.
 \end_layout
 
 \begin_layout Standard
@@ -1184,7 +1184,8 @@ Similar to the previous section, we compute halo-matter cross correlation
 \end_inset
 
 , chosen such that each bin has the same number of halos.
- We observe that the linear biases for the 
+ We observe that when we include ejected halos, the linear biases for the
+ 
 \begin_inset Formula $V_{{\rm max}}$
 \end_inset
 
@@ -1192,11 +1193,11 @@ Similar to the previous section, we compute halo-matter cross correlation
 \begin_inset Formula $M_{{\rm vir}}$
 \end_inset
 
--samples by 5% with ejected halos, while the difference in linear biases
- is suppressed to 2% by excluding ejected halos.
+-samples by 5%, while the difference in linear biases is suppressed to 2%
+ by excluding ejected halos.
  This result is consistent with the result in Sec.
  3.2.
- The magnitude of the difference is, however, smaller than the cases of
+ The magnitude of the difference, however, is smaller than the cases of
  splitting the samples based on 
 \begin_inset Formula $\overline{V}_{{\rm max}}$
 \end_inset
@@ -1214,15 +1215,15 @@ reference "fig:abundance_small"
 
 \end_inset
 
- is the same as Figure 
+ displays data in the same way as Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:small-scale"
 
 \end_inset
 
- with the ejected halos (left panel) and without the ejected halos (right
- panel).
+ with the ejected halos on the left and without the ejected halos on the
+ right.
  When those samples contain ejected halos, the 
 \begin_inset Formula $V_{{\rm max}}$
 \end_inset
