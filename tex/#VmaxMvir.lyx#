@@ -14,6 +14,10 @@
 %% A simple dot to overcome graphicx limitations
 %Make my life significantly easier
 \global\long\def\bd{{\bm{\delta}}}
+
+\usepackage{astrobib_mnras2e}
+
+\bibliographystyle{JHEP}
 \end_preamble
 \options usenatbib
 \use_default_options false
@@ -266,7 +270,7 @@ In this section, we investigate the maximum circular velocity dependence
  computed from the halo mass and its concentration.
  Then, we explain how we select halos for each sample to remove the halo
  mass dependence using the analytic expression of the maximum circular velocity.
- Finally, we show how halos biases differ for those samples both on large
+ Finally, we show how halo biases differ for those samples both on large
  scales and small scales.
 \end_layout
 
@@ -486,11 +490,27 @@ lower
 \end_inset
 
  (green dots) samples as an example.
- Note that the number of halos in upper and lower subsamples
-\color red
+ Note that the number of halos in 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples
+\color black
  are 
 \color inherit
-almost equal.
+almost equal for any halo mass bins.
  This selection ensures that both the upper and lower subsamples have the
  same mean halo mass.
  Therefore, in the absence of an additional 
@@ -801,9 +821,9 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- subsamples have different scale-dependence.
- To do that, we take the ratio of the cross correlation functions between
- the 
+ subsamples have different scale-dependence in small scale halo biases.
+ In order to explore that, we take the ratio of the cross correlation functions
+ between the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -864,7 +884,15 @@ lower
  mass samples.
 
 \color red
- XXX
+ Those low mass halos in the 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples are likely to be close to massive halos 
 \end_layout
 
 \begin_layout Standard

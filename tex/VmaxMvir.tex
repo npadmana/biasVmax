@@ -125,7 +125,7 @@ with an analytic expression of the maximum circular velocity computed
 from the halo mass and its concentration. Then, we explain how we
 select halos for each sample to remove the halo mass dependence using
 the analytic expression of the maximum circular velocity. Finally,
-we show how halos biases differ for those samples both on large scales
+we show how halo biases differ for those samples both on large scales
 and small scales.
 
 
@@ -179,14 +179,14 @@ greater than (denoted by ``upper'') or less than (denoted as ``lower'')
 $\overline{V}_{{\rm max}}$. Fig. \ref{fig:vmax-mvir} shows the distribution
 of halo mass and maximum circular velocity classified into ``upper''
 (blue dots) and ``lower'' (green dots) samples as an example. Note
-that the number of halos in upper and lower subsamples\textcolor{red}{{}
-are }almost equal. This selection ensures that both the upper and
-lower subsamples have the same mean halo mass. Therefore, in the absence
-of an additional $M_{{\rm vir}}$ dependence on clustering, these
-samples should have the same clustering properties. Note that this
-would not be true if we had simply split the sample along $V_{{\rm max}}$,
-since the two resulting subsamples would have different mean halo
-masses. 
+that the number of halos in ``upper'' and ``lower'' subsamples\textcolor{black}{{}
+are }almost equal for any halo mass bins. This selection ensures that
+both the upper and lower subsamples have the same mean halo mass.
+Therefore, in the absence of an additional $M_{{\rm vir}}$ dependence
+on clustering, these samples should have the same clustering properties.
+Note that this would not be true if we had simply split the sample
+along $V_{{\rm max}}$, since the two resulting subsamples would have
+different mean halo masses. 
 
 
 \subsection{Halo Bias}
@@ -243,16 +243,19 @@ samples becomes larger up to 40\%. .}
 
 Although halo biases are constant on large scales, halo biases on
 small scales are scale-dependent (XXX:reference). We explore whether
-the ``upper'' and ``lower'' subsamples have different scale-dependence.
-To do that, we take the ratio of the cross correlation functions between
-the ``upper'' and ``lower'' subsamples and normalize it with their
-linear biases. Fig. \ref{fig:small-scale} shows the ratios for several
-mass bins. The first three mass bins labeled in the figure, ${\rm log_{10}M[h^{-1}{\rm M_{\odot}}]=11.7,12.0,12.2}$,
+the ``upper'' and ``lower'' subsamples have different scale-dependence
+in small scale halo biases. In order to explore that, we take the
+ratio of the cross correlation functions between the ``upper'' and
+``lower'' subsamples and normalize it with their linear biases.
+Fig. \ref{fig:small-scale} shows the ratios for several mass bins.
+The first three mass bins labeled in the figure, ${\rm log_{10}M[h^{-1}{\rm M_{\odot}}]=11.7,12.0,12.2}$,
 are from the Bolshoi simulation, and the last two mass bins, ${\rm log_{10}M[h^{-1}{\rm M_{\odot}}]=12.7,13.1}$,
 are from the MultiDark simulation. The ``upper'' and ``lower''
 subsamples have very different scale-dependence, especially around
 1 to 2$h^{-1}{\rm Mpc}$. Furthermore, the difference on small scales
-becomes larger for lower halo mass samples.\textcolor{red}{{} XXX}
+becomes larger for lower halo mass samples\textcolor{black}{. This
+implies that those low mass halos in the ``upper'' subsamples cluster
+strongly and likely to live in hot environments near massive halos.}
 
 Up to now, we use both host halos and ejected halos to compute halo
 biases. Both types of halos are identified as distinct halos at $z=0$.
