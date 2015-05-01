@@ -106,7 +106,7 @@ The spatial distribution of dark matter (DM) halos in N-body simulations,
  The dependence of halo clustering upon other properties besides halo mass
  known as halo assembly bias.
  
-\color blue
+\color black
 There have been several studies showing the correlation between halo formation
  time and environment, and therefore any other properties which depends
  on formation time or environment (such as concentration, spin, and velocity
@@ -903,9 +903,9 @@ Up to now, we use both host halos and ejected halos to compute halo biases.
 \end_inset
 
 .
- Ejected halos, however, are halos which were identified as a part of a
- more massive halos at one or more occasions in the past.
- Those ejected halos tend to exist around a more massive halos (any reference?),
+ Ejected halos, however, are halos which were identified as part of more
+ massive halos at one or more occasions in the past.
+ Those ejected halos tend to exist around more massive halos (any reference?),
  and only some of them may be gravitationally bound to other more massive
  halos.
  Therefore, the efect on the scale-dependent biases may be caused by those
@@ -968,9 +968,9 @@ reference "fig:eject"
 
 \end_inset
 
- only shows the results for low mass halos from 
-\color red
-the Bolshoi simulation.
+ only shows the results for low mass halos from
+\color black
+ the Bolshoi simulation.
  This is because
 \color inherit
  we do not find many ejected halos in the MultiDark simulation due to its
@@ -1157,12 +1157,12 @@ Applications
 
 \begin_layout Standard
 In this section, we demonstrate 
-\color red
+\color black
 possible observational relevances of the results in the previous section
  to complement the halo theory results.
-
+ 
 \color inherit
- We start with the abundance matching (citation?) technique based on halo
+We start with the abundance matching (citation?) technique based on halo
  mass and the maximum circular velocity, and then compute 
 \begin_inset Formula $\Delta\Sigma({\rm R})$
 \end_inset
@@ -1365,10 +1365,6 @@ Ratio of halo-matter cross correlation functions between
 \end_layout
 
 \begin_layout Standard
-(Both are from Andrew's comments)
-\end_layout
-
-\begin_layout Standard
 --Select a bin of Milky Way mass host halos, and select their number-density-mat
 ched Vmax-selected equivalent.
  Use Peter Behroozi's stellar-to-halo mass relation to estimate the stellar
@@ -1382,10 +1378,6 @@ ched Vmax-selected equivalent.
  centrals is impacted at the xxx-yyy% level, in a highly scale-dependent
  fashion, by the theoretical choice to empirically connect stellar mass
  to either host halo Vmax or Mvir.
-\end_layout
-
-\begin_layout Subsection
-HOD: Compare with Tinker bias
 \end_layout
 
 \begin_layout Section

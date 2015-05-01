@@ -14,6 +14,10 @@
 %% A simple dot to overcome graphicx limitations
 %Make my life significantly easier
 \global\long\def\bd{{\bm{\delta}}}
+
+\usepackage{astrobib_mnras2e}
+
+\bibliographystyle{JHEP}
 \end_preamble
 \options usenatbib
 \use_default_options false
@@ -83,7 +87,7 @@ Introduction
 
 \begin_layout Standard
 
-\color red
+\color black
 The halo model
 \color inherit
  has been remarkably successful in describing observations of galaxy clustering.
@@ -102,7 +106,7 @@ The spatial distribution of dark matter (DM) halos in N-body simulations,
  The dependence of halo clustering upon other properties besides halo mass
  known as halo assembly bias.
  
-\color blue
+\color black
 There have been several studies showing the correlation between halo formation
  time and environment, and therefore any other properties which depends
  on formation time or environment (such as concentration, spin, and velocity
@@ -266,7 +270,7 @@ In this section, we investigate the maximum circular velocity dependence
  computed from the halo mass and its concentration.
  Then, we explain how we select halos for each sample to remove the halo
  mass dependence using the analytic expression of the maximum circular velocity.
- Finally, we show how halos biases differ for those samples both on large
+ Finally, we show how halo biases differ for those samples both on large
  scales and small scales.
 \end_layout
 
@@ -486,11 +490,27 @@ lower
 \end_inset
 
  (green dots) samples as an example.
- Note that the number of halos in upper and lower subsamples
-\color red
+ Note that the number of halos in 
+\begin_inset Quotes eld
+\end_inset
+
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+lower
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples
+\color black
  are 
 \color inherit
-almost equal.
+almost equal for any halo mass bins.
  This selection ensures that both the upper and lower subsamples have the
  same mean halo mass.
  Therefore, in the absence of an additional 
@@ -801,9 +821,9 @@ lower
 \begin_inset Quotes erd
 \end_inset
 
- subsamples have different scale-dependence.
- To do that, we take the ratio of the cross correlation functions between
- the 
+ subsamples have different scale-dependence in small scale halo biases.
+ In order to explore that, we take the ratio of the cross correlation functions
+ between the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -861,10 +881,19 @@ lower
 
 .
  Furthermore, the difference on small scales becomes larger for lower halo
- mass samples.
+ mass samples
+\color black
+.
+ This implies that those low mass halos in the 
+\begin_inset Quotes eld
+\end_inset
 
-\color red
- XXX
+upper
+\begin_inset Quotes erd
+\end_inset
+
+ subsamples cluster strongly and likely to live in hot environments near
+ massive halos.
 \end_layout
 
 \begin_layout Standard
@@ -939,9 +968,9 @@ reference "fig:eject"
 
 \end_inset
 
- only shows the results for low mass halos from 
-\color red
-the Bolshoi simulation.
+ only shows the results for low mass halos from
+\color black
+ the Bolshoi simulation.
  This is because
 \color inherit
  we do not find many ejected halos in the MultiDark simulation due to its
@@ -1128,12 +1157,12 @@ Applications
 
 \begin_layout Standard
 In this section, we demonstrate 
-\color red
+\color black
 possible observational relevances of the results in the previous section
  to complement the halo theory results.
-
+ 
 \color inherit
- We start with the abundance matching (citation?) technique based on halo
+We start with the abundance matching (citation?) technique based on halo
  mass and the maximum circular velocity, and then compute 
 \begin_inset Formula $\Delta\Sigma({\rm R})$
 \end_inset
@@ -1336,10 +1365,6 @@ Ratio of halo-matter cross correlation functions between
 \end_layout
 
 \begin_layout Standard
-(Both are from Andrew's comments)
-\end_layout
-
-\begin_layout Standard
 --Select a bin of Milky Way mass host halos, and select their number-density-mat
 ched Vmax-selected equivalent.
  Use Peter Behroozi's stellar-to-halo mass relation to estimate the stellar
@@ -1353,10 +1378,6 @@ ched Vmax-selected equivalent.
  centrals is impacted at the xxx-yyy% level, in a highly scale-dependent
  fashion, by the theoretical choice to empirically connect stellar mass
  to either host halo Vmax or Mvir.
-\end_layout
-
-\begin_layout Subsection
-HOD: Compare with Tinker bias
 \end_layout
 
 \begin_layout Section
