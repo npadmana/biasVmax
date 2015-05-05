@@ -88,41 +88,99 @@ Introduction
 \begin_layout Standard
 
 \color black
-The halo model
+The halo model provides a connection between dark matter halos and galaxies,
+ and it has been remarkably successful in describing observations of galaxy
+ clustering.
+ In particular,
 \color inherit
- has been remarkably successful in describing observations of galaxy clustering.
- In particular, the Halo Occupation Distribution (HOD) and the Conditional
- Luminosity Function (CLF) have been widely used to constrain not only the
- galaxy-halo connection [XXX] but also cosmology [XXX].
- The fundamental assumption in both formalisms is that galaxy occupation
- statistics only depends on halo mass.
+ the Halo Occupation Distribution (HOD) and the Conditional Luminosity Function
+ (CLF) are the two most widely used models of the galaxy-halo connection.
+ In order to populate halos with galaxies, the HOD gives the probability
  
+\begin_inset Formula $P(N|M)$
+\end_inset
+
+ that a halo with mass 
+\begin_inset Formula $\mbox{M}$
+\end_inset
+
+ hosts 
+\begin_inset Formula $N$
+\end_inset
+
+ galaxies, while the CLF models the mean abundance 
+\begin_inset Formula $\Phi(L|M)$
+\end_inset
+
+ of galaxies with luminosity 
+\begin_inset Formula $L$
+\end_inset
+
+ which live in a dark matter halo of mass 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Those two models are convertible that we can obtain an HOD by integrating
+ the CLF against luminosity and a CLF by differentiating the HOD with respect
+ to luminosity.
+ The fundamental assumption in both formalisms is that galaxy occupation
+ statistics is characterized entirely by halo mass.
 \end_layout
 
 \begin_layout Standard
-The spatial distribution of dark matter (DM) halos in N-body simulations,
- however, exhibits dependence on halo mass as well as on additional properties
- such as halo formation time [XXX].
+Some studies show that the most important halo property which influences
+ the properties of galaxies within halos is halo mass [White and Rees, 1978
+ and one more].
+ This is often extend to halo abundance and halo clustering as an assumption
+ that halo mass is the most influential halo property to characterize its
+ abundance and clustering.
+ The motivation behind this assumption comes from the simple excursion set
+ formalism, which models halo assembly and clustering from the random walks
+ of the density fluctuation.
+ This formalism often assumes that halo environment and halo assembly history
+ has no correlation.
+\end_layout
+
+\begin_layout Standard
+The halo clustering in N-body simulations, however, exhibits dependence
+ on halo mass as well as on additional properties such as halo formation
+ time [XXX].
  The dependence of halo clustering upon other properties besides halo mass
- known as halo assembly bias.
+ is known as halo assembly bias.
  
 \color black
 There have been several studies showing the correlation between halo formation
  time and environment, and therefore any other properties which depends
  on formation time or environment (such as concentration, spin, and velocity
  anisotropy) affect to the assembly bias.
- This assembly bias violates the standard HOD/CLF assumption and also questions
- how these model can predict the clustering statistics of galaxies correctly.
+ If the galaxy properties in halos correlates with halo environment, it
+ implies that the galaxy occupation statistics also correlates with halo
+ assembly bias.
+ Several groups study the correlation between galaxy formation and halo
+ assembly bias both theoretically (Croton et al.
+ 2007) and observationally (XXX).
+ Even though semi-analytic approach shows the significant influence of halo
+ assembly bias on galaxy clustering, there have been mixed responses to
+ the detection of such a correlation observationally.
 \end_layout
 
 \begin_layout Standard
-As a response to halo assembly bias, recent trend in the way to populate
+As a response to halo assembly bias, recent trend in connecting halos and
  galaxies has been to use the Abundance Matching technique based on the
  maximum circular velocities of halos.
- The motivation behind use of the maximum circular velocity is that it depends
- only on the central part of the halo potential (i.e., potentially more closely
- related to galaxy formation) and sets early in the growth of the halo [XXX:
- Frank's paper] (i.e., more robust to disruption in mergers).
+ This is because assembly bias is a generic predictions in this technique.
+ The general idea behind the Abundance Matching technique is that the size
+ of halos and the size of galaxies are tightly correlated in a monotonic
+ manner so that one can assign the largest galaxy to the largest halo and
+ so on.
+ For the size of galaxies, the luminosity or stellar mass of galaxies is
+ often chosen, while the maximum circular velocity is often used as a measure
+ of halo size.
+ The motivation behind use of the maximum circular velocity is that it is
+ a proxy for the potential well depth of halos and depends only on the central
+ part of the halo potential (i.e., potentially more closely related to galaxy
+ formation).
 \end_layout
 
 \begin_layout Standard
@@ -194,8 +252,18 @@ We use cosmological N-body simulations called the Bolshoi simulation and
 
 \begin_layout Standard
 For halo identification, we use the ROCKSTAR halo finder (XXX) where the
- halo masses and maximum circular velocities are computed from bound particles.
- For the sake of the internal structure of halos to be resolved well enough,
+ halo masses and maximum circular velocities are computed from bound particles,
+ 
+\color red
+where halo boundary is defined by a virial radius 
+\begin_inset Formula $R_{{\rm vir}}$
+\end_inset
+
+.
+ We download those halo files from http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html.
+ 
+\color inherit
+For the sake of the internal structure of halos to be resolved well enough,
  we make a conservative cut in mass and maximum circular velocity.
  We use halos whose mass is greater than 
 \begin_inset Formula $10^{12}h^{-1}{\rm M_{\odot}}$
@@ -230,7 +298,9 @@ For halo identification, we use the ROCKSTAR halo finder (XXX) where the
 \end_layout
 
 \begin_layout Standard
-From the merger tree, we can classify halos into three different categories:
+In order to build a merger tree, we use a merger tree algorithm CONSISTENT
+ TREES[cite].
+ From the merger tree, we can classify halos into three different categories:
  host halo, subhalos, and ejected halos.
  Host halos are the halos which have never been within the virial radius
  of more massive halos.
@@ -435,9 +505,13 @@ reference "eq:vmax-mvir"
 \end_layout
 
 \begin_layout Standard
+
+\color red
 We first split the sample into a sequence of virial mass bins, chosen such
  that there are the same numbers of halos in each bin.
- This process is reminiscent of an abundance matching procedure (cite XXX).
+ 
+\color inherit
+This process is reminiscent of an abundance matching procedure (cite XXX).
  We then further split each bin into two subsamples with their observed
  
 \begin_inset Formula $V_{{\rm max,obs}}$
@@ -903,9 +977,9 @@ Up to now, we use both host halos and ejected halos to compute halo biases.
 \end_inset
 
 .
- Ejected halos, however, are halos which were identified as a part of a
- more massive halos at one or more occasions in the past.
- Those ejected halos tend to exist around a more massive halos (any reference?),
+ Ejected halos, however, are halos which were identified as part of more
+ massive halos at one or more occasions in the past.
+ Those ejected halos tend to exist around more massive halos (any reference?),
  and only some of them may be gravitationally bound to other more massive
  halos.
  Therefore, the efect on the scale-dependent biases may be caused by those
@@ -1382,6 +1456,48 @@ ched Vmax-selected equivalent.
 
 \begin_layout Section
 Discussion
+\end_layout
+
+\begin_layout Standard
+Previous studies show the dependencies of halo clustering on other parameters
+ besides halo mass and how those dependencies affect on observations.
+ 
+\end_layout
+
+\begin_layout Standard
+We explore the dependency of clustering on the maximum circular velocity
+ and how it makes defference on observations.
+ 
+\end_layout
+
+\begin_layout Standard
+We find that halo clustering depends on the maximum circular velocity both
+ on large and small scales.
+ The dependence of the clustering on small scales is mostly due to backsplash
+ halos.
+\end_layout
+
+\begin_layout Standard
+Our finding [What do we find?] for the clustering on large scales is consistent
+ with the result in Dalal et al.
+ 2008.
+ This is first time to show how the backsplash halos affect the clustering
+ on small scales.
+ It suggests that the backsplash halos should be treated as subhalos and
+ not as host halos.
+\end_layout
+
+\begin_layout Standard
+The limitations of my study is that we did not investigate whether those
+ backsplash halos are actually gravitationally bound to more massive halos
+ which are close to those backsplash halos.
+ Also, at this point, we are not sure whether all backsplash halos should
+ be treated as subhalos or some subclasses of backsplash halos are subhalos.
+ 
+\end_layout
+
+\begin_layout Standard
+In conclusion, XXX.
 \end_layout
 
 \end_body

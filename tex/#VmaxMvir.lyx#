@@ -177,10 +177,10 @@ As a response to halo assembly bias, recent trend in connecting halos and
  For the size of galaxies, the luminosity or stellar mass of galaxies is
  often chosen, while the maximum circular velocity is often used as a measure
  of halo size.
- The motivation behind use of the maximum circular velocity is that it is
- a proxy for the potential well depth of halos and depends only on the central
- part of the halo potential (i.e., potentially more closely related to galaxy
- formation).
+ The motivation behind use of the maximum circular velocity is that it cdepends
+ only on the central part of the halo potential (i.e., potentially more closely
+ related to galaxy formation) and sets early in the growth of the halo [XXX:
+ Frank's paper] (i.e., more robust to disruption in mergers).
 \end_layout
 
 \begin_layout Standard
@@ -252,18 +252,8 @@ We use cosmological N-body simulations called the Bolshoi simulation and
 
 \begin_layout Standard
 For halo identification, we use the ROCKSTAR halo finder (XXX) where the
- halo masses and maximum circular velocities are computed from bound particles,
- 
-\color red
-where halo boundary is defined by a virial radius 
-\begin_inset Formula $R_{{\rm vir}}$
-\end_inset
-
-.
- We download those halo files from http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html.
- 
-\color inherit
-For the sake of the internal structure of halos to be resolved well enough,
+ halo masses and maximum circular velocities are computed from bound particles.
+ For the sake of the internal structure of halos to be resolved well enough,
  we make a conservative cut in mass and maximum circular velocity.
  We use halos whose mass is greater than 
 \begin_inset Formula $10^{12}h^{-1}{\rm M_{\odot}}$
@@ -298,9 +288,7 @@ For the sake of the internal structure of halos to be resolved well enough,
 \end_layout
 
 \begin_layout Standard
-In order to build a merger tree, we use a merger tree algorithm CONSISTENT
- TREES[cite].
- From the merger tree, we can classify halos into three different categories:
+From the merger tree, we can classify halos into three different categories:
  host halo, subhalos, and ejected halos.
  Host halos are the halos which have never been within the virial radius
  of more massive halos.
@@ -505,13 +493,9 @@ reference "eq:vmax-mvir"
 \end_layout
 
 \begin_layout Standard
-
-\color red
 We first split the sample into a sequence of virial mass bins, chosen such
  that there are the same numbers of halos in each bin.
- 
-\color inherit
-This process is reminiscent of an abundance matching procedure (cite XXX).
+ This process is reminiscent of an abundance matching procedure (cite XXX).
  We then further split each bin into two subsamples with their observed
  
 \begin_inset Formula $V_{{\rm max,obs}}$
@@ -1473,10 +1457,14 @@ We explore the dependency of clustering on the maximum circular velocity
 \begin_layout Standard
 We find that halo clustering depends on the maximum circular velocity both
  on large and small scales.
- Our finding for the clustering on large scales is consistent with the result
- in Dalal et al.
- 2008.The dependence of the clustering on small scales is mostly due to backsplas
-h halos.
+ The dependence of the clustering on small scales is mostly due to backsplash
+ halos.
+\end_layout
+
+\begin_layout Standard
+Our finding [What do we find?] for the clustering on large scales is consistent
+ with the result in Dalal et al.
+ 2008.
  This is first time to show how the backsplash halos affect the clustering
  on small scales.
  It suggests that the backsplash halos should be treated as subhalos and
