@@ -1456,7 +1456,11 @@ cal manner so that
 \end_inset
 
  respectively.
- In practice, we rank order halos by 
+ The practical procedure is following:
+\end_layout
+
+\begin_layout Standard
+1) Rank order halos by 
 \begin_inset Formula $M_{{\rm vir}}$
 \end_inset
 
@@ -1464,13 +1468,35 @@ cal manner so that
 \begin_inset Formula $V_{{\rm max}}$
 \end_inset
 
- and select 
+.
+\end_layout
+
+\begin_layout Standard
+2) Select 
 \begin_inset Formula $N$
 \end_inset
 
  halos for each bin from high to low.
- This time, we only use halo sample from the Bolshoi simulation and select
- 25000 halos for each bin.
+\end_layout
+
+\begin_layout Standard
+In this section, we only use halo sample from the Bolshoi simulation and
+ select 25000 halos for each bin.
+\end_layout
+
+\begin_layout Standard
+, we want to identify what kind of physical properties characterize halo
+ 
+\begin_inset Quotes eld
+\end_inset
+
+size
+\begin_inset Quotes erd
+\end_inset
+
+.
+ As a first step, we explore how the abundance matching based on halo mass
+ and maximum circular velocity influence halo clustering.
 \end_layout
 
 \begin_layout Standard
