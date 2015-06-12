@@ -1245,7 +1245,7 @@ ntly different, which is mainly caused by the ejected halos.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1414,11 +1414,8 @@ possible observational relevances of the results in the previous section
  
 \color inherit
 We start with the abundance matching (citation?) technique based on halo
- mass and the maximum circular velocity, and then compute 
-\begin_inset Formula $\Delta\Sigma({\rm R})$
-\end_inset
-
- using those two different abundance matching technique.
+ mass and the maximum circular velocity which may make qualitatively different
+ predictions for clustering of central galaxies.
 \end_layout
 
 \begin_layout Subsection
@@ -1427,11 +1424,8 @@ Mvir-based v.s.
 \end_layout
 
 \begin_layout Standard
-In abundance matching, we link galaxy populations to halo populations by
- assuming that luminous galaxies live in larger halos in a hierarchical
- manner.
- To rank order halos, we want to identify what kind of physical properties
- characterize halo 
+In abundance matching, we assume a monotonic relation between galaxy luminosity
+ and one of the halo properties which represent the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1439,9 +1433,44 @@ size
 \begin_inset Quotes erd
 \end_inset
 
-.
- As a first step, we explore how the abundance matching based on halo mass
- and maximum circular velocity influence halo clustering.
+ of halos and assign the most luminous galaxy to the largest halo in a hierarchi
+cal manner so that 
+\begin_inset Formula $n_{g}(>L)=n_{h}(>M_{{\rm vir}}/V_{{\rm max}})$
+\end_inset
+
+ where 
+\begin_inset Formula $n_{g}(>L)$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{h}(>M_{{\rm vir}}/V_{{\rm max}})$
+\end_inset
+
+ are the number density of galaxies and halos which have larger luminosity
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ or halo mass/the maximum circular velocity 
+\begin_inset Formula $M_{{\rm vir}}/V_{{\rm max}}$
+\end_inset
+
+ respectively.
+ In practice, we rank order halos by 
+\begin_inset Formula $M_{{\rm vir}}$
+\end_inset
+
+ or 
+\begin_inset Formula $V_{{\rm max}}$
+\end_inset
+
+ and select 
+\begin_inset Formula $N$
+\end_inset
+
+ halos for each bin from high to low.
+ This time, we only use halo sample from the Bolshoi simulation and select
+ 25000 halos for each bin.
 \end_layout
 
 \begin_layout Standard
@@ -1628,36 +1657,116 @@ Discussion
 \end_layout
 
 \begin_layout Standard
-Previous studies show the dependencies of halo clustering on other parameters
- besides halo mass and how those dependencies affect on observations.
+In this paper, we explore additional dependence of halo clustering on the
+ maximum circular velocity of halos in addition to halo mass.
+ The maximum circular velocity is a measure of potential well depth of halos,
+ which determines the escape velocity of particles around the halos and
+ therefore detemine the feedback efficiency for galaxy formation.
+\end_layout
+
+\begin_layout Standard
+Our result for linear bias is consistent with previous studies investigating
+ clustering dependence on other parameters such as formation time and concentrat
+ion (Ref.
+ XXX).
+ The result is expected since the maximum circular velocity is tightly correlate
+d with those parameters.
+ In high mass regime, halos with shallower potential well depth (hereafter,
+ PWD) cluster more strongly than the ones with deeper PWD.
+ This is nicely explained in terms of the statistics of peaks and peak curvature
+ of random Gaussian fields (XXX:Dalal et al.
+ 2008).
+ Two halos with the same mass originated from the same peak height but different
+ peak curvature cluster differently because of their different environment.
+ The halos with shallower peak curvature tend to live in high density region
+ and therefore cluster more strongly.
+ Since there is a correlation between concentration and peak curvature,
+ the maximum circular velocity may correlate well with the curvature.
+ In low mass regime, we observed that halos with deeper PWD cluster more
+ strongly and the dependence of linear bias on PWD is stronger than in high
+ mass regime.
+ On low mass end, the difference in linear bias for halos with deeper/shallower
+ PWD reaches to 40%.
+ This is consistent with previous works done for formation time and concentratio
+n.
+ Ref.
+ XXX (vdB et al.
+ 2014) shows that the maximum circular velocity reaches to its current value
+ at early times than halo mass.
+ This implies that low mass halos with deeper PWD have higher halo mass
+ at early times than the ones with shallower PWD and their mass growth is
+ suppressed at later times and remain to be low mass halos.
+ The suppressions of halo mass growth is due to the strong tidal field generated
+ in high density region (Ref.
+ XXX).
+ So, those low mass halos with deeper PWD must live in high density region
+ and therefore cluster more strongly.
+\end_layout
+
+\begin_layout Standard
+We also explore the scale dependence of halo assembly bias.
+ On small scales, halos with deeper PWD cluster much more strongly at 
+\begin_inset Formula $1-2h^{-1}{\rm Mpc}$
+\end_inset
+
+ and this scale dependence feature on halo bias becomes stronger for lower
+ mass halos.
+ This feature, however, is removed by excluding the ejected halos.
+ So, this scale dependence on assembly bias is due to the ejected halos.
+ Furthermore, the ejected halos clustering at 
+\begin_inset Formula $1-2h^{-1}{\rm Mpc}$
+\end_inset
+
+ strongly means that they probably cluster around more massive host halos.
+ Ref.
+ XXX (Wetzel et al.
+ 2014) shows that those ejected halos are subhalos which are gravitationally
+ bound to more massive host halos beyond the virial radius of those host
+ halos and eventually falling into the host halos after a few Gyrs.
+ Those ejected halos host satellite galaxies more quiescent star formation
+ rate than a central galaxy.
+ So, it is crucial to identify the ejected halos and treat them differently
+ when populate halos with galaxies since those host halos may host very
+ different type of galaxies.
+ In Section 4, we demonstrate that abundance matching technique based on
+ halo mass and the maximum circular velocity give a very different scale
+ dependence on small scale halo bias with the ejected halos.
+ It may be observationally testable which parameter is better in use of
+ the abundance matching technique by identifying central galaxies and those
+ ejected satellite galaxies and measuring their halo bias.
+\end_layout
+
+\begin_layout Standard
+One interesting question we did not explore in this paper is whether those
+ ejected halos are within the splashback radius of host halos, which is
+ the radius where accreted matter reaches its first apocenter of orbit after
+ turnaround.
+ Several studies, which explore a more physically motivated definition of
+ halo radius, propose the idea of the splashback radius, because XXX.
+ If all te ejected halos are within the splashback radius of host halos,
+ it will more motivate to use splashback radius as a halo radius and we
+ do not need to consider treating the ejected halos differently since they
+ are naturally considered as subhalos.
+\end_layout
+
+\begin_layout Standard
+In summary,
+\end_layout
+
+\begin_layout Standard
+We found that halo bias shows a very different scale dependence for the
+ halos with deeper/shallower potential wells.
+ The halos with deeper potential wells clsuter more strongly at 
+\begin_inset Formula $1-2h^{-1}{\rm Mpc}$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
-We explore the dependency of clustering on the maximum circular velocity
- and how it makes difference on observations.
- 
-\end_layout
-
-\begin_layout Standard
-We find that halo clustering depends on the maximum circular velocity both
- on large and small scales.
- Our finding for the clustering on large scales is consistent with the result
- in Dalal et al.
- 2008.The dependence of the clustering on small scales is mostly due to backsplas
-h halos.
- This is first time to show how the backsplash halos affect the clustering
- on small scales.
- It suggests that the backsplash halos should be treated as subhalos and
- not as host halos.
-\end_layout
-
-\begin_layout Standard
-The limitations of my study is that we did not investigate whether those
- backsplash halos are actually gravitationally bound to more massive halos
- which are close to those backsplash halos.
- Also, at this point, we are not sure whether all backsplash halos should
- be treated as subhalos or some subclasses of backsplash halos are subhalos.
+This is first time to show how ejected halos affect to linear biases and
+ scale-dependent halo biases on small scales.
  
 \end_layout
 
