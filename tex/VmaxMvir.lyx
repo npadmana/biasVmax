@@ -455,7 +455,7 @@ Those values correspond to the peak in the number of halos by binning them
  as a function of mass and maximum circular velocity.
  
 \color inherit
-The halo samples below the halo mass or maximum circular velocoty corresponding
+The halo samples below the halo mass or maximum circular velocity corresponding
  to the peak are not considered to be complete based on the predictions
  for halo mass functions, which are a monotonically increasing function
  with the decrease in halo mass.
@@ -1661,7 +1661,7 @@ In this paper, we explore additional dependence of halo clustering on the
  maximum circular velocity of halos in addition to halo mass.
  The maximum circular velocity is a measure of potential well depth of halos,
  which determines the escape velocity of particles around the halos and
- therefore detemine the feedback efficiency for galaxy formation.
+ therefore determine the feedback efficiency for galaxy formation.
 \end_layout
 
 \begin_layout Standard
@@ -1743,7 +1743,7 @@ One interesting question we did not explore in this paper is whether those
  turnaround.
  Several studies, which explore a more physically motivated definition of
  halo radius, propose the idea of the splashback radius, because XXX.
- If all te ejected halos are within the splashback radius of host halos,
+ If all the ejected halos are within the splashback radius of host halos,
  it will more motivate to use splashback radius as a halo radius and we
  do not need to consider treating the ejected halos differently since they
  are naturally considered as subhalos.

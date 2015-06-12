@@ -1723,12 +1723,12 @@ We also explore the scale dependence of halo assembly bias.
  2014) shows that those ejected halos are subhalos which are gravitationally
  bound to more massive host halos beyond the virial radius of those host
  halos and eventually falling into the host halos after a few Gyrs.
- Those ejected halos host satellite galaxies more quiescent star formation
- rate than a central galaxy.
+ Those ejected halos host satellite galaxies having more quiescent star
+ formation rate than a central galaxy.
  So, it is crucial to identify the ejected halos and treat them differently
- when populate halos with galaxies since those host halos may host very
+ when populate halos with galaxies, because those host halos may host very
  different type of galaxies.
- In Section 4, we demonstrate that abundance matching technique based on
+ In Section 4, we demonstrate that abundance matching techniques based on
  halo mass and the maximum circular velocity give a very different scale
  dependence on small scale halo bias with the ejected halos.
  It may be observationally testable which parameter is better in use of
@@ -1750,28 +1750,12 @@ One interesting question we did not explore in this paper is whether those
 \end_layout
 
 \begin_layout Standard
-In summary,
-\end_layout
-
-\begin_layout Standard
-We found that halo bias shows a very different scale dependence for the
- halos with deeper/shallower potential wells.
- The halos with deeper potential wells clsuter more strongly at 
-\begin_inset Formula $1-2h^{-1}{\rm Mpc}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-This is first time to show how ejected halos affect to linear biases and
- scale-dependent halo biases on small scales.
- 
-\end_layout
-
-\begin_layout Standard
-In conclusion, XXX.
+In summary, we found a consistent trend to previous works in additional
+ dependence of linear bias on the maximum circular velocity for both high/low
+ mass halos.
+ We also found that scale dependence of halo assembly bias on small scales
+ mostly come from the ejected halos, which suggest to treat them differently
+ in the methods to connect halo populations to galaxy populations.
 \end_layout
 
 \end_body
