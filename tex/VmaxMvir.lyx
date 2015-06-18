@@ -569,7 +569,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/plaecholder.tiff
+	filename ../plots/plaecholder.tiff
 	lyxscale 50
 	width 50col%
 
@@ -908,11 +908,11 @@ lower
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang.pdf
+	filename ../plots/linearBias_wang.pdf
 	width 50col%
 
 \end_inset
@@ -1227,11 +1227,11 @@ ntly different, which is mainly caused by the ejected halos.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Both_smallScale_wang_log.pdf
+	filename ../plots/Both_smallScale_wang_log.pdf
 	width 80col%
 
 \end_inset
@@ -1317,11 +1317,11 @@ lower
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_smallScale_wang_log_eje.pdf
+	filename ../plots/Bolshoi_smallScale_wang_log_eje.pdf
 	width 50col%
 
 \end_inset
@@ -1547,18 +1547,18 @@ reference "fig:eject"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale.pdf
+	filename ../plots/Bolshoi_andrew_smallScale.pdf
 	width 50col%
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale_nonEj.pdf
+	filename ../plots/Bolshoi_andrew_smallScale_nonEj.pdf
 	lyxscale 50
 	width 50col%
 

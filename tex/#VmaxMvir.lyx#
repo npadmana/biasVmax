@@ -136,12 +136,7 @@ The halo clustering in large N-body simulations, however, exhibits dependence
  This additional dependence of halo clustering is called halo assembly bias,
  because those additional dependences come from different assmebly history
  of halos.
- Several studies show that halo clustering depends on concentration ....those
- concentration and things are correlated with formation time and environment...
-\end_layout
-
-\begin_layout Standard
-
+ 
 \color black
 If the galaxy properties in halos are affected by halo environment, the
  galaxy occupation statistics will depend on other halo properties XXX.
@@ -574,7 +569,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/plaecholder.tiff
+	filename ../plots/plaecholder.tiff
 	lyxscale 50
 	width 50col%
 
@@ -913,11 +908,11 @@ lower
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/linearBias_wang.pdf
+	filename ../plots/linearBias_wang.pdf
 	width 50col%
 
 \end_inset
@@ -1232,11 +1227,11 @@ ntly different, which is mainly caused by the ejected halos.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Both_smallScale_wang_log.pdf
+	filename ../plots/Both_smallScale_wang_log.pdf
 	width 80col%
 
 \end_inset
@@ -1322,11 +1317,11 @@ lower
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_smallScale_wang_log_eje.pdf
+	filename ../plots/Bolshoi_smallScale_wang_log_eje.pdf
 	width 50col%
 
 \end_inset
@@ -1552,11 +1547,11 @@ reference "fig:eject"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /Users/old_ts485/Desktop/biasVmax/plots/Bolshoi_andrew_smallScale.pdf
+	filename ../plots/Bolshoi_andrew_smallScale.pdf
 	width 50col%
 
 \end_inset
