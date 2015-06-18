@@ -23,7 +23,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \newcommand{\mvir}{M_{\rm vir}}
 \newcommand{\vmax}{V_{\rm max}}
-
+\newcommand{\meanvmax}{\overline{V}_{\rm max}}
 
 
 
@@ -205,36 +205,30 @@ this cut unless it is noted.
 
 % In this section, we investigate the maximum circular velocity dependence of halo clustering on both large and small scales. We first start with an analytic expression of the maximum circular velocity computed from the halo mass and its concentration. Then, we explain how we select halos for each sample to remove the halo mass dependence using the analytic expression of the maximum circular velocity. Finally, we show how halo biases differ for those samples both on large scales and small scales.
 
-In this section, we describe our methodology for studying how halo clustering depends on $\mvir$ and $\vmax.$  We first start in \S\ref{subsec:vmaxdef} by defining the analytic expression for $\vmax$ that we use to categorize halos as having above- or below-average circular velocities for their mass. In \S\ref{subsec:samples} we describe the halo samples we use throughout the paper.  
+In this section we present our primary results. We begin in \S\ref{subsec:samples} by describing the sample of halos we use throughout the paper, as well as our method for how we categorize halos as having above- or below-average circular velocities for their mass. In \S\ref{subsec:halobias} ... 
 
-\subsection{The Maximum Circular Velocity}
-\label{subsec:vmaxdef}
+
+\subsection{Halo Sample Definitions}
+\label{subsec:samples}
 
 %In order to compute the maximum circular velocity for halos, we assume that dark matter halos are defined as a spherical halo with a virial radius. Those halos have average density equal to $\Delta_{{\rm h}}\rho_{{\rm crit}}$ where $\Delta_{{\rm h}}=360$ \textcolor{red}{for $z=0$ according to Bryan \& Norman fitting function {[}XXX{]}}. We also assume that those spherical halos have an NFW density profile (XXX). Then, the maximum circular velocity $\overline{V}_{{\rm max}}$ as a function of the halo mass $M_{{\rm vir}}$ and its concentration $c$ is given by:
 
 If the internal structure of a dark matter halo of mass $\mvir$ is described by an NFW profile \citep{nfw97} of concentration $c,$ 
 then its maximum circular velocity $\vmax$ is given by:
-
 \begin{equation}
 \overline{V}_{{\rm max}}=0.465M_{{\rm vir}}^{1/3}\sqrt{G(\frac{4}{3}\pi\Delta_{{\rm h}}\rho_{{\rm crit}}\Omega_{m})^{1/3}\frac{c}{{\rm ln(1+c)-c/(1+c)}}}.\label{eq:vmax-mvir}
 \end{equation}
-The median concentration-mass relation at $z=0$ obtained from the
-Bolshoi simulation in Ref. XXX(Klypin et al. 2011) is: 
+As shown in \citep{klypin10a}, the median concentration-mass relation $\bar{c}(\mvir)$ for $z=0$ Bolshoi halos is well-described by:
 \begin{equation}
-{\rm log}_{10}c=-0.097{\rm log_{10}M_{vir}}+2.148.\label{eq:concen}
+{\rm log}_{10}\bar{c}=-0.097{\rm log_{10}M_{vir}}+2.148.\label{eq:concen}
 \end{equation}
-\textcolor{black}{By using the above median concentration to Eq. \ref{eq:vmax-mvir},
-we obtain a one to one mapping between the virial halo mass and its
-maximum circular velocity, denoted as $\overline{V}_{{\rm max}}$
-hereafter.} Given this mapping, we can translate clustering measurements
-as a function of halo mass into predicted clustering measurements
-as a function of maximum circular velocity. Our goal below is to determine
-whether this conversion describes the measured clustering or if there
-is a residual dependence on the maximum circular velocity.
+For every halo in the Bolshoi and Multidark catalogs, we use its tabulated $\mvir$ to compute $\bar{c}(\mvir),$ 
+and then use the values $\bar{c}$ together with Eq.~\ref{eq:vmax-mvir} to compute $\overline{V}_{\rm max}$ for every halo. 
+We will henceforth refer to halos with $\vmax < \meanvmax(\mvir)$ as ``low-$\vmax$ halos'', 
+and halos with $\vmax > \meanvmax(\mvir)$ as ``high-$\vmax$ halos''. Thus a halo's high- or low-$\vmax$ designation 
+refers to whether its true $\vmax$ value in the simulation is above- or below-average for its mass. 
 
-
-\subsection{Samples}
-\label{subsec:samples}
+%By using the above median concentration to Eq. \ref{eq:vmax-mvir},we obtain a one to one mapping between the virial halo mass and its maximum circular velocity, denoted as $\overline{V}_{{\rm max}}$hereafter. Given this mapping, we can translate clustering measurementsas a function of halo mass into predicted clustering measurementsas a function of maximum circular velocity. Our goal below is to determinewhether this conversion describes the measured clustering or if thereis a residual dependence on the maximum circular velocity.
 
 \begin{figure}
 \includegraphics[width=0.5\columnwidth]{../plots/plaecholder}\caption{\label{fig:vmax-mvir}Distribution of halo mass and maximum circular
@@ -247,26 +241,20 @@ dots correspond to $\overline{V}_{{\rm max}}$ computed from Eq. \ref{eq:vmax-mvi
 \end{figure}
 
 
-\textcolor{red}{To begin with, we split the sample of halos described
-in Section 2 into a sequence of virial mass bins from high mass to
-low mass, chosen such that there are the same numbers of halos in
-each bin. We select 200000 halos for each bin for the halo sample
-from the MultiDark simulation and 25000 halos for the Bolshoi simulation.
-}This process is reminiscent of an abundance matching procedure (cite
-XXX). We then further split each bin into two subsamples with their
-observed $V_{{\rm max,obs}}$ greater than (denoted by ``upper'')
-or less than (denoted as ``lower'') $\overline{V}_{{\rm max}}$.
-Fig. \ref{fig:vmax-mvir} shows the distribution of halo mass and
-maximum circular velocity classified into ``upper'' (blue dots)
-and ``lower'' (green dots) samples as an example. Note that the
-number of halos in ``upper'' and ``lower'' subsamples\textcolor{black}{{}
-are }almost equal for any halo mass bins. This selection ensures that
-both the upper and lower subsamples have the same mean halo mass.
-Therefore, in the absence of an additional $V_{{\rm max}}$ dependence
-on clustering, these samples should have the same clustering properties.\textcolor{red}{{}
-Note that this would not be true if we had simply split the sample
-along $V_{{\rm max}}$, since the two resulting subsamples would have
-different mean halo masses. }
+%%% APH: Discussion of binning is not necessary for Figure 1, is it?
+
+%To begin with, we split the sample of halos described in Section 2 into a sequence of virial mass bins from high mass to low mass, chosen such that there are the same numbers of halos in each bin. We select 200000 halos for each bin for the halo sample from the MultiDark simulation and 25000 halos for the Bolshoi simulation. This process is reminiscent of an abundance matching procedure (cite XXX). We then further split each bin into two subsamples with their observed $V_{{\rm max,obs}}$ greater than (denoted by ``upper'') or less than (denoted as ``lower'') $\overline{V}_{{\rm max}}$.
+
+ %mass andmaximum circular velocity classified into ``upper'' (blue dots)and ``lower'' (green dots) samples as an example. Note that thenumber of halos in ``upper'' and ``lower'' subsamples\textcolor{black}{{}are }almost equal for any halo mass bins. This selection ensures thatboth the upper and lower subsamples have the same mean halo mass. Therefore, in the absence of an additional $V_{{\rm max}}$ dependence on clustering, these samples should have the same clustering properties.\textcolor{red}{{} Note that this would not be true if we had simply split the sample along $V_{{\rm max}}$, since the two resulting subsamples would have different mean halo masses. }
+
+
+Fig. \ref{fig:vmax-mvir} illustrates the distribution of Bolshoi and Multidark halos as a function of $\mvir$ and $\vmax.$ 
+{\bf APH: We need to explicitly state at what mass $\mvir$ we start using Multidark}.  
+High-$\vmax$ halos are shown in blue, low-$\vmax$ halos in green. The dividing line between the two samples 
+is defined by Eq.~\ref{eq:vmax-mvir}. We find that our analytical approximation for $\meanvmax(\mvir)$ 
+gives a good description of the true median: for any fixed value of $\mvir,$ 
+the high-$\vmax$ and low-$\vmax$ subsamples have very similar numbers of objects.  
+
 
 
 \subsection{Halo Bias}
