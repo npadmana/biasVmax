@@ -112,6 +112,8 @@ our main conlusions.
 
 \section{Simulations}
 
+{\bf NP : Check the mass limits}
+
 We use the Bolshoi \citep{bolshoi_11} and Multidark simulations \citep{riebe_etal11, prada_etal11}
 \footnote{\url{http://www.multidark.org}} in this work; the combination
 of these simulations allows us to span a large range in halo mass. We summarize
@@ -435,52 +437,90 @@ between assembly bias and subhalo back-splashing.}
 --use jackknife sampling to put error bars
 
 
-\section{Applications}
+\section{Observational Consequences}
 
-In this section, we demonstrate \textcolor{black}{possible observational
-relevances of the results in the previous section to complement the
-halo theory results. }We start with the abundance matching (citation?)
-technique based on halo mass and the maximum circular velocity which
-may make qualitatively different predictions for clustering of central
-galaxies.
+%%%In this section, we demonstrate \textcolor{black}{possible observational
+%%%relevances of the results in the previous section to complement the
+%%%halo theory results. }We start with the abundance matching (citation?)
+%%%technique based on halo mass and the maximum circular velocity which
+%%%may make qualitatively different predictions for clustering of central
+%%%galaxies.
 
 
-\subsection{Mvir-based v.s. Vmax-based}
+%%%\subsection{Mvir-based v.s. Vmax-based}
 
-In abundance matching, we assume a monotonic relation between galaxy
-luminosity and one of the halo properties which represent the ``size''
-of halos and assign the most luminous galaxy to the largest halo in
-a hierarchical manner so that $n_{g}(>L)=n_{h}(>M_{{\rm vir}}/V_{{\rm max}})$
-where $n_{g}(>L)$ and $n_{h}(>M_{{\rm vir}}/V_{{\rm max}})$ are
-the number density of galaxies and halos which have larger luminosity
-$L$ or halo mass/the maximum circular velocity $M_{{\rm vir}}/V_{{\rm max}}$
-respectively. In practice, we rank order halos by $M_{{\rm vir}}$
-or $V_{{\rm max}}$ and select $N$ halos for each bin from high to
-low. This time, we only use halo sample from the Bolshoi simulation
-and select 25000 halos for each bin.
+{\bf NP : Need to change the labels to stellar mass labels based on the
+Behroozi et al mass relation}
 
-Similar to the previous section, we compute halo-matter cross correlation
-functions for the abundance matched samples by splitting halos into
-a sequence of halo mass bins, $\overline{n}(M_{{\rm vir}})$, and
-the maximum circular velocity bins, $\overline{n}(V_{{\rm max}})$,
-chosen such that each bin has the same number of halos. We observe
-that when we include ejected halos, the linear biases for the $V_{{\rm max}}$-samples
-are larger than the ones for the $M_{{\rm vir}}$-samples by 5\%,
-while the difference in linear biases is suppressed to 2\% by excluding
-ejected halos. This result is consistent with the result in Sec. 3.2.
-The magnitude of the difference, however, is smaller than the cases
-of splitting the samples based on $\overline{V}_{{\rm max}}$. 
+{\bf NP : Probably should explicitly show that the mean halo masses of these
+samples is the same}
 
-We also compare the cross correlation functions on small scales. Figure
-\ref{fig:abundance_small} displays data in the same way as Figure
-\ref{fig:small-scale} with the ejected halos on the left and without
-the ejected halos on the right. When those samples contain ejected
-halos, the $V_{{\rm max}}$-samples show very different scale-dependence
-on halo bias than the $M_{{\rm vir}}$-samples do. This scale-dependent
-feature becomes stronger as halo mass decreases. Without ejected halos,
-the difference on small-scale biases between the $M_{{\rm vir}}$-
-and $V_{{\rm max}}$- samples is reduced to $\sim5\%$, which is the
-same order of magnitude as the case of Sec. 3.3 shown in Fig. \ref{fig:eject}.
+We now consider possible observational consequences of the results of the 
+previous section. In order to do this, the key first step is to relate
+an observable property of a galaxy (luminosity, stellar mass) to an
+intrinsic property of its host halo (mass, circular velocity). As one 
+might infer from above (and we demonstrate below), different
+choices for the latter can result in significant differences for different
+observables.
+
+In order to be explicit, we consider abundance matching (CITE??) 
+the stellar masses of central galaxies to either the mass or 
+circular velocity of host halos. We implement this by splitting
+the halo catalog into a series of bins with constant number density (=????),
+rank ordering either by mass or circular velocity. We label each bin
+by its corresponding stellar mass, computed from the stellar-to-halo
+mass relation of CITE Behroozi et al.
+When we rank order based on circular velocity, there is the possibility
+that the effective halo masses of these bins could differ from what we 
+obtain after rank ordering by halo mass. We explicitly check this and 
+find that the effective halo masses for both cases agree to $\sim ???\%$, 
+allowing us to consistently compare samples with the same imputed 
+stellar mass.
+
+At fixed stellar mass, the linear bias of samples selected by their
+circular velocity are $\sim 5\%$ higher than samples selected by halo
+mass. This decreases to $\sim 2\%$ if we remove ejected halos from 
+both samples. Fig.~\ref{fig:abundance_small} shows the ratio of 
+the small scale ($1$ to $10 h^{-1} {\rm Mpc}$) correlation functions
+of these two samples, both including [left] and excluding [right]
+ejected subhalos. As previously, we see a clear scale dependence
+of this signal, with a maximum difference of $\sim 15\%$ at $\sim 1 h^{-1} {\rm Mpc}$.
+These differences go down to $\sim 5\%$ after removing ejected subhalos.
+
+%%%In abundance matching, we assume a monotonic relation between galaxy
+%%%luminosity and one of the halo properties which represent the ``size''
+%%%of halos and assign the most luminous galaxy to the largest halo in
+%%%a hierarchical manner so that $n_{g}(>L)=n_{h}(>M_{{\rm vir}}/V_{{\rm max}})$
+%%%where $n_{g}(>L)$ and $n_{h}(>M_{{\rm vir}}/V_{{\rm max}})$ are
+%%%the number density of galaxies and halos which have larger luminosity
+%%%$L$ or halo mass/the maximum circular velocity $M_{{\rm vir}}/V_{{\rm max}}$
+%%%respectively. In practice, we rank order halos by $M_{{\rm vir}}$
+%%%or $V_{{\rm max}}$ and select $N$ halos for each bin from high to
+%%%low. This time, we only use halo sample from the Bolshoi simulation
+%%%and select 25000 halos for each bin.
+%%%
+%%%Similar to the previous section, we compute halo-matter cross correlation
+%%%functions for the abundance matched samples by splitting halos into
+%%%a sequence of halo mass bins, $\overline{n}(M_{{\rm vir}})$, and
+%%%the maximum circular velocity bins, $\overline{n}(V_{{\rm max}})$,
+%%%chosen such that each bin has the same number of halos. We observe
+%%%that when we include ejected halos, the linear biases for the $V_{{\rm max}}$-samples
+%%%are larger than the ones for the $M_{{\rm vir}}$-samples by 5\%,
+%%%while the difference in linear biases is suppressed to 2\% by excluding
+%%%ejected halos. This result is consistent with the result in Sec. 3.2.
+%%%The magnitude of the difference, however, is smaller than the cases
+%%%of splitting the samples based on $\overline{V}_{{\rm max}}$. 
+%%%
+%%%We also compare the cross correlation functions on small scales. Figure
+%%%\ref{fig:abundance_small} displays data in the same way as Figure
+%%%\ref{fig:small-scale} with the ejected halos on the left and without
+%%%the ejected halos on the right. When those samples contain ejected
+%%%halos, the $V_{{\rm max}}$-samples show very different scale-dependence
+%%%on halo bias than the $M_{{\rm vir}}$-samples do. This scale-dependent
+%%%feature becomes stronger as halo mass decreases. Without ejected halos,
+%%%the difference on small-scale biases between the $M_{{\rm vir}}$-
+%%%and $V_{{\rm max}}$- samples is reduced to $\sim5\%$, which is the
+%%%same order of magnitude as the case of Sec. 3.3 shown in Fig. \ref{fig:eject}.
 
 \begin{figure}[H]
 \includegraphics[width=0.5\columnwidth]{../plots/Bolshoi_andrew_smallScale}\includegraphics[width=0.5\columnwidth]{../plots/Bolshoi_andrew_smallScale_nonEj}
