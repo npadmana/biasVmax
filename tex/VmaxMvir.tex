@@ -31,7 +31,7 @@
 \newcommand{\bh}{b_{\rm h}}
 \newcommand{\bhlin}{b^{\rm lin}_{\rm h}}
 
-
+\newcommand{\msun}{M_{\odot}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
 %% A simple dot to overcome graphicx limitations
@@ -253,7 +253,6 @@ dots correspond to $\overline{V}_{{\rm max}}$ computed from Eq. \ref{eq:vmax-mvi
 
 
 Fig. \ref{fig:vmax-mvir} illustrates the distribution of Bolshoi and Multidark halos as a function of $\mvir$ and $\vmax.$ 
-{\bf APH: We need to explicitly state at what mass $\mvir$ we start using Multidark}.  
 High-$\vmax$ halos are shown in blue, low-$\vmax$ halos in green. The dividing line between the two samples 
 is defined by Eq.~\ref{eq:vmax-mvir}. We find that our analytical approximation for $\meanvmax(\mvir)$ 
 gives a good description of the true median: for any fixed value of $\mvir,$ 
@@ -288,24 +287,21 @@ b_{{\rm lin}}=\sum_{i}(\xi_{hm}(r_{i})/\xi_{mm}(r_{i}))/N_{{\rm bin}}.
 In Eq.~\ref{eq:blindef}, the sum is performed over $N_{{\rm bin}}=20$ separation bins $r_{\rm i}$ 
 linearly spaced from $10h^{-1}{\rm Mpc}$ to $20h^{-1}{\rm Mpc}.$ 
 
-Fig. \ref{fig:linear-bias} shows linear biases as a function of halo
-mass by splitting each sample into ``upper'' and ``lower'' subsamples.
-For large halo masses, the ``lower'' subsamples have larger linear
-biases than the ``upper'' subsamples. This result is consistent
-with the result discussed in Ref. XXX(Dalal et al. 2008). For low
-halo masses, the ``upper'' subsamples have larger linear biases
-than the ``lower'' subsamples. Those halos, which have larger maximum
-circular velocities than $\overline{V}_{{\rm max}}$, are the ones
-which are supposed to grow into larger mass halos, but somehow the
-mass growth is suppressed due to a tidal field {[}XXX: Wang et al.
-+ Wetzel et al. 2014{]}. This is why those halos in the ``upper''
-subsamples cluster more strongly than the ones in the ``lower''
-subsamples. As halo mass decreases, the difference in linear bias
-between the ``upper'' and ``lower'' subsamples increases up to
-$\sim40\%$. On the low mass end, there is a drop in the ratio of
-the linear biases. As we see no physical reasons, consider that this
-is a resolution effect and suggest that the condition required for
-completeness is more stringent {[}XXX: Peter's paper{]}.
+In order to study the mass-dependence of halo bias, we bin our halos into a sequence of $\mvir$ bins chosen such that there are the same numbers of halos in each bin. 
+For Multidark, we select $2\times10^{5}$ halos for each bin; for Bolshoi we use $25000$ halos per bin. The halos in each mass bin are categorized as high-$\vmax$ or low-$\vmax$ according to the method described in \S\ref{subsec:samples}. 
+{\bf APH: We need to explicitly state at what mass $\mvir$ we start using Multidark}.  
+
+The top panel of Fig.~\ref{fig:linear-bias} shows $\bhlin$ as a function of $\mvir;$ results for high-$\vmax$ halos are shown in blue, low-$\vmax$ halos in green. 
+At the low-mass end, linear bias is a weak function of $\mvir;$ for $\mvir\gtrsim10^{13}\msun$ we see that $\bhlin$ increases sharply with $\mvir.$ 
+Thus the basic shape of each curve in Fig. \ref{fig:linear-bias} is in accord with theoretical expectations from the peak-background split \citep{sheth_tormen99} formalism and Press-Schechter theory \citep{pressschechter74}. 
+
+By comparing the red and blue curves in Fig.~\ref{fig:linear-bias} we can see that linear bias has significant dependence upon $\vmax$ for halos of the same mass. This dependence is most readily seen in the bottom panel, which shows the ratio of $\bhlin$ of upper-$\vmax$ samples divided by $\bhlin$ of lower-$\vmax$ samples.
+Thus in the bottom panel of Fig.~\ref{fig:linear-bias}, vertical axis values exceeding unity correspond to masses where high-$\vmax$ halos cluster more strongly relative to their low-$\vmax$ counterparts. 
+
+At the low-mass end, high-$\vmax$ halos are more strongly clustered than low-$\vmax$ halos of the same mass. The clustering difference increases with decreasing $\mvir,$ and exceeds $30\%$ for halos of Milky Way mass $\mvir\approx10^{12}\msun.$ At the high-mass end, the trend reverses, and the overall magnitude is weaker. These results are consistent with \citet{wechsler06}, who find that the same trends hold when the secondary halo property is NFW concentration, rather than $\vmax.$ This agreement is to be expected: insofar as the halo profile is well-approximated by an NFW profile, $\vmax$ is entirely determined by concentration (see Eq.~\ref{eq:vmax-mvir}). 
+%%% Some of the following paragraph has already been discussed above, 
+%%% and some of it should go in the Discussion
+%Fig. \ref{fig:linear-bias} shows linear biases as a function of halo mass by splitting each sample into ``upper'' and ``lower'' subsamples. For large halo masses, the ``lower'' subsamples have larger linear biases than the ``upper'' subsamples. This result is consistent with the result discussed in Ref. XXX(Dalal et al. 2008). For low halo masses, the ``upper'' subsamples have larger linear biases than the ``lower'' subsamples. Those halos, which have larger maximum circular velocities than $\overline{V}_{{\rm max}}$, are the ones which are supposed to grow into larger mass halos, but somehow the mass growth is suppressed due to a tidal field {[}XXX: Wang et al. + Wetzel et al. 2014{]}. This is why those halos in the ``upper'' subsamples cluster more strongly than the ones in the ``lower'' subsamples. As halo mass decreases, the difference in linear bias between the ``upper'' and ``lower'' subsamples increases up to $\sim40\%$. On the low mass end, there is a drop in the ratio of the linear biases. As we see no physical reasons, consider that this is a resolution effect and suggest that the condition required for completeness is more stringent {[}XXX: Peter's paper{]}.
 
 \begin{figure}
 \includegraphics[width=0.5\columnwidth]{../plots/linearBias_wang}
