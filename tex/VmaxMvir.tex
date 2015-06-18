@@ -126,78 +126,105 @@ in a $250h^{-1}{\rm Mpc}$ box and a force resolution of $1h^{-1}{\rm kpc}$,
 giving a particle mass of $1.35\times10^{8}h^{-1}{\rm M_{\odot}}$, while the 
 Multidark simulation used $2048^3$ particles in a $1 h^{-1} {\rm Gpc}$ box
 and a force resolution of $7h^{-1}{\rm kpc}$ giving a particle mass of 
-$8.721\times10^{9}h^{-1}{\rm M_{\odot}}$. 
+$8.721\times10^{9}h^{-1}{\rm M_{\odot}}$. Dark matter halos and subhalos are identified using
+the {\tt ROCKSTAR} phase-space, temporal halo finder \citep{rockstar}
+and merger trees are constructed using the {\tt CONSISTENT TREES} 
+\citep{rockstar_trees} procedures\footnote{The catalogues used in this paper are
+publicly available at \url{http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html}}.
+All of the results we consider here are at $z=0$.
 
+In what follows, we use the virial masses and maximum circular velocities
+(tagged ``{\tt mvir}'' and ``{\tt vmax}'') directly from the halo catalogues. 
+The halo mass and velocity functions start to show incompleteness at 
+$10^{11} h^{-1} M_{\odot}$ ($\sim 740$ particles) for the Bolshoi simulation, and $10^{12} h^{-1}
+M_{\odot}$ ($\sim 100$ particles) for the Multidark simulation. 
+We choose to be conservative and restrict to halos with $> 740$ particles for
+both simulations, corresponding to mass limits of ??? and ??? for Bolshoi
+and Multidark respectively.
 
+In addition to the standard classification of halos into host halos
+(not within the virial radius of a more massive halo) and subhalos
+(within the virial radius of a more massive halo), we further classify
+host halos into ejected and non-ejected halos. Ejected halos, 
+also referred to as ``backsplash'' halos, are host halos whose
+main progenitor was 
+classified, at some point in its merger tree history, as a subhalo.
+As we discuss below, these ejected halos have very different clustering
+properties compared to their non-ejected counterparts. The ejected
+fraction for the Bolshoi simulation is $\sim ????$ at $10^{11} h^{-1} M_{\odot}$,
+and drops to $\sim ????$ at $10^{13} h^{-1} M_{\odot}$. The lower mass resolution
+of the Multidark simulation prevents us from making this additional
+sub-classification. Accordingly, results that rely on this split are
+restricted to the Bolshoi simulation and mass range.
 
-We use cosmological N-body simulations called the Bolshoi simulation
-{[}XXX:http://arxiv.org/abs/1002.3660 (Klypin, Trujillo-Gomez, and
-Primack, 2011){]} and the MultiDark simulation {[}XXX: http://arxiv.org/abs/1109.0003
-(Riebe et al., 2012), Prada et al. 2011{]} to investigate the maximum
-circular velocity dependence of halo clustering. We use both simulations
-in order to obtain a large dynamic mass range. Both simulations assume
-a flat $\Lambda{\rm CDM}$ model with density parameters $\Omega_{m}=0.27$,
-$\Omega_{\Lambda}=0.73$, $\Omega_{b}=0.0469$, and $\sigma_{8}=0.82$,
-$n=0.95$, $h=0.70$. The Bolshoi simulation uses $2048^{3}$ particles
-in a periodic box with side length $250h^{-1}{\rm Mpc}$. The mass
-of each particle is $1.35\times10^{8}h^{-1}{\rm M_{\odot}}$ with
-the force resolution $1h^{-1}{\rm kpc}$. The MultiDark simulation
-uses $2048^{3}$ particles in a periodic box with side length $1000h^{-1}{\rm Mpc}$.
-The mass of each particle is $8.721\times10^{9}h^{-1}{\rm M_{\odot}}$
-with the force resolution $7h^{-1}{\rm kpc}$. The simulations were
-run with the Adaptive Refinement Tree Code {[}ART: Kravtsov et al.
-1997, Gottloeber \& Klypin 2008{]}. Halo catalogues and snapshots
-for dark matter particles are available at \url{http://www.multidark.org}.
+%%%We use cosmological N-body simulations called the Bolshoi simulation
+%%%{[}XXX:http://arxiv.org/abs/1002.3660 (Klypin, Trujillo-Gomez, and
+%%%Primack, 2011){]} and the MultiDark simulation {[}XXX: http://arxiv.org/abs/1109.0003
+%%%(Riebe et al., 2012), Prada et al. 2011{]} to investigate the maximum
+%%%circular velocity dependence of halo clustering. We use both simulations
+%%%in order to obtain a large dynamic mass range. Both simulations assume
+%%%a flat $\Lambda{\rm CDM}$ model with density parameters $\Omega_{m}=0.27$,
+%%%$\Omega_{\Lambda}=0.73$, $\Omega_{b}=0.0469$, and $\sigma_{8}=0.82$,
+%%%$n=0.95$, $h=0.70$. The Bolshoi simulation uses $2048^{3}$ particles
+%%%in a periodic box with side length $250h^{-1}{\rm Mpc}$. The mass
+%%%of each particle is $1.35\times10^{8}h^{-1}{\rm M_{\odot}}$ with
+%%%the force resolution $1h^{-1}{\rm kpc}$. The MultiDark simulation
+%%%uses $2048^{3}$ particles in a periodic box with side length $1000h^{-1}{\rm Mpc}$.
+%%%The mass of each particle is $8.721\times10^{9}h^{-1}{\rm M_{\odot}}$
+%%%with the force resolution $7h^{-1}{\rm kpc}$. The simulations were
+%%%run with the Adaptive Refinement Tree Code {[}ART: Kravtsov et al.
+%%%1997, Gottloeber \& Klypin 2008{]}. Halo catalogues and snapshots
+%%%for dark matter particles are available at \url{http://www.multidark.org}.
+%%%
+%%%We use halo catalogues generated by the ROCKSTAR, which is a phase-space,
+%%%temporal halo finder {[}XXX{]}. The ROCKSTAR identifies halos and
+%%%subhalos down to the maximum circular velocity $V_{{\rm max}}\thicksim55{\rm km/s}$
+%%%and also provides merger trees. Those catalogues are publicly available
+%%%at \url{http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html}. 
 
-We use halo catalogues generated by the ROCKSTAR, which is a phase-space,
-temporal halo finder {[}XXX{]}. The ROCKSTAR identifies halos and
-subhalos down to the maximum circular velocity $V_{{\rm max}}\thicksim55{\rm km/s}$
-and also provides merger trees. Those catalogues are publicly available
-at \url{http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html}. 
-
-Based on the halo catalogue, we classify halos into three different
-categories: host halo, subhalos, and ejected halos. Host halos are
-the halos that have never been within the virial radius of more massive
-halos. Subhalos are the halos which are within the virial radius of
-more massive halos at $z=0$. Ejected halos, sometimes called ``backsplash''
-halos, are the distinct halos at $z=0$ whose main progenitors passed
-through the virial radius of a more massive halos at least once in
-the past. In order to identify ejected halos, we build a merger tree
-by using a merger tree algorithm CONSISTENT TREES{[}cite{]}. In later
-sections, when we say halos without any specifications, we include
-both host halos and ejected halos. 
-
-The dark matter halos in the halo catalogue at $z=0$ are defined
-to be spherical regions whose average density equal to $\Delta_{{\rm h}}\rho_{{\rm crit}}$
-where $\Delta_{{\rm h}}=360$\textcolor{black}{{} at $z=0$ according
-to Bryan \& Norman fitting function for the $\Lambda{\rm CDM}$ cosmology
-{[}XXX{]} and whose radius $R_{{\rm vir}}$ corresponds to $M_{{\rm vir}}=4\pi\Omega_{m}\rho_{{\rm crit}}\Delta_{{\rm h}}R_{{\rm vir}}^{3}/3$.
-Note that even though subhalos are distinct and bound objects within
-the host halos, the masses and radii of subhalos do not follow the
-above virial definition, because their structures are strongly affected
-by the potentials of their host halos. In order to define the maximum
-circular velocity for each halo, $\sqrt{{\rm G}M(r)/r}$ within the
-radius $r$ is repeatedly computed with increasing $r<R_{{\rm vir}}$
-until finding the maximum value.}
-
-For the sake of the internal structure of halos to be resolved well
-enough, we made a conservative cut in mass and maximum circular velocity.
-We use halos whose mass is greater than $10^{12}h^{-1}{\rm M_{\odot}}$
-(corresponding to $>100$ particles per halo) and whose maximum circular
-velocity is greater than $200{\rm km/s}$ for the MultiDark simulation,
-and halos whose mass is greater than $10^{11}h^{-1}{\rm M_{\odot}}$
-(corresponding to $>740$ particles per halo) and whose maximum circular
-velocity is greater than $95{\rm km/s}$ for the Bolshoi simulation.
-\textcolor{red}{Those values correspond to the peak in the number
-of halos by binning them as a function of mass and maximum circular
-velocity. }The halo samples below the halo mass or maximum circular
-velocity corresponding to the peak are not considered to be complete
-based on the predictions for halo mass functions, which are a monotonically
-increasing function with the decrease in halo mass. As we will see
-in Section 3, simultaneous dependence of halo clustering on $M_{{\rm vir}}$
-and $V_{{\rm max}}$, the cut is not enough. But all the results pass
-this cut unless it is noted.
-
+%%%Based on the halo catalogue, we classify halos into three different
+%%%categories: host halo, subhalos, and ejected halos. Host halos are
+%%%the halos that have never been within the virial radius of more massive
+%%%halos. Subhalos are the halos which are within the virial radius of
+%%%more massive halos at $z=0$. Ejected halos, sometimes called ``backsplash''
+%%%halos, are the distinct halos at $z=0$ whose main progenitors passed
+%%%through the virial radius of a more massive halos at least once in
+%%%the past. In order to identify ejected halos, we build a merger tree
+%%%by using a merger tree algorithm CONSISTENT TREES{[}cite{]}. In later
+%%%sections, when we say halos without any specifications, we include
+%%%both host halos and ejected halos. 
+%%%
+%%%The dark matter halos in the halo catalogue at $z=0$ are defined
+%%%to be spherical regions whose average density equal to $\Delta_{{\rm h}}\rho_{{\rm crit}}$
+%%%where $\Delta_{{\rm h}}=360$\textcolor{black}{{} at $z=0$ according
+%%%to Bryan \& Norman fitting function for the $\Lambda{\rm CDM}$ cosmology
+%%%{[}XXX{]} and whose radius $R_{{\rm vir}}$ corresponds to $M_{{\rm vir}}=4\pi\Omega_{m}\rho_{{\rm crit}}\Delta_{{\rm h}}R_{{\rm vir}}^{3}/3$.
+%%%Note that even though subhalos are distinct and bound objects within
+%%%the host halos, the masses and radii of subhalos do not follow the
+%%%above virial definition, because their structures are strongly affected
+%%%by the potentials of their host halos. In order to define the maximum
+%%%circular velocity for each halo, $\sqrt{{\rm G}M(r)/r}$ within the
+%%%radius $r$ is repeatedly computed with increasing $r<R_{{\rm vir}}$
+%%%until finding the maximum value.}
+%%%
+%%%For the sake of the internal structure of halos to be resolved well
+%%%enough, we made a conservative cut in mass and maximum circular velocity.
+%%%We use halos whose mass is greater than $10^{12}h^{-1}{\rm M_{\odot}}$
+%%%(corresponding to $>100$ particles per halo) and whose maximum circular
+%%%velocity is greater than $200{\rm km/s}$ for the MultiDark simulation,
+%%%and halos whose mass is greater than $10^{11}h^{-1}{\rm M_{\odot}}$
+%%%(corresponding to $>740$ particles per halo) and whose maximum circular
+%%%velocity is greater than $95{\rm km/s}$ for the Bolshoi simulation.
+%%%\textcolor{red}{Those values correspond to the peak in the number
+%%%of halos by binning them as a function of mass and maximum circular
+%%%velocity. }The halo samples below the halo mass or maximum circular
+%%%velocity corresponding to the peak are not considered to be complete
+%%%based on the predictions for halo mass functions, which are a monotonically
+%%%increasing function with the decrease in halo mass. As we will see
+%%%in Section 3, simultaneous dependence of halo clustering on $M_{{\rm vir}}$
+%%%and $V_{{\rm max}}$, the cut is not enough. But all the results pass
+%%%this cut unless it is noted.
+%%%
 
 \section{The Maximum Circular Velocity Dependence of Halo Clustering}
 
