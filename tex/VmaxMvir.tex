@@ -26,7 +26,10 @@
 \newcommand{\vmax}{V_{\rm max}}
 \newcommand{\meanvmax}{\overline{V}_{\rm max}}
 
-
+\newcommand{\ximm}{\xi_{\rm mm}}
+\newcommand{\xihm}{\xi_{\rm hm}}
+\newcommand{\bh}{b_{\rm h}}
+\newcommand{\bhlin}{b^{\rm lin}_{\rm h}}
 
 
 
@@ -265,19 +268,25 @@ formally $\vmax$ cannot exceed $V_{\rm vir}.$ This manifests as the sharp lower 
 \subsection{Halo Bias}
 \label{subsec:halobias}
 
-In order to measure halo biases, we first compute halo-matter cross
-correlation functions for each subsample. We used cross correlation
-functions to reduce the shot noise effect on the error. Here, instead
-of using full DM particles, we subsample $10^{6}$ particles to compute
-the cross correlation functions and matter auto correlation functions.
-Then, we define a linear bias: 
+In this section we present our primary results for the clustering properties of 
+halos as a function of $\mvir$ and $\vmax.$ Clustering strength is quantified by 
+the two-point correlation function, $\xi(r).$ In all that follows, we will use $\ximm(r)$ to denote
+the auto-correlation of the dark matter density field with itself, and $\xihm(r)$ to denote
+the cross-correlation between a sample of halos and the underlying density field. 
+
+Halos are biased tracers of the dark matter density field. We denote this bias as $\bh,$ 
+which is in general a function of spatial separation. We define halo bias as $$\bh(r) \equiv \xihm(r)/\ximm(r).$$ 
+On sufficiently large scales halo bias is approximately linear, and $\bh(r)$ approaches a constant value $\bhlin.$ 
+
+In order to measure the bias of a sample of simulated halos, for both Bolshoi and Multidark we estimate 
+$\ximm(r)$ and $\xihm(r)$ using a random down-sampling of $10^6$ dark matter particles. For a given sample of halos, 
+we estimate the value of $\bhlin$ exhibited by the sample as follows:
 \begin{equation}
-b_{{\rm lin}}=\sum_{i}(\xi_{hm}(r_{i})/\xi_{mm}(r_{i}))/N_{{\rm bin}},
+\label{eq:blindef}
+b_{{\rm lin}}=\sum_{i}(\xi_{hm}(r_{i})/\xi_{mm}(r_{i}))/N_{{\rm bin}}. 
 \end{equation}
-where $\xi_{hm}$ and $\xi_{mm}$ are halo-matter and matter-matter
-correlation functions and we take the average of the ratio on $r$
-from $10h^{-1}{\rm Mpc}$ to $20h^{-1}{\rm Mpc}$, which contains
-20 bins in total. 
+In Eq.~\ref{eq:blindef}, the sum is performed over $N_{{\rm bin}}=20$ separation bins $r_{\rm i}$ 
+linearly spaced from $10h^{-1}{\rm Mpc}$ to $20h^{-1}{\rm Mpc}.$ 
 
 Fig. \ref{fig:linear-bias} shows linear biases as a function of halo
 mass by splitting each sample into ``upper'' and ``lower'' subsamples.
