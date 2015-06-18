@@ -21,6 +21,8 @@
 \usepackage{jcappub}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\newcommand{\mvir}{M_{\rm vir}}
+\newcommand{\vmax}{V_{\rm max}}
 
 
 
@@ -201,27 +203,17 @@ this cut unless it is noted.
 
 \section{The Maximum Circular Velocity Dependence of Halo Clustering}
 
-In this section, we investigate the maximum circular velocity dependence
-of halo clustering on both large and small scales. We first start
-with an analytic expression of the maximum circular velocity computed
-from the halo mass and its concentration. Then, we explain how we
-select halos for each sample to remove the halo mass dependence using
-the analytic expression of the maximum circular velocity. Finally,
-we show how halo biases differ for those samples both on large scales
-and small scales.
+% In this section, we investigate the maximum circular velocity dependence of halo clustering on both large and small scales. We first start with an analytic expression of the maximum circular velocity computed from the halo mass and its concentration. Then, we explain how we select halos for each sample to remove the halo mass dependence using the analytic expression of the maximum circular velocity. Finally, we show how halo biases differ for those samples both on large scales and small scales.
 
+In this section, we describe our methodology for studying how halo clustering depends on $\mvir$ and $\vmax.$  We first start in \S\ref{subsec:vmaxdef} by defining the analytic expression for $\vmax$ that we use to categorize halos as having above- or below-average circular velocities for their mass. In \S\ref{subsec:samples} we describe the halo samples we use throughout the paper.  
 
 \subsection{The Maximum Circular Velocity}
+\label{subsec:vmaxdef}
 
-In order to compute the maximum circular velocity for halos, we assume
-that dark matter halos are defined as a spherical halo with a virial
-radius. Those halos have average density equal to $\Delta_{{\rm h}}\rho_{{\rm crit}}$
-where $\Delta_{{\rm h}}=360$ \textcolor{red}{for $z=0$ according
-to Bryan \& Norman fitting function {[}XXX{]}}. We also assume that
-those spherical halos have an NFW density profile (XXX). Then, the
-maximum circular velocity $\overline{V}_{{\rm max}}$ as a function
-of the halo mass $M_{{\rm vir}}$ and its concentration $c$ is given
-by:
+%In order to compute the maximum circular velocity for halos, we assume that dark matter halos are defined as a spherical halo with a virial radius. Those halos have average density equal to $\Delta_{{\rm h}}\rho_{{\rm crit}}$ where $\Delta_{{\rm h}}=360$ \textcolor{red}{for $z=0$ according to Bryan \& Norman fitting function {[}XXX{]}}. We also assume that those spherical halos have an NFW density profile (XXX). Then, the maximum circular velocity $\overline{V}_{{\rm max}}$ as a function of the halo mass $M_{{\rm vir}}$ and its concentration $c$ is given by:
+
+If the internal structure of a dark matter halo of mass $\mvir$ is described by an NFW profile \citep{nfw97} of concentration $c,$ 
+then its maximum circular velocity $\vmax$ is given by:
 
 \begin{equation}
 \overline{V}_{{\rm max}}=0.465M_{{\rm vir}}^{1/3}\sqrt{G(\frac{4}{3}\pi\Delta_{{\rm h}}\rho_{{\rm crit}}\Omega_{m})^{1/3}\frac{c}{{\rm ln(1+c)-c/(1+c)}}}.\label{eq:vmax-mvir}
@@ -242,6 +234,7 @@ is a residual dependence on the maximum circular velocity.
 
 
 \subsection{Samples}
+\label{subsec:samples}
 
 \begin{figure}
 \includegraphics[width=0.5\columnwidth]{../plots/plaecholder}\caption{\label{fig:vmax-mvir}Distribution of halo mass and maximum circular
@@ -277,6 +270,7 @@ different mean halo masses. }
 
 
 \subsection{Halo Bias}
+\label{subsec:halobias}
 
 In order to measure halo biases, we first compute halo-matter cross
 correlation functions for each subsample. We used cross correlation
