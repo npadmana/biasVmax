@@ -88,7 +88,7 @@ Introduction
 \begin_layout Standard
 
 \color black
-The halo model provides a connection between dark matter halos and galaxies,
+The halo models provide a connection between dark matter halos and galaxies,
  and it has been remarkably successful in describing observations of galaxy
  clustering.
  In particular,
@@ -121,43 +121,30 @@ The halo model provides a connection between dark matter halos and galaxies,
 \end_inset
 
 .
- Those two models are convertible that we can obtain an HOD by integrating
- the CLF against luminosity and a CLF by differentiating the HOD with respect
- to luminosity.
- The fundamental assumption in both formalisms is that galaxy occupation
- statistics are characterized entirely by halo mass.
+ Those two models are convertible because they operate under the same assumption
+; we can obtain an HOD by integrating the CLF against luminosity and a CLF
+ by differentiating the HOD with respect to luminosity.
+ Both models have been applied extensively to observations in order to study
+ the halo-galaxy connection [XXX] as well as cosmology [XXX].
 \end_layout
 
 \begin_layout Standard
-Some studies show that the most important halo property that influences
- the properties of galaxies within halos is halo mass [White and Rees, 1978
- and one more].
- This is often extended to halo abundance and halo clustering as an assumption
- that halo mass is the most influential halo property to characterize its
- abundance and clustering.
- The motivation behind this assumption comes from the simple excursion set
- formalism, which models halo assembly and clustering from the random walks
- of the density fluctuation, with the assumption that halo environment and
- halo assembly history have no correlation.
- It, however, is shown that the excursion set theory predicts halo clustering
- depends on additional halo environmental factors by relaxing its assumption.
+The halo clustering in large N-body simulations, however, exhibits dependence
+ on additional halo properties besides halo mass [XXX].
+ Ref.XXX shows that formation time of halos affects to halo bias; older halos
+ cluster more strongly than younder ones.
+ This additional dependence of halo clustering is called halo assembly bias,
+ because those additional dependences come from different assmebly history
+ of halos.
+ Several studies show that halo clustering depends on concentration ....those
+ concentration and things are correlated with formation time and environment...
 \end_layout
 
 \begin_layout Standard
-Furthermore, the halo clustering in N-body simulations exhibits dependence
- on halo mass as well as on additional properties such as halo formation
- time [XXX].
- The dependence of halo clustering upon other properties besides halo mass
- is known as halo assembly bias.
- 
+
 \color black
-There have been several studies showing the correlation between halo formation
- time and environment, and therefore any other properties that depend on
- formation time or environment (such as concentration, spin, and velocity
- anisotropy) affect to the assembly bias.
- If the galaxy properties in halos are affected by halo environment, it
- implies that the galaxy occupation statistics also correlate with halo
- assembly bias.
+If the galaxy properties in halos are affected by halo environment, the
+ galaxy occupation statistics will depend on other halo properties XXX.
  Several groups study the correlation between galaxy formation and halo
  assembly bias both theoretically (Croton et al.
  2007) and observationally (XXX).
