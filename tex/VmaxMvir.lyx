@@ -1552,6 +1552,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename ../plots/Bolshoi_andrew_smallScale.pdf
+	lyxscale 50
 	width 50col%
 
 \end_inset
