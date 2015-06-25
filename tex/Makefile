@@ -6,6 +6,7 @@ all :
 	bibtex VmaxMvir
 	pdflatex VmaxMvir
 	pdflatex VmaxMvir
+	pdflatex VmaxMvir
 
 
 clean :
