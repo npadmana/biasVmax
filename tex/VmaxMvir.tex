@@ -58,78 +58,116 @@ We study how the two-point clustering of dark matter halos depends on halo mass,
 
 \section{Introduction}
 
-The halo model provides a connection between dark
+The halo model \citep[][for a recent review]{seljak00,vdboschBOOK} 
+provides a connection between dark
 matter halos and galaxies, and it has been remarkably successful in
 describing observations of galaxy clustering. In particular, the
 Halo Occupation Distribution (HOD) and the Conditional Luminosity
 Function (CLF) are the two most widely used models of the galaxy-halo
-connection. Those models assume that halo mass completely determines
+connection. These models start from the assumption that halo mass completely determines
 the galaxy occupation statistics. In order to populate halos with
-galaxies, the HOD gives the probability $P(N|M)$ that a halo with
+galaxies, the HOD specifies the probability $P(N|M)$ that a halo with
 mass $\mbox{M}$ hosts $N$ galaxies, while the CLF models the mean
-abundance $\Phi(L|M)$ of galaxies with luminosity $L$ which live
-in a dark matter halo of mass $M$. Those two models are convertible
-because they operate under the same assumption; we can obtain an HOD
-by integrating the CLF against luminosity and a CLF by differentiating
-the HOD with respect to luminosity. Both models have been applied
+abundance $\Phi(L|M)$ of galaxies with luminosity $L$ in halos of  mass $M$.
+These two models are interchangeable; integrating the CLF over luminosity
+yields an HOD. Both models have been applied
 extensively to observations in order to study the halo-galaxy connection
 \citep{magliocchetti03,zehavi05a,yang_etal05,zheng07,vdBosch07,zheng09,skibba09,simon_etal09,ross10,zehavi11,geach12,parejko13}
 as well as cosmology \citep{tinker05,leauthaud11b,more_etal13,cacciato_etal13,mandelbaum13}.
 
-The halo clustering in large N-body simulations, however, exhibits
-dependence on additional halo properties besides halo mass 
-\citep{gao_etal05,wechsler06,gao_white07,li_etal08}.
-This additional dependence is known as halo assembly bias; halos of
-the same mass in different environment have different assembly history
-and cluster differently. Having different assembly history also affects
-to the internal structure of halos. If galaxy formation is tightly
-connected to the internal structure of halos and its assembly history,
-galaxy clustering will have assembly bias.
+However, the clustering of halos also exhibits a
+dependence on additional properties beyond their mass 
+\citep{gao_etal05,wechsler06,gao_white07,li_etal08}, a
+phenomenon generically referred to as halo assembly bias. This can be 
+traced back to the fact that halos of
+the same mass in different environments have different assembly histories
+and cluster differently. Having different assembly histories also affects
+the internal structure of halos. This, in turn, results in a clustering dependence
+on the structural properties of a halo, including the depth of its 
+gravitational potential well, characterized by its maximum circular
+velocity $V_{\rm max}$. This work revisits this manifestation 
+of halo assembly bias, and extends it down to smaller scales ($< 10 h^{-1} {\rm Mpc}$) 
+than has been previously explored.
 
-As a response to halo assembly bias, a recent trend in connecting
-halos and galaxies has been to use the Abundance Matching technique
+An alternative approach to connecting halos and galaxies is abundance
+matching
 \citep{kravtsov04a,vale_ostriker04,tasitsiomi_etal04,vale_ostriker06,conroy_wechsler09,
-guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13},
-which assumes a monotonic relation in size of galaxies and halos in
-order to assign galaxies to halos in a hierarchical manner. In order
-to evaluate size of halos, the maximum circular velocity, which is
-a measure of potential well depth of halos, is often used due to its
-tight correlation with stellar mass of galaxies. In the Abundance
-Matching technique, halo assembly bias is a generic prediction.
+guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13}. 
+In its simplest form, abundance matching posits a monotonic
+relationship between a property of a galaxy (luminosity, stellar mass) 
+and that of a halo (mass, potential well depth). By construction, 
+such a relationship preserves the rank ordering of the galaxies and halos. 
+The choice of this halo property is a priori unknown. In light of 
+the previous discussion of assembly bias, one would naturally 
+expect this choice to affect the predicted clustering properties 
+of halos. This work aims to quantify these differences, again
+focusing on smaller scales than previous studies.
 
-Besides halo assembly bias, there have been several studies discussing
-definition of a more physically motivated boundary for halos. A virial
-radius of halos is commonly used as a boundary definition. Those studies,
-however, show that halos and their environmental effects extend well
-beyond the virial radius and a more physically motivated boundary
-is a ``splashback'' radius at which splashback material generates
-a caustic \citep{diemer14,adhikari14,wetzel_nagai14,more15}.
-The environmental effects of halos beyond their virial radius is also
-found in galaxy groups and clusters; galaxies which are beyond the
-virial radius of groups/clusters tend to have more quiescent star
-formation rates \cite{wetzel_etal13}. \cite{wetzel_etal13}
-shows that it is due to ejected satellite galaxies which orbit beyond
-their host halo's virial radius and eventually fall back in. Those
-ejected satellite galaxies live in ejected halos, which were within
-the virial radius of more massive host halos in the past but identified
-as a distinguished halo at present epoch. Since those ejected halos
-host very different type of galaxies than central galaxies that host
-halos host, it is crucial to understand the effect of ejected halos
-on halo clustering.
+%%As a response to halo assembly bias, a recent trend in connecting
+%%halos and galaxies has been to use the Abundance Matching technique
+%%\citep{kravtsov04a,vale_ostriker04,tasitsiomi_etal04,vale_ostriker06,conroy_wechsler09,
+%%guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13},
+%%which assumes a monotonic relation in size of galaxies and halos in
+%%order to assign galaxies to halos in a hierarchical manner. In order
+%%to evaluate size of halos, the maximum circular velocity, which is
+%%a measure of potential well depth of halos, is often used due to its
+%%tight correlation with stellar mass of galaxies. In the Abundance
+%%Matching technique, halo assembly bias is a generic prediction.
 
-In this paper, we explore the additional dependence of galaxy clustering
-on the central velocity dispersion both on small and large scales.
-In Section 2, we briefly describe the simulations, halo finding algorithm,
-and identification of halo types. In Section 3, we explore halo clustering
-as a function of halo mass and the maximum circular velocity through
-two-point correlation functions. We also investigate the effect of
-ejected halos on the halo clustering. In Section4, we show how the
-Abundance Matching techniques based on halo mass and the maximum circular
-velocity make qualitatively different predictions for the clustering
-of central galaxies to connect our findings in Section 3 to observations.
-In Section 5, we discuss the implications of our results and summarize
-our main conclusions.
+A recent parallel research effort has been revisiting the standard
+subdivision of dark matter halos into host/sub-halos, which depends
+on how the halo boundary is chosen. While the virial radius is the
+most commonly chosen definition, recent work has demonstrated that the
+environmental effects of halos extends well beyond the virial radius
+\citep{wetzel_etal13, diemer14,adhikari14,wetzel_nagai14,more15}. 
+In particular, \cite{wetzel_etal13} argue that these environmental effects
+are due to ejected subhalos which orbit beyond the virial radius
+of their hosts, and therefore get temporarily reclassified as host
+halos. These studies 
+argue that a more physically motivated boundary is the 
+``splashback radius'' corresponding to the caustic from material 
+just reaching its first apocentric passage. This work demonstrates
+that the halo assembly bias on small scales predominantly 
+arises from this mis-classification.
 
+The outline of this paper is as follows. Sec.~2 summarizes the simulations
+we use in this work. Sec.~3 presents our primary results - characterizing
+the dependence of the clustering of halos on $V_{\rm max}$; Sec.~4 explores
+some of the implications of these results. We conclude in Sec.~???.
+
+%%%Besides halo assembly bias, there have been several studies discussing
+%%%definition of a more physically motivated boundary for halos. A virial
+%%%radius of halos is commonly used as a boundary definition. Those studies,
+%%%however, show that halos and their environmental effects extend well
+%%%beyond the virial radius and a more physically motivated boundary
+%%%is a ``splashback'' radius at which splashback material generates
+%%%a caustic \citep{diemer14,adhikari14,wetzel_nagai14,more15}.
+%%%The environmental effects of halos beyond their virial radius is also
+%%%found in galaxy groups and clusters; galaxies which are beyond the
+%%%virial radius of groups/clusters tend to have more quiescent star
+%%%formation rates \cite{wetzel_etal13}. \cite{wetzel_etal13}
+%%%shows that it is due to ejected satellite galaxies which orbit beyond
+%%%their host halo's virial radius and eventually fall back in. Those
+%%%ejected satellite galaxies live in ejected halos, which were within
+%%%the virial radius of more massive host halos in the past but identified
+%%%as a distinguished halo at present epoch. Since those ejected halos
+%%%host very different type of galaxies than central galaxies that host
+%%%halos host, it is crucial to understand the effect of ejected halos
+%%%on halo clustering.
+
+%%In this paper, we explore the additional dependence of galaxy clustering
+%%on the central velocity dispersion both on small and large scales.
+%%In Section 2, we briefly describe the simulations, halo finding algorithm,
+%%and identification of halo types. In Section 3, we explore halo clustering
+%%as a function of halo mass and the maximum circular velocity through
+%%two-point correlation functions. We also investigate the effect of
+%%ejected halos on the halo clustering. In Section4, we show how the
+%%Abundance Matching techniques based on halo mass and the maximum circular
+%%velocity make qualitatively different predictions for the clustering
+%%of central galaxies to connect our findings in Section 3 to observations.
+%%In Section 5, we discuss the implications of our results and summarize
+%%our main conclusions.
+%%
 
 \section{Simulations}
 
