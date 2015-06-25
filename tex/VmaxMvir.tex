@@ -1,15 +1,19 @@
 %% LyX 2.0.5.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[usenatbib]{article}
+\documentclass[useAMS,usenatbib,letterpaper]{mn2e} 
+\usepackage[totalwidth=480pt,totalheight=680pt,layoutvoffset=0.5cm]{geometry}
+%\documentclass[usenatbib]{article}
 \usepackage[latin9]{inputenc}
-\usepackage[a4paper]{geometry}
 \geometry{verbose}
 \usepackage{color}
 \usepackage{float}
 \usepackage{url}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{astrobib_mnras2e}
 \usepackage{graphicx}
+\usepackage{times} 
+\usepackage{fixltx2e}
 
 \makeatletter
 
@@ -235,7 +239,8 @@ designation refers to whether its true $\vmax$ value in the simulation
 is above- or below-average for its mass.
 
 \begin{figure}
-\includegraphics[width=0.5\columnwidth,bb = 0 0 200 100, draft, type=eps]{../plots/plaecholder}\caption{\label{fig:vmax-mvir}Distribution of halo mass and maximum circular
+\includegraphics[width=0.5\columnwidth]{../plots/plaecholder}
+\caption{\label{fig:vmax-mvir}Distribution of halo mass and maximum circular
 velocity at $z=0.0$ for halos\textcolor{black}{{} from the Bolshoi
 simulation.} The blue dots represent halos whose observed maximum
 circular velocity, $V_{{\rm max,obs}}$, is greater than $\overline{V}_{{\rm max}}$,
@@ -338,8 +343,7 @@ profile is well-approximated by an NFW profile, $\vmax$ is entirely
 determined by concentration (see Eq.~\ref{eq:vmax-mvir}).
 
 \begin{figure}
-\includegraphics[width=0.5\columnwidth,bb = 0 0 200 100, draft, type=eps]{../plots/linearBias_wang}
-
+\includegraphics[width=0.5\columnwidth]{../plots/linearBias_wang}
 \caption{\label{fig:linear-bias}Upper panel: Linear bias at $z=0.0$ as a
 function of halo mass from the Bolshoi simulation (circle points)
 and the MultiDark simulation (triangle points). The blue circles correspond
@@ -399,8 +403,7 @@ This is broadly consistent with our results, where we find the strongest
 scale dependence at $1h^{-1}{\rm Mpc}$.
 
 \begin{figure}[H]
-\includegraphics[width=0.8\columnwidth,bb = 0 0 200 100, draft, type=eps]{../plots/Both_smallScale_wang_log}
-
+\includegraphics[width=0.8\columnwidth]{../plots/Both_smallScale_wang_log}
 \caption{\label{fig:small-scale}Ratio of halo-matter cross correlation functions
 between high/low-$V_{{\rm max}}$ halos normalized by their linear
 biases. The plots are from the Bolshoi simulation and the MultiDark
@@ -415,8 +418,7 @@ those subsamples increases smoothly with decreasing halo mass. }
 
 
 \begin{figure}[H]
-\includegraphics[width=0.5\columnwidth,bb = 0 0 200 100, draft, type=eps]{../plots/Bolshoi_smallScale_wang_log_eje}
-
+  \includegraphics[width=0.5\columnwidth]{../plots/Bolshoi_smallScale_wang_log_eje}
 \caption{\label{fig:eject}The same figures as Fig. \ref{fig:small-scale}
 without ejected halos only from the Bolshoi simulation. As can be
 seen by comparing these results to those in Fig. \ref{fig:small-scale},
@@ -463,9 +465,10 @@ ejected subhalos. As previously, we see a clear scale dependence of
 this signal, with a maximum difference of $\sim15\%$ at $\sim1h^{-1}{\rm Mpc}$.
 These differences go down to $\sim5\%$ after removing ejected subhalos.
 
+{bf NP : Missing figure here}
 \begin{figure}[H]
-\includegraphics[width=0.5\columnwidth,bb = 0 0 200 100, draft, type=eps]{../plots/Bolshoi_andrew_smallScale.pdf}\includegraphics[width=0.5\columnwidth,bb = 0 0 200 100, draft, type=eps]{../plots/Bolshoi_andrew_smallScale_nonEj}
-
+\includegraphics[width=0.5\columnwidth]{../plots/Bolshoi_andrew_smallScale}
+%\includegraphics[width=0.5\columnwidth]{../plots/Bolshoi_andrew_smallScale_nonEj}
 \caption{\label{fig:abundance_small}Ratio of halo-matter cross correlation
 functions between$M_{{\rm vir}}$-based and $V_{{\rm max}}$-based
 abundance matching samples with ejected halos (left) and without ejected
@@ -568,6 +571,7 @@ dependence of linear bias on the maximum circular velocity for both
 high/low mass halos. We also found that scale dependence of halo assembly
 bias on small scales mostly come from the ejected halos.
 
+\bibliographystyle{mn2elong}
 \bibliography{VmaxMvir}
 
 \end{document}

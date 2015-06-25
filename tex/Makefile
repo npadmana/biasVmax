@@ -7,3 +7,6 @@ all :
 	pdflatex VmaxMvir
 	pdflatex VmaxMvir
 
+
+clean :
+	-rm *.aux VmaxMvir.bbl VmaxMvir.log
