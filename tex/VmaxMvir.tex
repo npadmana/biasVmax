@@ -62,12 +62,12 @@ The halo model \citep[][for a recent review]{seljak00,vdboschBOOK}
 provides a connection between dark
 matter halos and galaxies, and it has been remarkably successful in
 describing observations of galaxy clustering. In particular, the
-Halo Occupation Distribution (HOD) and the Conditional Luminosity
-Function (CLF) are the two most widely used models of the galaxy-halo
+Halo Occupation Distribution (HOD)\citep{berlind02,berlind03} and the Conditional Luminosity
+Function (CLF)\citep{yang03} are the two most widely used models of the galaxy-halo
 connection. These models start from the assumption that halo mass completely determines
 the galaxy occupation statistics. In order to populate halos with
 galaxies, the HOD specifies the probability $P(N|M)$ that a halo with
-mass $\mbox{M}$ hosts $N$ galaxies, while the CLF models the mean
+mass $M$ hosts $N$ galaxies, while the CLF models the mean
 abundance $\Phi(L|M)$ of galaxies with luminosity $L$ in halos of  mass $M$.
 These two models are interchangeable; integrating the CLF over luminosity
 yields an HOD. Both models have been applied
@@ -77,12 +77,12 @@ as well as cosmology \citep{tinker05,leauthaud11b,more_etal13,cacciato_etal13,ma
 
 However, the clustering of halos also exhibits a
 dependence on additional properties beyond their mass 
-\citep{gao_etal05,wechsler06,gao_white07,li_etal08}, a
+\citep{gao_etal05,wechsler06,gao_white07,li_etal08,hahn_etal09}, a
 phenomenon generically referred to as halo assembly bias. This can be 
 traced back to the fact that halos of
 the same mass in different environments have different assembly histories
 and cluster differently. Having different assembly histories also affects
-the internal structure of halos. This, in turn, results in a clustering dependence
+the internal structure of halos\citep{bullock01,wechsler02,hahn_etal07b,faltenbacher_white10}. This, in turn, results in a clustering dependence
 on the structural properties of a halo, including the depth of its 
 gravitational potential well, characterized by its maximum circular
 velocity $V_{\rm max}$. This work revisits this manifestation 
@@ -357,19 +357,24 @@ than $\vmax.$ This agreement is to be expected: insofar as the halo
 profile is well-approximated by an NFW profile, $\vmax$ is entirely
 determined by concentration (see Eq.~\ref{eq:vmax-mvir}).
 
+
 \begin{figure}
-\begin{center}
-\includegraphics[width=0.9\columnwidth]{../plots/linearBias_wang}
-\end{center}
+\includegraphics[width=0.5\columnwidth]{../plots/linearBias_wang}
+
 \caption{\label{fig:linear-bias}Upper panel: Linear bias at $z=0.0$ as a
-function of halo mass from the Bolshoi simulation (circle points)
-and the MultiDark simulation (triangle points). The blue circles correspond
-to a linear bias for high-$V_{{\rm max}}$ halos, while the green
-circles correspond to low-$V_{{\rm max}}$ halos. Lower panel: Ratio
-of linear biases between high-$V_{{\rm max}}$ and low-$V_{{\rm max}}$
-samples from the Bolshoi simulation and the MultiDark simulation.
-The clustering difference increases with decreasing $\mvir,$ and
-exceeds $30\%$ for halos of Milky Way mass $\mvir\approx10^{12}\msun.$}
+function of halo mass from the Bolshoi and the MultiDark simulations.
+The vertical dashed line indicates the upper/lower limit of halo mass
+for the Bolshoi/MultiDark simulations respectively. The blue lines
+correspond to a linear bias for high-$V_{{\rm max}}$ halos, while
+the green lines correspond to low-$V_{{\rm max}}$ halos. The solid
+lines are the case of including the ejected halos and the dashed lines
+are the case without them. Note that the MultiDark simulation does not 
+have sufficient number of ejected halos due to its mass resolution. 
+Lower panel: Ratio of linear biases between 
+high-$V_{{\rm max}}$ and low-$V_{{\rm max}}$ samples from the Bolshoi
+and the MultiDark simulations. The clustering difference increases
+with decreasing $\mvir,$ and exceeds $30\%$ for halos of Milky Way
+mass $\mvir\approx10^{12}\msun.$}
 \end{figure}
 
 
@@ -391,7 +396,7 @@ compute halo biases. Both types of halos are identified as distinct
 halos at $z=0$. Ejected halos, however, are halos which were identified
 as part of more massive halos at one or more occasions in the past,
 but were ejected and now exist at a host halo at $z=0$. Those ejected
-halos tend to exist around more massive halos (any reference?). Therefore,
+halos tend to exist around more massive halos \citep{more citations?: wetzel_etal13}. Therefore,
 the effect on scale-dependent biases may be caused by those ejected
 halos. To test this, we compute halo-matter cross correlation functions
 without the ejected halos. Similar to Fig. \ref{fig:linear-bias},
@@ -463,17 +468,18 @@ As one might infer from above (and we demonstrate below), different
 choices for the latter can result in significant differences for different
 observables.
 
-In order to be explicit, we consider abundance matching (CITE??) the
+In order to be explicit, we consider abundance matching\citep{kravtsov04a,vale_ostriker04,tasitsiomi_etal04,vale_ostriker06,conroy_wechsler09,
+guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13} the
 stellar masses of central galaxies to either the mass or circular
 velocity of host halos. We implement this by splitting the halo catalog
 into a series of bins with constant number density (=$1.6\times10^{-3}$),
 rank ordering either by mass or circular velocity. We label each bin
 by its corresponding stellar mass, computed from the stellar-to-halo
-mass relation of CITE Behroozi et al. When we rank order based on
+mass relation of \citep{behroozi13}. When we rank order based on
 circular velocity, there is the possibility that the effective halo
 masses of these bins could differ from what we obtain after rank ordering
 by halo mass. We explicitly check this and find that the effective
-halo masses for both cases agree to $\sim0.4\%$, allowing us to consistently
+halo masses for both cases agree to $\sim99.6\%$, allowing us to consistently
 compare samples with the same imputed stellar mass.
 
 At fixed stellar mass, the linear bias of samples selected by their
@@ -484,21 +490,26 @@ the small scale ($1$ to $10h^{-1}{\rm Mpc}$) correlation functions
 of these two samples, both including {[}left{]} and excluding {[}right{]}
 ejected subhalos. As previously, we see a clear scale dependence of
 this signal, with a maximum difference of $\sim15\%$ at $\sim1h^{-1}{\rm Mpc}$.
-These differences go down to $\sim5\%$ after removing ejected subhalos.
+These differences go down to $\sim5\%$ after removing ejected subhalos. The reason
+we see the bump for the $V_{{\rm max}}$-selected samples is because
+the $V_{{\rm max}}$-selected samples contain more ejected halos than the
+ $M_{{\rm vir}}$-selected samples. On low stellar mass end ($M^{*}\sim11.4{\rm M_{\odot}}$}), the 
+ fraction of the ejected halos in the $V_{{\rm max}}$-selected sample becomes $\sim14\%$, while the fraction in the 
+  $M_{{\rm vir}}$-selected sample is $\sim14\%$.
 
-{\bf NP : Missing figure here}
+
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{../plots/Bolshoi_andrew_smallScale}
-%\includegraphics[width=0.9\columnwidth]{../plots/Bolshoi_andrew_smallScale_nonEj}
+\includegraphics[width=0.9\columnwidth]{../plots/Bolshoi_andrew_smallScale_nonEj}
 \end{center}
 \caption{\label{fig:abundance_small}Ratio of halo-matter cross correlation
 functions between$M_{{\rm vir}}$-based and $V_{{\rm max}}$-based
 abundance matching samples with ejected halos (left) and without ejected
 halos (right). The ratios are normalized by their linear biases. Each
-line corresponds to different halo mass bins labeled in the plots.
-With ejected halos, the halo biases computed from the $V_{{\rm max}}$-samples
-have very different scale-dependence than the ones from the $M_{{\rm vir}}$-samples.
+line corresponds to different stellar mass bins labeled in the plots.
+With ejected halos, the halo biases computed from the $V_{{\rm max}}$-selected samples
+have very different scale-dependence than the ones from the $M_{{\rm vir}}$-selected samples.
 By removing those ejected halos, the difference is more or less removed.}
 \end{figure}
 
@@ -583,7 +594,7 @@ galaxies and halos observationally.
 In summary, we found a consistent trend with previous works in additional
 dependence of linear bias on the maximum circular velocity for both
 high/low mass halos. We also found that scale dependence of halo assembly
-bias on small scales mostly come from the ejected halos.
+bias on small scales, which mostly come from the ejected halos.
 
 
 \section{Summary}
