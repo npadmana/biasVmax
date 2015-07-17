@@ -133,7 +133,7 @@ arises from this mis-classification.
 The outline of this paper is as follows. Sec.~2 summarizes the simulations
 we use in this work. Sec.~3 presents our primary results - characterizing
 the dependence of the clustering of halos on $V_{\rm max}$; Sec.~4 explores
-some of the implications of these results. We conclude in Sec.~???.
+some of the implications of these results. We conclude in Sec.~5.
 
 %%%Besides halo assembly bias, there have been several studies discussing
 %%%definition of a more physically motivated boundary for halos. A virial
@@ -172,8 +172,8 @@ some of the implications of these results. We conclude in Sec.~???.
 \section{Simulations}
 
 
-We use the Bolshoi \citep{bolshoi_11} and Multidark simulations \citep{riebe_etal11, prada_etal11}
-\footnote{\url{http://www.multidark.org}%
+We use the Bolshoi \citep{bolshoi_11} and MultiDark simulations \citep{riebe_etal11, prada_etal11}
+\footnote{\url{http://www.MultiDark.org}%
 } in this work; the combination of these simulations allows us to span
 a large range in halo mass. We summarize key properties of these simulations
 here. Both simulations were run with the Adaptive Refinement Tree
@@ -183,7 +183,7 @@ $\Omega_{\Lambda}=0.73$, $\Omega_{b}=0.0469$, and $\sigma_{8}=0.82$,
 $n=0.95$, $h=0.70$. The Bolshoi simulation used $2048^{3}$ particles
 in a $250h^{-1}{\rm Mpc}$ box and a force resolution of $1h^{-1}{\rm kpc}$,
 giving a particle mass of $1.35\times10^{8}h^{-1}{\rm M_{\odot}}$,
-while the Multidark simulation used $2048^{3}$ particles in a $1h^{-1}{\rm Gpc}$
+while the MultiDark simulation used $2048^{3}$ particles in a $1h^{-1}{\rm Gpc}$
 box and a force resolution of $7h^{-1}{\rm kpc}$ giving a particle
 mass of $8.721\times10^{9}h^{-1}{\rm M_{\odot}}$. Dark matter halos
 and subhalos are identified using the \texttt{ROCKSTAR} phase-space,
@@ -197,10 +197,10 @@ In what follows, we use the virial masses and maximum circular velocities
 the halo catalogues. The halo mass and velocity functions start to
 show incompleteness at $10^{11}h^{-1}M_{\odot}$ ($\sim740$ particles)
 for the Bolshoi simulation, and $10^{12}h^{-1}M_{\odot}$ ($\sim100$
-particles) for the Multidark simulation. We choose to be conservative
+particles) for the MultiDark simulation. We choose to be conservative
 and restrict to halos with $>740$ particles for both simulations,
 corresponding to mass limits of $10^{11}h^{-1}{\rm M_{\odot}}$ and
-$6.45\times10^{12}h^{-1}{\rm M_{\odot}}$ for Bolshoi and Multidark
+$6.45\times10^{12}h^{-1}{\rm M_{\odot}}$ for Bolshoi and MultiDark
 respectively.
 
 In addition to the standard classification of halos into host halos
@@ -213,7 +213,7 @@ As we discuss below, these ejected halos have very different clustering
 properties compared to their non-ejected counterparts. The ejected
 fraction for the Bolshoi simulation is $\sim15.8\%$ at $10^{11}h^{-1}M_{\odot}$,
 and drops to $\sim6.3\%$ at $10^{13}h^{-1}M_{\odot}$. The lower
-mass resolution of the Multidark simulation prevents us from making
+mass resolution of the MultiDark simulation prevents us from making
 this additional sub-classification. Accordingly, results that rely
 on this split are restricted to the Bolshoi simulation and mass range.
 
@@ -223,9 +223,8 @@ on this split are restricted to the Bolshoi simulation and mass range.
 In this section we present our primary results. We begin in \S\ref{subsec:samples}
 by describing the sample of halos we use throughout the paper, as
 well as our method for how we categorize halos as having above- or
-below-average circular velocities for their mass. In \S\ref{subsec:halobias}
-...
-
+below-average circular velocities for their mass. In \S\ref{subsec:halobias},
+we show the dependence of the clustering of halos on $V_{\rm max}$.
 
 \subsection{Halo Sample Definitions}
 
@@ -242,7 +241,7 @@ $\bar{c}(\mvir)$ for $z=0$ Bolshoi halos is well-described by:
 \begin{equation}
 {\rm log}_{10}\bar{c}=-0.097{\rm log_{10}M_{vir}}+2.148.\label{eq:concen}
 \end{equation}
-For every halo in the Bolshoi and Multidark catalogs, we use its tabulated
+For every halo in the Bolshoi and MultiDark catalogs, we use its tabulated
 $\mvir$ to compute $\bar{c}(\mvir),$ and then use the values $\bar{c}$
 together with Eq.~\ref{eq:vmax-mvir} to compute $\overline{V}_{{\rm max}}$
 for every halo. We will henceforth refer to halos with $\vmax<\meanvmax(\mvir)$
@@ -309,12 +308,12 @@ On sufficiently large scales halo bias is approximately linear, and
 $\bh(r)$ approaches a constant value $\bhlin.$
 
 In order to measure the bias of a sample of simulated halos, for both
-Bolshoi and Multidark we estimate $\ximm(r)$ and $\xihm(r)$ using
+Bolshoi and MultiDark we estimate $\ximm(r)$ and $\xihm(r)$ using
 a random down-sampling of $10^{6}$ dark matter particles. For a given
 sample of halos, we estimate the value of $\bhlin$ exhibited by the
 sample as follows: 
 \begin{equation}
-b_{{\rm lin}}=\sum_{i}(\xi_{hm}(r_{i})/\xi_{mm}(r_{i}))/N_{{\rm bin}}.\label{eq:blindef}
+b_{{\rm lin}}=\frac{1}{N_{{\rm bin}}}\sum_{i}(\xi_{\rm hm}(r_{i})/\xi_{\rm mm}(r_{i})).\label{eq:blindef}
 \end{equation}
 In Eq.~\ref{eq:blindef}, the sum is performed over $N_{{\rm bin}}=20$
 separation bins $r_{{\rm i}}$ linearly spaced from $10h^{-1}{\rm Mpc}$
@@ -322,11 +321,11 @@ to $20h^{-1}{\rm Mpc}.$
 
 In order to study the mass-dependence of halo bias, we bin our halos
 into a sequence of $\mvir$ bins chosen such that there are the same
-numbers of halos in each bin. For Multidark, we select $2\times10^{5}$
+numbers of halos in each bin. For MultiDark, we select $2\times10^{5}$
 halos for each bin; for Bolshoi we use $25000$ halos per bin. The
 halos in each mass bin are categorized as high-$\vmax$ or low-$\vmax$
 according to the method described in \S\ref{subsec:samples}. We
-start using halos from the Multidark simulation for $M_{{\rm vir}}>10^{12.3}h^{-1}{\rm M_{\odot}}$. 
+start using halos from the MultiDark simulation for $M_{{\rm vir}}>10^{12.3}h^{-1}{\rm M_{\odot}}$. 
 
 The top panel of Fig.~\ref{fig:linear-bias} shows $\bhlin$ as a
 function of $\mvir;$ results for high-$\vmax$ halos are shown in
@@ -381,8 +380,8 @@ Next, we study scale-dependence of halo bias on small scales for high-$V_{{\rm m
 and low-$V_{{\rm max}}$ halos. Fig. \ref{fig:small-scale} shows
 the ratio of halo bias $b_{h}(r)$ of high-$V_{{\rm max}}$ samples
 divided by $b_{h}(r)$ of low-$V_{{\rm max}}$ samples for several
-mass bins. The first three mass bins labeled in the figure, ${\rm log_{10}M[h^{-1}{\rm M_{\odot}}]=11.7,12.0,12.2}$,
-are from the Bolshoi simulation, and the last two mass bins, ${\rm log_{10}M[h^{-1}{\rm M_{\odot}}]=12.7,13.1}$,
+mass bins. The first three mass bins labeled in the figure, $M_{{\rm vir}}=10^{11.7,12.0,12.2}h^{-1}{\rm {\rm M_{\odot}}}$,
+are from the Bolshoi simulation, and the last two mass bins, $M_{{\rm vir}}=10^{12.7,13.1}h^{-1}{\rm {\rm M_{\odot}}}$,
 are from the MultiDark simulation. The ratio is normalized by their
 linear biases so that the ratio goes to 1 on large scales. High-$V_{{\rm max}}$
 halos cluster more strongly compared to their low-$V_{{\rm max}}$
@@ -403,11 +402,11 @@ we first compare linear biases as a function of halo mass, shown in
 Fig.\ref{fig:linear-bias} as dashed lines. The ratio
 of linear bias between high-$V_{{\rm max}}$ and low-$V_{{\rm max}}$
 halos is suppressed to 25\% for halos of Milky Way mass. This suppression due 
-to excluding the ejected halos is consistent with \citep{wang09}. Similar to
+to excluding the ejected halos is consistent with \cite{wang09}. Similar to
 what was done in Fig. \ref{fig:small-scale}, Fig. \ref{fig:eject}
 shows the ratio of $b_{h}(r)$ between high-$V_{{\rm max}}$and low-$V_{{\rm max}}$
 halos on small scales for several mass bins only from the Bolshoi
-simulation. Due to the mass resolution of the Multidark simulation,
+simulation. Due to the mass resolution of the MultiDark simulation,
 we do not have sufficient number of ejected halos in the halo catalog.\textcolor{black}{{}
 Once the ejected halos have been removed, the deviation of the halo
 bias on small scales is greatly reduced. }This implies an intimate
@@ -415,7 +414,7 @@ connection between assembly bias and subhalo back-splashing.
 
 This scale dependence in the clustering signal from ejected halos
 has a very simple interpretation. By definition, ejected halos are
-physically associated with a more massive halo and cluster strongly at $\sim1.6r_{200}$ \citep{wang09}.
+physically associated with a more massive halo and cluster strongly at $\sim1.6r_{200}$ \cite{wang09}.
  Their clustering signal is therefore determined by this associated halo, much like the clustering
 of subhalos is determined by its host halo. More quantitatively, \cite{wetzel_etal13}
 find the fraction of ejected halos is a strong function of the corresponding
@@ -458,8 +457,8 @@ between assembly bias and subhalo back-splashing.}
 
 \section{Observational Consequences}
 
-\textbf{NP : Probably should explicitly show that the mean halo masses
-of these samples is the same}
+%%\textbf{NP : Probably should explicitly show that the mean halo masses
+%%of these samples is the same}
 
 We now consider possible observational consequences of the results
 of the previous section. In order to do this, the key first step is
@@ -473,13 +472,13 @@ In order to be explicit, we consider abundance matching\citep{kravtsov04a,vale_o
 guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13} the
 stellar masses of central galaxies to either the mass or circular
 velocity of host halos. We implement this by splitting the halo catalog
-into a series of bins with constant number density (=$1.6\times10^{-3}$),
+into a series of bins with constant number density (=$1.6\times10^{-3}(h^{-1}{\rm Mpc})^{-3}$),
 rank ordering either by mass or circular velocity. We label each bin
 by its corresponding stellar mass, computed from the stellar-to-halo
 mass relation of \citep{behroozi13}. When we rank order based on
-circular velocity, there is the possibility that the effective halo
+circular velocity, there is the possibility that the mean halo
 masses of these bins could differ from what we obtain after rank ordering
-by halo mass. We explicitly check this and find that the effective
+by halo mass. We explicitly check this and find that the mean
 halo masses for both cases agree to $\sim99.6\%$, allowing us to consistently
 compare samples with the same imputed stellar mass.
 
