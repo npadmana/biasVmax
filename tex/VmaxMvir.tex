@@ -51,7 +51,10 @@
 \title{The Maximum Circular Velocity Dependence of Halo Clustering}
 \maketitle
 \begin{abstract}
-We study how the two-point clustering of dark matter halos depends on halo mass, $\mvir,$ and the depth of the gravitational potential well, $\vmax.$  At the low-mass end, halos with high-$\vmax$ show stronger large-scale clustering relative to halos with low-$\vmax$ of the same mass.  In keeping with previous results, this trend weakens and reverses for $\mvir>\mcoll\approx10^{12.5}\msun,$ such that large-scale bias is mildly stronger for low-$\vmax$ halos relative to their high-$\vmax$ counterparts. We present the first study of the scale-dependence of halo assembly bias. At the low-mass end, assembly bias exhibits a pronounced scale-dependent ``bump''  at $500\kpch-5\mpch,$ a new result. This feature weakens and eventually vanishes for halos of higher mass. We show that halo assembly bias can primarily be attributed to a special subpopulation of {\em ejected subhalos}, defined as present-day host halos that were previously members of a higher-mass halo at some point in their past history. Our findings have important implications for both cosmological parameter inference and galaxy evolution modeling. We find that predictions for galaxy clustering and lensing in the $r\sim1-2\mpch$ regime can be impacted by up to $\sim20\%$ by the choice of the halo property, even for stellar mass-limited samples. We conclude by outlining a program to alleviate this threatening systematic, so that existing and near-future surveys can achieve their promise to robustly constrain cosmology and the galaxy-halo connection using high-precision measurements of clustering and lensing. 
+We study how the two-point clustering of dark matter halos depends on halo mass, $\mvir,$ and the depth of the gravitational potential well, $\vmax.$  At the low-mass end, halos with high-$\vmax$ show stronger large-scale clustering relative to halos with low-$\vmax$ of the same mass.  In keeping with previous results, this trend weakens and reverses for $\mvir>\mcoll\approx10^{12.5}\msun,$ such that large-scale bias is mildly stronger for low-$\vmax$ halos relative to their high-$\vmax$ counterparts. We present the first study of the scale-dependence of halo assembly bias. At the low-mass end, assembly bias exhibits a pronounced scale-dependent ``bump''  at $500\kpch-5\mpch,$. This feature weakens and eventually vanishes for halos of higher mass. We show that halo assembly bias can primarily be attributed to a special subpopulation of {\em ejected halos}, defined as present-day host halos that were previously members of a higher-mass halo at some point in their past history. Our findings show that {\em ejected halos} signifies the effect of assembly bias and also questions whether {\em ejected halos} should be treated as distinct host halos in the galaxy-halo connection. 
+%Our findings have important implications for both cosmological parameter inference and galaxy evolution modeling. 
+We find that predictions for galaxy clustering and lensing in the $r\sim1-2\mpch$ regime can be impacted by up to $\sim20\%$ by the choice of the halo property, even for stellar mass-limited samples. We conclude by outlining a program to alleviate this systematic.
+%, so that existing and near-future galaxy surveys can achieve their promise to robustly constrain cosmology and the galaxy-halo connection using high-precision measurements of clustering and lensing. 
 
 %At constant halo mass, we see residual dependence of halo clustering on $V_{{\rm max}}$. In low mass regime, high-$V_{{\rm max}}$ halos cluster more strongly than low-$V_{{\rm max}}$ halos; at $M_{{\rm vir}}\thickapprox10^{11.6}h^{-1}{\rm M_{\odot}}$, the linear bias for high-$V_{{\rm max}}$ halos is $40\%$ larger. In high mass regime, this trend reverses that low-$V_{{\rm max}}$halos cluster more strongly, and the overall difference is smaller. At $r<10h^{-1}{\rm Mpc}$, halo bias for high-$V_{{\rm max}}$ halos exhibit significantly different scale-dependent feature compared to the bias for low-$V_{{\rm max}}$ halos; high-$V_{{\rm max}}$ halos cluster strongly at $1h^{-1}{\rm Mpc}$ and their clustering signal differs by 60\% at $M_{{\rm vir}}\approx10^{11.8}h^{-1}{\rm M_{\odot}}$ compared to their low-$V_{{\rm max}}$counterparts. This scale-dependent feature, however, is significantly reduced by excluding ejected halos from the samples. The ejected halos are the halos which are identified as host halos at present epoch but were subhalos of more massive host halos in the past, and they are known to host satellite galaxies instead of central galaxies. As possible observational consequences of the results, we relate an observable property of a galaxy (luminosity, stellar mass) to an intrinsic property of its host halo (mass, circular velocity). By using different choices for the halo property, we see a clear scale dependence in clustering at $1h^{-1}{\rm Mpc}$, with a maximum difference of $\sim15\%$. These differences go down to $\sim5\%$ after removing the ejected halos.
 \end{abstract}
@@ -181,10 +184,10 @@ Code \citep{kravtsov_etal97,gottloeber_klypin08} assuming a flat
 $\Lambda{\rm CDM}$ model with density parameters $\Omega_{m}=0.27$,
 $\Omega_{\Lambda}=0.73$, $\Omega_{b}=0.0469$, and $\sigma_{8}=0.82$,
 $n=0.95$, $h=0.70$. The Bolshoi simulation used $2048^{3}$ particles
-in a $250h^{-1}{\rm Mpc}$ box and a force resolution of $1h^{-1}{\rm kpc}$,
+in a $250h^{-1}{\rm Mpc}$ box with a force resolution of $1h^{-1}{\rm kpc}$,
 giving a particle mass of $1.35\times10^{8}h^{-1}{\rm M_{\odot}}$,
 while the MultiDark simulation used $2048^{3}$ particles in a $1h^{-1}{\rm Gpc}$
-box and a force resolution of $7h^{-1}{\rm kpc}$ giving a particle
+box with a force resolution of $7h^{-1}{\rm kpc}$ giving a particle
 mass of $8.721\times10^{9}h^{-1}{\rm M_{\odot}}$. Dark matter halos
 and subhalos are identified using the \texttt{ROCKSTAR} phase-space,
 temporal halo finder \citep{rockstar} and merger trees are constructed
@@ -197,11 +200,9 @@ In what follows, we use the virial masses and maximum circular velocities
 the halo catalogues. The halo mass and velocity functions start to
 show incompleteness at $10^{11}h^{-1}M_{\odot}$ ($\sim740$ particles)
 for the Bolshoi simulation, and $10^{12}h^{-1}M_{\odot}$ ($\sim100$
-particles) for the MultiDark simulation. We choose to be conservative
-and restrict to halos with $>740$ particles for both simulations,
-corresponding to mass limits of $10^{11}h^{-1}{\rm M_{\odot}}$ and
-$6.45\times10^{12}h^{-1}{\rm M_{\odot}}$ for Bolshoi and MultiDark
-respectively.
+particles) for the MultiDark simulation. 
+%TS: The sentence below is not correct; I use halos greater than 10^12 solar masses for the MultiDark. I don't use the conservative cut.
+%We choose to be conservative and restrict to halos with $>740$ particles for both simulations, corresponding to mass limits of $10^{11}h^{-1}{\rm M_{\odot}}$ and $6.45\times10^{12}h^{-1}{\rm M_{\odot}}$ for Bolshoi and MultiDark respectively.
 
 In addition to the standard classification of halos into host halos
 (not within the virial radius of a more massive halo) and subhalos
@@ -307,8 +308,8 @@ We define halo bias as
 On sufficiently large scales halo bias is approximately linear, and
 $\bh(r)$ approaches a constant value $\bhlin.$
 
-In order to measure the bias of a sample of simulated halos, for both
-Bolshoi and MultiDark we estimate $\ximm(r)$ and $\xihm(r)$ using
+In order to measure the bias of a sample of simulated halos for both
+Bolshoi and MultiDark simulations, we estimate $\ximm(r)$ and $\xihm(r)$ using
 a random down-sampling of $10^{6}$ dark matter particles. For a given
 sample of halos, we estimate the value of $\bhlin$ exhibited by the
 sample as follows: 
@@ -325,7 +326,7 @@ numbers of halos in each bin. For MultiDark, we select $2\times10^{5}$
 halos for each bin; for Bolshoi we use $25000$ halos per bin. The
 halos in each mass bin are categorized as high-$\vmax$ or low-$\vmax$
 according to the method described in \S\ref{subsec:samples}. We
-start using halos from the MultiDark simulation for $M_{{\rm vir}}>10^{12.3}h^{-1}{\rm M_{\odot}}$. 
+start using halos from the MultiDark simulation for $M_{{\rm vir}}>10^{12.2}h^{-1}{\rm M_{\odot}}$. 
 
 The top panel of Fig.~\ref{fig:linear-bias} shows $\bhlin$ as a
 function of $\mvir;$ results for high-$\vmax$ halos are shown in
@@ -335,6 +336,7 @@ see that $\bhlin$ increases sharply with $\mvir.$ Thus the basic
 shape of each curve in Fig. \ref{fig:linear-bias} is in accord with
 theoretical expectations from the peak-background split \citep{sheth_tormen99}
 formalism and Press-Schechter theory \citep{pressschechter74}.
+%TS: Is the above statement really correct? Original peak-background split and PS formalism do not predict assembly bias...It's predicted by the paper by Kaiser...
 
 By comparing the blue and green curves in Fig.~\ref{fig:linear-bias}
 we can see that linear bias has significant dependence upon $\vmax$
@@ -377,7 +379,7 @@ mass $\mvir\approx10^{12}\msun.$}
 
 
 Next, we study scale-dependence of halo bias on small scales for high-$V_{{\rm max}}$
-and low-$V_{{\rm max}}$ halos. Fig. \ref{fig:small-scale} shows
+and low-$V_{{\rm max}}$ halos. The left panel of Fig. \ref{fig:small-scale} shows
 the ratio of halo bias $b_{h}(r)$ of high-$V_{{\rm max}}$ samples
 divided by $b_{h}(r)$ of low-$V_{{\rm max}}$ samples for several
 mass bins. The first three mass bins labeled in the figure, $M_{{\rm vir}}=10^{11.7,12.0,12.2}h^{-1}{\rm {\rm M_{\odot}}}$,
@@ -393,17 +395,17 @@ Up until present, we have used both host halos and ejected halos to
 compute halo biases. Both types of halos are identified as distinct
 halos at $z=0$. Ejected halos, however, are halos which were identified
 as part of more massive halos at one or more occasions in the past,
-but were ejected and now exist at a host halo at $z=0$. Those ejected
+but were ejected and now exist as a host halo at $z=0$. Those ejected
 halos tend to exist around more massive halos \citep[e.g.]{wetzel_etal13, wang09}. Therefore,
 the effect on scale-dependent biases may be caused by those ejected
 halos. To test this, we compute halo-matter cross correlation functions
 without the ejected halos. Similar to Fig. \ref{fig:linear-bias},
 we first compare linear biases as a function of halo mass, shown in 
-Fig.\ref{fig:linear-bias} as dashed lines. The ratio
+Fig. \ref{fig:linear-bias} as dashed lines. The ratio
 of linear bias between high-$V_{{\rm max}}$ and low-$V_{{\rm max}}$
 halos is suppressed to 25\% for halos of Milky Way mass. This suppression due 
 to excluding the ejected halos is consistent with \cite{wang09}. Similar to
-what was done in Fig. \ref{fig:small-scale}, Fig. \ref{fig:eject}
+what was done in Fig. \ref{fig:small-scale}, the right panel of Fig. \ref{fig:small-scale}
 shows the ratio of $b_{h}(r)$ between high-$V_{{\rm max}}$and low-$V_{{\rm max}}$
 halos on small scales for several mass bins only from the Bolshoi
 simulation. Due to the mass resolution of the MultiDark simulation,
@@ -414,7 +416,7 @@ connection between assembly bias and subhalo back-splashing.
 
 This scale dependence in the clustering signal from ejected halos
 has a very simple interpretation. By definition, ejected halos are
-physically associated with a more massive halo and cluster strongly at $\sim1.6r_{200}$ \cite{wang09}.
+physically associated with a more massive halo and cluster strongly at $\sim1.6r_{200}$ (\cite{wang09}).
  Their clustering signal is therefore determined by this associated halo, much like the clustering
 of subhalos is determined by its host halo. More quantitatively, \cite{wetzel_etal13}
 find the fraction of ejected halos is a strong function of the corresponding
@@ -428,30 +430,29 @@ scale dependence at $1h^{-1}{\rm Mpc}$.
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{../plots/Both_smallScale_wang_log}
 \end{center}
-\caption{\label{fig:small-scale}Ratio of halo-matter cross correlation functions
-between high/low-$V_{{\rm max}}$ halos normalized by their linear
-biases. The plots are from the Bolshoi simulation and the MultiDark
-simulation at $z=0$. Each line corresponds to different halo mass
+\caption{\label{fig:small-scale} Left panel: Ratio of halo-matter cross correlation functions
+between high/low-$V_{{\rm max}}$ halos from the Bolshoi simulation and the MultiDark
+simulation at $z=0$, normalized by their linear
+biases. Each line corresponds to different halo mass
 bins labeled in the plots. The top three lines that correspond to
 low mass halos are computed from halos in the Bolshoi simulation,
 while the bottom lines are from the MultiDark simulation. Those plots
 show that high-$V_{{\rm max}}$ halos cluster more strongly than low-$V_{{\rm max}}$
 halos at $1h^{-1}{\rm Mpc}$ and the relative scale-dependence between
-those subsamples increases smoothly with decreasing halo mass. }
+those subsamples increases smoothly with decreasing halo mass. Right panel: The same figure 
+as the left panel without ejected halos only from the Bolshoi simulation. As can be seen by 
+comparing these results to those in the left panel, the $V_{{\rm max}}$-dependence 
+of halo bias on small scales is dramatically reduced by excluding ejected subhalos. This 
+implies an intimate connection between assembly bias and subhalo back-splashing.}
 \end{figure}
 
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=0.9\columnwidth]{../plots/Bolshoi_smallScale_wang_log_eje}
-\end{center}
-\caption{\label{fig:eject}The same figures as Fig. \ref{fig:small-scale}
-without ejected halos only from the Bolshoi simulation. As can be
-seen by comparing these results to those in Fig. \ref{fig:small-scale},
-the $V_{{\rm max}}$-dependence of halo bias on small scales is dramatically
-reduced by excluding ejected subhalos. This implies an intimate connection
-between assembly bias and subhalo back-splashing.}
-\end{figure}
+%\begin{figure}
+%\begin{center}
+% \includegraphics[width=0.9\columnwidth]{../plots/Bolshoi_smallScale_wang_log_eje}
+%\end{center}
+%\caption{\label{fig:eject}The same figures as Fig. \ref{fig:small-scale} without ejected halos only from the Bolshoi simulation. As can be seen by comparing these results to those in Fig. \ref{fig:small-scale}, the $V_{{\rm max}}$-dependence of halo bias on small scales is dramatically reduced by excluding ejected subhalos. This implies an intimate connection between assembly bias and subhalo back-splashing.}
+%\end{figure}
 
 
 
@@ -494,8 +495,8 @@ These differences go down to $\sim5\%$ after removing ejected subhalos. The reas
 we see the bump for the $V_{{\rm max}}$-selected samples is because
 the $V_{{\rm max}}$-selected samples contain more ejected halos than the
  $M_{{\rm vir}}$-selected samples. On low stellar mass end ($M^{*}\sim11.4{\rm M_{\odot}}$), the 
- fraction of the ejected halos in the $V_{{\rm max}}$-selected sample becomes $\sim14\%$, while the fraction in the 
-  $M_{{\rm vir}}$-selected sample is $\sim14\%$.
+ fraction of the ejected halos in the $V_{{\rm max}}$-selected sample becomes $\sim13.3\%$, while the fraction in the 
+  $M_{{\rm vir}}$-selected sample is $\sim13.8\%$.
 
 
 \begin{figure}
@@ -515,18 +516,11 @@ By removing those ejected halos, the difference is more or less removed.}
 
 
 
-\subsection{$\Delta\Sigma(r)$}
+%\subsection{$\Delta\Sigma(r)$}
 
---Select a bin of Milky Way mass host halos, and select their number-density-matched
-Vmax-selected equivalent. Use Peter Behroozi's stellar-to-halo mass
-relation to estimate the stellar mass of the central galaxy that would
-be found in these halos, then plot the halo-matter cross-correlation
-as a function of scale, over-plotting the two results.
+%--Select a bin of Milky Way mass host halos, and select their number-density-matched Vmax-selected equivalent. Use Peter Behroozi's stellar-to-halo mass relation to estimate the stellar mass of the central galaxy that would be found in these halos, then plot the halo-matter cross-correlation as a function of scale, over-plotting the two results.
 
---want to show: We show that the galaxy-galaxy lensing signal of low-mass
-centrals is impacted at the xxx-yyy\% level, in a highly scale-dependent
-fashion, by the theoretical choice to empirically connect stellar
-mass to either host halo Vmax or Mvir.
+%--want to show: We show that the galaxy-galaxy lensing signal of low-mass centrals is impacted at the xxx-yyy\% level, in a highly scale-dependent fashion, by the theoretical choice to empirically connect stellar mass to either host halo Vmax or Mvir.
 
 
 \section{Discussion}
@@ -546,6 +540,8 @@ has a sharper peak than the low-concentration (low-$\vmax$) halo.
 is that low-curvature peaks cluster more strongly relative to high-curvature peaks of the same height. In closely related work, 
  \citet{zentner07} used EPS with a configuration space filter to show that for a pair of halos of the same peak height, the early-forming halo should 
  reside in a denser large-scale environment than the late-forming one.\footnote{See Chapter IX, Section D.}
+ %TS: What is Chapter IX, Section D?
+ 
 
 A critical assumption underlying these EPS predictions is that a halo is the dominant peak in its large-scale environment. This is a well-founded assumption at the high-mass end, and we see that the predictions are in good agreement with simulations in the $\mvir>\mcoll$ regime \citep{dalal_etal08}. The situation is quite different when $\mvir\lesssim\mcoll.$ We have confirmed previous results \citep[e.g.,][]{wechsler06} that assembly bias changes sign and strengthens for lower-mass halos. This is in stark contrast to the EPS model described above, which makes the same prediction for assembly bias regardless of halo mass. 
 
