@@ -24,7 +24,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \newcommand{\mvir}{M_{\rm vir}}
-\newcommand{\mcoll}{M_{\ast}}
+\newcommand{\mcoll}{M_{\rm coll}}
 \newcommand{\rvir}{R_{\rm vir}}
 \newcommand{\vmax}{V_{\rm max}}
 \newcommand{\meanvmax}{\overline{V}_{\rm max}}
@@ -48,23 +48,25 @@
 
 \begin{document}
 
-\title{The Maximum Circular Velocity Dependence of Halo Clustering}
+\title[The Scale-Dependence of Halo Assembly Bias]{The Scale-Dependence of Halo Assembly Bias}
+\author[Sunayama et al.]
+{Tomomi Sunayama$^1$, Andrew P. Hearin$^2$, Nikhil Padmanabhan$^1$, Alexie Leauthaud$^3$\\
+$^1$Department of Astronomy, Yale University, P.O. Box 208101, New Haven, CT \\
+$^2$Yale Center for Astronomy \& Astrophysics, Yale University, New Haven, CT\\
+$^3$ Kavli IPMU (WPI), UTIAS, The University of Tokyo, Kashiwa, Chiba 277-8583, Japan
+}
+
 \maketitle
 \begin{abstract}
-We study how the two-point clustering of dark matter halos depends on halo mass, $\mvir,$ and the depth of the gravitational potential well, $\vmax.$  At the low-mass end, halos with high-$\vmax$ show stronger large-scale clustering relative to halos with low-$\vmax$ of the same mass.  In keeping with previous results, this trend weakens and reverses for $\mvir>\mcoll\approx10^{12.5}\msun,$ such that large-scale bias is mildly stronger for low-$\vmax$ halos relative to their high-$\vmax$ counterparts. We present the first study of the scale-dependence of halo assembly bias. At the low-mass end, assembly bias exhibits a pronounced scale-dependent ``bump''  at $500\kpch-5\mpch,$. This feature weakens and eventually vanishes for halos of higher mass. We show that halo assembly bias can primarily be attributed to a special subpopulation of {\em ejected halos}, defined as present-day host halos that were previously members of a higher-mass halo at some point in their past history. Our findings show that {\em ejected halos} signifies the effect of assembly bias and also questions whether {\em ejected halos} should be treated as distinct host halos in the galaxy-halo connection. 
-%Our findings have important implications for both cosmological parameter inference and galaxy evolution modeling. 
-We find that predictions for galaxy clustering and lensing in the $r\sim1-2\mpch$ regime can be impacted by up to $\sim20\%$ by the choice of the halo property, even for stellar mass-limited samples. We conclude by outlining a program to alleviate this systematic.
-%, so that existing and near-future galaxy surveys can achieve their promise to robustly constrain cosmology and the galaxy-halo connection using high-precision measurements of clustering and lensing. 
-
-%At constant halo mass, we see residual dependence of halo clustering on $V_{{\rm max}}$. In low mass regime, high-$V_{{\rm max}}$ halos cluster more strongly than low-$V_{{\rm max}}$ halos; at $M_{{\rm vir}}\thickapprox10^{11.6}h^{-1}{\rm M_{\odot}}$, the linear bias for high-$V_{{\rm max}}$ halos is $40\%$ larger. In high mass regime, this trend reverses that low-$V_{{\rm max}}$halos cluster more strongly, and the overall difference is smaller. At $r<10h^{-1}{\rm Mpc}$, halo bias for high-$V_{{\rm max}}$ halos exhibit significantly different scale-dependent feature compared to the bias for low-$V_{{\rm max}}$ halos; high-$V_{{\rm max}}$ halos cluster strongly at $1h^{-1}{\rm Mpc}$ and their clustering signal differs by 60\% at $M_{{\rm vir}}\approx10^{11.8}h^{-1}{\rm M_{\odot}}$ compared to their low-$V_{{\rm max}}$counterparts. This scale-dependent feature, however, is significantly reduced by excluding ejected halos from the samples. The ejected halos are the halos which are identified as host halos at present epoch but were subhalos of more massive host halos in the past, and they are known to host satellite galaxies instead of central galaxies. As possible observational consequences of the results, we relate an observable property of a galaxy (luminosity, stellar mass) to an intrinsic property of its host halo (mass, circular velocity). By using different choices for the halo property, we see a clear scale dependence in clustering at $1h^{-1}{\rm Mpc}$, with a maximum difference of $\sim15\%$. These differences go down to $\sim5\%$ after removing the ejected halos.
+The two-point clustering of dark matter halos is influenced by halo properties besides mass, a phenomenon referred to as {\em halo assembly bias}. Using the depth of the gravitational potential well, $\vmax,$ as our secondary halo property, in this paper we present the first study of the scale-dependence assembly bias. In the large-scale linear regime, $r\gtrsim10\mpch,$ our findings are in keeping with previous results. At the low-mass end ($\mvir<\mcoll\approx10^{12.5}\msun$), halos with high-$\vmax$ show stronger large-scale clustering relative to halos with low-$\vmax$ of the same mass; this trend weakens and reverses for $\mvir\gtrsim\mcoll.$ In the nonlinear regime, assembly bias in low-mass halos exhibits a pronounced scale-dependent ``bump''  at $500\kpch-5\mpch,$ a new result. This feature weakens and eventually vanishes for halos of higher mass. We show that this scale-dependent signature can primarily be attributed to a special subpopulation of {\em ejected halos}, defined as present-day host halos that were previously members of a higher-mass halo at some point in their past history. A corollary of our results is that galaxy clustering on scales of $r\sim1-2\mpch$ can be impacted by up to $\sim20\%$ by the choice of the halo property used in the halo model, even for stellar mass-limited samples. 
 \end{abstract}
 
 \section{Introduction}
 
-The halo model \citep[][for a recent review]{seljak00,vdboschBOOK} 
+The halo model  
 provides a connection between dark
 matter halos and galaxies, and it has been remarkably successful in
-describing observations of galaxy clustering. In particular, the
+describing observations of galaxy clustering \citep[][for a recent review]{seljak00,vdboschBOOK}. In particular, the
 Halo Occupation Distribution (HOD)\citep{berlind02,berlind03} and the Conditional Luminosity
 Function (CLF)\citep{yang03} are the two most widely used models of the galaxy-halo
 connection. These models start from the assumption that halo mass completely determines
@@ -74,21 +76,21 @@ mass $M$ hosts $N$ galaxies, while the CLF models the mean
 abundance $\Phi(L|M)$ of galaxies with luminosity $L$ in halos of  mass $M$.
 These two models are interchangeable; integrating the CLF over luminosity
 yields an HOD. Both models have been applied
-extensively to observations in order to study the halo-galaxy connection
+extensively to observations in order to study the galaxy-halo connection
 \citep{magliocchetti03,zehavi05a,yang_etal05,zheng07,vdBosch07,zheng09,skibba09,simon_etal09,ross10,zehavi11,geach12,parejko13}
 as well as cosmology \citep{tinker05,leauthaud11b,more_etal13,cacciato_etal13,mandelbaum13}.
 
 However, the clustering of halos also exhibits a
 dependence on additional properties beyond their mass 
 \citep{gao_etal05,wechsler06,gao_white07,li_etal08,hahn_etal09}, a
-phenomenon generically referred to as halo assembly bias. This can be 
+phenomenon generically referred to as {\em halo assembly bias}. This can be 
 traced back to the fact that halos of
 the same mass in different environments have different assembly histories
 and cluster differently. Having different assembly histories also affects
 the internal structure of halos\citep{bullock01,wechsler02,hahn_etal07b,faltenbacher_white10}. This, in turn, results in a clustering dependence
 on the structural properties of a halo, including the depth of its 
 gravitational potential well, characterized by its maximum circular
-velocity $V_{\rm max}$. This work revisits this manifestation 
+velocity $V_{\rm max}$. The present work revisits this manifestation 
 of halo assembly bias, and extends it down to smaller scales ($< 10 h^{-1} {\rm Mpc}$) 
 than has been previously explored.
 
@@ -106,19 +108,8 @@ expect this choice to affect the predicted clustering properties
 of halos. This work aims to quantify these differences, again
 focusing on smaller scales than previous studies.
 
-%%As a response to halo assembly bias, a recent trend in connecting
-%%halos and galaxies has been to use the Abundance Matching technique
-%%\citep{kravtsov04a,vale_ostriker04,tasitsiomi_etal04,vale_ostriker06,conroy_wechsler09,
-%%guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13},
-%%which assumes a monotonic relation in size of galaxies and halos in
-%%order to assign galaxies to halos in a hierarchical manner. In order
-%%to evaluate size of halos, the maximum circular velocity, which is
-%%a measure of potential well depth of halos, is often used due to its
-%%tight correlation with stellar mass of galaxies. In the Abundance
-%%Matching technique, halo assembly bias is a generic prediction.
-
 A recent parallel research effort has been revisiting the standard
-subdivision of dark matter halos into host/sub-halos, which depends
+subdivision of dark matter halos into host/sub-halos, a classification that naturally depends
 on how the halo boundary is chosen. While the virial radius is the
 most commonly chosen definition, recent work has demonstrated that the
 environmental effects of halos extends well beyond the virial radius
@@ -129,7 +120,7 @@ of their hosts, and therefore get temporarily reclassified as host
 halos. These studies 
 argue that a more physically motivated boundary is the 
 ``splashback radius'' corresponding to the caustic from material 
-just reaching its first apocentric passage. This work demonstrates
+just reaching its first apocentric passage. One of the chief results of the present work is 
 that the halo assembly bias on small scales predominantly 
 arises from this mis-classification.
 
