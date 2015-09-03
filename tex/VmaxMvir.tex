@@ -154,10 +154,11 @@ using the \texttt{CONSISTENT TREES} \citep{rockstar_trees} procedures%
 
 In what follows, we use the virial masses and maximum circular velocities
 (tagged ``\texttt{mvir}'' and ``\texttt{vmax}'') directly from
-the halo catalogues. {\bf APH: The following sentence must be corrected: The halo mass and velocity functions start to
+the halo catalogues. The halo mass and velocity functions start to
 show incompleteness at $10^{11}h^{-1}M_{\odot}$ ($\sim740$ particles)
 for the Bolshoi simulation, and $10^{12}h^{-1}M_{\odot}$ ($\sim100$
-particles) for the MultiDark simulation. }
+particles) for the MultiDark simulation. Those are the halo masses where the mass functions show a turn-around. Since halo mass functions are
+monotonically increasing functions as halo mass decreases, showing a turn-around means that halos below the turn-around mass are resolved incompletely.
 %TS: The sentence below is not correct; I use halos greater than 10^12 solar masses for the MultiDark. I don't use the conservative cut.
 %We choose to be conservative and restrict to halos with $>740$ particles for both simulations, corresponding to mass limits of $10^{11}h^{-1}{\rm M_{\odot}}$ and $6.45\times10^{12}h^{-1}{\rm M_{\odot}}$ for Bolshoi and MultiDark respectively.
 
@@ -289,9 +290,6 @@ see that $\bhlin$ increases sharply with $\mvir.$ Thus the basic
 shape of each curve in Fig. \ref{fig:linear-bias} is in accord with
 theoretical expectations from the peak-background split \citep{sheth_tormen99}
 formalism and Press-Schechter theory \citep{pressschechter74}.
-%TS: Is the above statement really correct? Original peak-background split and PS formalism do not predict assembly bias...It's predicted by the paper by Kaiser...
-% APH: Yes, this sentence is correct as written. You are right that neither p-b split nor PS predict assembly bias. However, the sentence refers to the basic shape of *each curve*, not the *relative* shape of the two curves. Feel free to alter this language to something more intuitive if you find it confusing. 
-
 By comparing the blue and green curves in Fig.~\ref{fig:linear-bias}
 we can see that linear bias has significant dependence upon $\vmax$
 for halos of the same mass. This dependence is most readily seen in
@@ -411,7 +409,7 @@ In order to be explicit, we use the abundance matching technique \citep{kravtsov
 guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13} to connect the
 stellar masses of central galaxies to either the mass or circular
 velocity of host halos. We implement this by splitting the halo catalog
-into a series of bins with constant number density (=$1.6\times10^{-3}(h^{-1}{\rm Mpc})^{-3}$) {\bf APH: What does this number mean?},
+into a series of bins with constant number density (=$1.6\times10^{-3}(h^{-1}{\rm Mpc})^{-3}$),
 rank ordering either by mass or circular velocity. We label each bin
 by its corresponding stellar mass, computed from the stellar-to-halo
 mass relation of \citep{behroozi13}. 
@@ -489,9 +487,7 @@ so that the ejected halo's mass is significantly more affected than its circular
 
 %%%%%%%%%
 
-Recent advances in our understanding of halo growth sheds further light on the above results. As shown in \citet{diemer14,adhikari14,wetzel_nagai14,more15}, the natural physical boundary of a dark matter is the so-called ``splashback radius", which is the radius where accreted matter reaches its first apocenter after turnaround, and is roughly $2-3\rvir.$ As shown in \citet{wetzel_etal13}, the halos of massive groups and clusters ($\mvir\gtrsim10^{13}\msun,$ $\rvir\gtrsim500\kpch$) are surrounded by a large fraction of ejected halos. For ejected halos with $\mvir\approx10^{11.7}h^{-1}M_{\odot}$ halos, the host-centric spatial distribution of the ejected population peaks at $r\approx1.25R_{\rm 200m}\approx1.5\mpch$ (see Figs. 2 and 3 in \cite{wetzel_etal13}). The bump feature we find at $1-2\mpch$ is therefore in quantitative agreement with the \citet{wetzel_etal13} results: this bump occurs at the same physical scale that we would expect if the clustering of the ejected population is largely determined by the host to which the halos are ultimately bound. 
-
-%wang_mo_jing08 - need to cite
+Recent advances in our understanding of halo growth sheds further light on the above results. As shown in \citet{diemer14,adhikari14,wetzel_nagai14,more15}, the natural physical boundary of a dark matter is the so-called ``splashback radius", which is the radius where accreted matter reaches its first apocenter after turnaround, and is roughly $2-3\rvir.$ As shown in \citet{wetzel_etal13}, the halos of massive groups and clusters ($\mvir\gtrsim10^{13}\msun,$ $\rvir\gtrsim500\kpch$) are surrounded by a large fraction of ejected halos. For ejected halos with $\mvir\approx10^{11.7}h^{-1}M_{\odot}$ halos, the host-centric spatial distribution of the ejected population peaks at $r\approx1.25R_{\rm 200m}\approx1.5\mpch$ (see Figs. 2 and 3 in \cite{wetzel_etal13}). The bump feature we find at $1-2\mpch$ is therefore in quantitative agreement with the \citet{wetzel_etal13, wang_mo_jing08} results: this bump occurs at the same physical scale that we would expect if the clustering of the ejected population is largely determined by the host to which the halos are ultimately bound. 
 
 In order to explore possible observational consequences of our findings, we
 use abundance matching relating a stellar mass of central galaxies
