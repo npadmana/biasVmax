@@ -50,8 +50,8 @@
 
 \title[The Scale-Dependence of Halo Assembly Bias]{The Scale-Dependence of Halo Assembly Bias}
 \author[Sunayama et al.]
-{Tomomi Sunayama$^1$, Andrew P. Hearin$^2$, Nikhil Padmanabhan$^1$, Alexie Leauthaud$^3$\\
-$^1$Department of Astronomy, Yale University, P.O. Box 208101, New Haven, CT \\
+{Tomomi Sunayama$^{1,2}$, Andrew P. Hearin$^2$, Nikhil Padmanabhan$^{1,2}$, Alexie Leauthaud$^3$\\
+$^1$Department of Physics, Yale University, P.O. Box 208101, New Haven, CT \\
 $^2$Yale Center for Astronomy \& Astrophysics, Yale University, New Haven, CT\\
 $^3$ Kavli IPMU (WPI), UTIAS, The University of Tokyo, Kashiwa, Chiba 277-8583, Japan
 }
@@ -77,8 +77,8 @@ abundance $\Phi(L|M)$ of galaxies with luminosity $L$ in halos of  mass $M$.
 These two models are interchangeable; integrating the CLF over luminosity
 yields an HOD. Both models have been applied
 extensively to observations in order to study the galaxy-halo connection
-\citep{magliocchetti03,zehavi05a,yang_etal05,zheng07,vdBosch07,zheng09,skibba09,simon_etal09,ross10,zehavi11,geach12,parejko13}
-as well as cosmology \citep{tinker05,leauthaud11b,more_etal13,cacciato_etal13,mandelbaum13}.
+\citep{magliocchetti03,zehavi05a,yang_etal05,zheng07,vdBosch07,zheng09,skibba09,simon_etal09,ross10,zehavi11,leauthaud11b,leauthaud12,geach12,parejko13}
+as well as cosmology \citep{tinker05,more_etal13,cacciato_etal13,mandelbaum13}.
 
 However, the clustering of halos also exhibits a
 dependence on additional properties beyond their mass 
@@ -97,7 +97,7 @@ than has been previously explored.
 An alternative approach to connecting halos and galaxies is abundance
 matching
 \citep{kravtsov04a,vale_ostriker04,tasitsiomi_etal04,vale_ostriker06,conroy_wechsler09,
-guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13}. 
+guo10,simha10,neistein11a,watson_etal12b,rod_puebla12,kravtsov13,saito15}. 
 In its simplest form, abundance matching posits a monotonic
 relationship between a property of a galaxy (luminosity, stellar mass) 
 and that of a halo (mass, potential well depth). By construction, 
@@ -284,7 +284,7 @@ start using halos from the MultiDark simulation for $M_{{\rm vir}}>10^{12.2}h^{-
 The top panel of Fig.~\ref{fig:linear-bias} shows $\bhlin$ as a
 function of $\mvir;$ results for high-$\vmax$ halos are shown in
 blue, low-$\vmax$ halos in green. At the low-mass end, linear bias
-is a weak function of $\mvir;$ for $\mvir\gtrsim10^{13}\msun$ we
+is a weak function of $\mvir;$ for  $M_{{\rm vir}}\gtrsim\mcoll\approx10^{12.8}\msun,$ where \mcoll is a characteristic mass scale for clustering corresponding to $\sigma(\mcoll, z) = \delta_{c} \approx 1.69$, we
 see that $\bhlin$ increases sharply with $\mvir.$ Thus the basic
 shape of each curve in Fig. \ref{fig:linear-bias} is in accord with
 theoretical expectations from the peak-background split \citep{sheth_tormen99}
@@ -317,9 +317,7 @@ function of halo mass from the Bolshoi and the MultiDark simulations.
 The vertical dashed line indicates the upper/lower limit of halo mass
 for the Bolshoi/MultiDark simulations respectively. The blue lines
 correspond to a linear bias for high-$V_{{\rm max}}$ halos, while
-the green lines correspond to low-$V_{{\rm max}}$ halos. The solid
-lines are the case of including the ejected halos and the dashed lines
-are the case without them. Note that the MultiDark simulation does not 
+the green lines correspond to low-$V_{{\rm max}}$ halos. The solid lines correspond to the full halo sample while the dashed line corresponds to the sample where ejected halos are removed. Note that the MultiDark simulation does not 
 have sufficient number of ejected halos due to its mass resolution. 
 Lower panel: Ratio of linear biases between 
 high-$V_{{\rm max}}$ and low-$V_{{\rm max}}$ samples from the Bolshoi
@@ -329,7 +327,7 @@ mass $\mvir\approx10^{12}\msun.$}
 \end{figure}
 
 
-Next, we study scale-dependence of halo bias on small scales for high-$V_{{\rm max}}$
+Next, we study the scale-dependence of halo bias on small scales for high-$V_{{\rm max}}$
 and low-$V_{{\rm max}}$ halos. We wish to parse the novel, small-scale effects from the 
 well-known large-scale effects. So for each sample of high- and low-$V_{{\rm max}}$ halos, 
 we compute the following quantity:
@@ -453,7 +451,7 @@ By removing those ejected halos, the difference is more or less removed.}
 \section{Discussion}
 \label{sec:discussion}
 
-For halos $M_{{\rm vir}}\gtrsim\mcoll\approx10^{12.5}\msun,$ we have shown that the linear bias of low-$V_{{\rm max}}$ halos 
+For halos $M_{{\rm vir}}\gtrsim\mcoll\approx10^{12.8}\msun,$ we have shown that the linear bias of low-$V_{{\rm max}}$ halos 
 is larger relative to high-$V_{{\rm max}}$ halos of the same mass. As shown in \citet{dalal_etal08}, this 
 phenomenon is nicely explained in terms of the statistics of fluctuations in a Gaussian random field.
 Consider two halos with the same present-day mass, but with different concentration. Both halos originate from a 
