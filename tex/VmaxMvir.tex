@@ -51,7 +51,7 @@
 \title[The Scale-Dependence of Halo Assembly Bias]{The Scale-Dependence of Halo Assembly Bias}
 \author[Sunayama et al.]
 {Tomomi Sunayama$^{1,2}$, Andrew P. Hearin$^2$, Nikhil Padmanabhan$^{1,2}$, Alexie Leauthaud$^3$\\
-$^1$Department of Physics, Yale University, P.O. Box 208101, New Haven, CT \\
+$^1$Department of Physics, Yale University, P.O. Box 208120, New Haven, CT \\
 $^2$Yale Center for Astronomy \& Astrophysics, Yale University, New Haven, CT\\
 $^3$ Kavli IPMU (WPI), UTIAS, The University of Tokyo, Kashiwa, Chiba 277-8583, Japan
 }
@@ -284,7 +284,7 @@ start using halos from the MultiDark simulation for $M_{{\rm vir}}>10^{12.2}h^{-
 The top panel of Fig.~\ref{fig:linear-bias} shows $\bhlin$ as a
 function of $\mvir;$ results for high-$\vmax$ halos are shown in
 blue, low-$\vmax$ halos in green. At the low-mass end, linear bias
-is a weak function of $\mvir;$ for  $M_{{\rm vir}}\gtrsim\mcoll\approx10^{12.8}\msun,$ where \mcoll is a characteristic mass scale for clustering corresponding to $\sigma(\mcoll, z) = \delta_{c} \approx 1.69$, we
+is a weak function of $\mvir;$ for  $M_{{\rm vir}}\gtrsim\mcoll\approx10^{12.8}\msun,$ where $\mcoll$ is a characteristic mass scale for clustering corresponding to $\sigma(\mcoll, z) = \delta_{c} \approx 1.69$, we
 see that $\bhlin$ increases sharply with $\mvir.$ Thus the basic
 shape of each curve in Fig. \ref{fig:linear-bias} is in accord with
 theoretical expectations from the peak-background split \citep{sheth_tormen99}
@@ -307,7 +307,10 @@ are consistent with \citet{wechsler06}, who find that the same trends
 hold when the secondary halo property is NFW concentration, rather
 than $\vmax.$ This agreement is to be expected: insofar as the halo
 profile is well-approximated by an NFW profile, $\vmax$ is entirely
-determined by concentration (see Eq.~\ref{eq:vmax-mvir}).
+determined by concentration (see Eq.~\ref{eq:vmax-mvir}). Note that there is a drop in the ratio of
+the linear biases on the low-mass end. As we see no physical reasons, consider that this
+is a resolution effect and suggest that the condition required for
+completeness is more stringent \citep{\bf{XXX}}.
 
 
 \begin{figure}
@@ -337,7 +340,7 @@ we compute the following quantity:
 \end{equation}
 Thus for any sample of halos, as $r\gtrsim10\mpch,$ we have $\tilde{b}_{\rm h}(r)\rightarrow1,$ by construction. 
 
-The left panel of Fig. \ref{fig:small-scale} shows
+The bottom panel of Fig. \ref{fig:small-scale} shows
 the ratio of $\tilde{b}_{h}(r)$ of high-$V_{{\rm max}}$ samples
 divided by $b_{h}(r)$ of low-$V_{{\rm max}}$ samples for several
 mass bins. The first three mass bins labeled in the figure, $M_{{\rm vir}}=10^{11.7,12.0,12.2}h^{-1}{\rm {\rm M_{\odot}}}$,
@@ -365,7 +368,7 @@ linear bias between high-$V_{{\rm max}}$ and low-$V_{{\rm max}}$
 halos is suppressed to 25\% for halos of Milky Way mass. This suppression due 
 to excluding the ejected halos is consistent with the results presented in \cite{wang09}. 
 
-In the right panel of Fig. \ref{fig:small-scale}, we show the scale-dependence of assembly bias for non-ejected halos.\footnote{We remind the reader that due to the mass resolution of the MultiDark simulation, fig. \ref{fig:small-scale} only shows results for Bolshoi halos.}
+In the bottom panel of Fig. \ref{fig:small-scale}, we show the scale-dependence of assembly bias for non-ejected halos.\footnote{We remind the reader that due to the mass resolution of the MultiDark simulation, fig. \ref{fig:small-scale} only shows results for Bolshoi halos.}
 Once the ejected halos have been removed, the scale-dependent feature of assembly bias is greatly reduced. This implies an intimate
 connection between the scale-dependence of assembly bias and subhalo back-splashing (see \S\ref{sec:discussion} for further discussion). 
 
@@ -373,9 +376,9 @@ connection between the scale-dependence of assembly bias and subhalo back-splash
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.9\columnwidth]{../plots/Both_smallScale_wang_log}
+\includegraphics[width=0.9\columnwidth]{../plots/Bolshoi_smallScale_wang_log_nonEject}
 \end{center}
-\caption{\label{fig:small-scale} {\bf APH: Change y-axis label according to the updated text}. 
- Left panel: Ratio of halo-matter cross correlation functions
+\caption{\label{fig:small-scale} Top panel: Ratio of halo-matter cross correlation functions
 between high/low-$V_{{\rm max}}$ halos from the Bolshoi simulation and the MultiDark
 simulation at $z=0$, normalized by their linear
 biases. Each line corresponds to different halo mass
@@ -384,9 +387,9 @@ low mass halos are computed from halos in the Bolshoi simulation,
 while the bottom lines are from the MultiDark simulation. Those plots
 show that high-$V_{{\rm max}}$ halos cluster more strongly than low-$V_{{\rm max}}$
 halos at $1h^{-1}{\rm Mpc}$ and the relative scale-dependence between
-those subsamples increases smoothly with decreasing halo mass. Right panel: The same figure 
-as the left panel without ejected halos only from the Bolshoi simulation. As can be seen by 
-comparing these results to those in the left panel, the $V_{{\rm max}}$-dependence 
+those subsamples increases smoothly with decreasing halo mass. Bottom panel: The same figure 
+as the top panel without ejected halos only from the Bolshoi simulation. As can be seen by 
+comparing these results to those in the top panel, the $V_{{\rm max}}$-dependence 
 of halo bias on small scales is dramatically reduced by excluding ejected subhalos. This 
 implies an intimate connection between assembly bias and subhalo back-splashing.}
 \end{figure}
@@ -439,8 +442,8 @@ between scale-dependent assembly bias and subhalo back-splashing.
 \end{center}
 \caption{\label{fig:abundance_small}Ratio of halo-matter cross correlation
 functions between$M_{{\rm vir}}$-based and $V_{{\rm max}}$-based
-abundance matching samples with ejected halos (left) and without ejected
-halos (right). The ratios are normalized by their linear biases. Each
+abundance matching samples with ejected halos (top) and without ejected
+halos (bottom). The ratios are normalized by their linear biases. Each
 line corresponds to different stellar mass bins labeled in the plots.
 With ejected halos, the halo biases computed from the $V_{{\rm max}}$-selected samples
 have very different scale-dependence than the ones from the $M_{{\rm vir}}$-selected samples.
